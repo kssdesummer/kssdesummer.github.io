@@ -1,12 +1,12 @@
 # Basic
-title: Dong
+title: KssdeBlog
 subtitle: 终生学习者
 description: “日事日毕，日清日高”
 # 头像里面的标题
-avatarTitle: Dong
+avatarTitle: Kss
 # 头像里面的描述
-avatarDesc: Java / 个人学习
-url: "https://hdd2803.github.io"
+avatarDesc: Python / 个人学习
+url: "https://kssdesummer.github.io"
 
 # Comment
 comment:
@@ -15,15 +15,15 @@ comment:
 
 # Social
 social:
-    weibo: 13629242942 
-    github: hdd2803
-    # twitter: 
-    mail: hdongdong2803@gmail.com
+    weibo: 15518103321
+    github: kssdesummer
+    # qq mail:
+    mail: 910036938@qq.com
 
 # 百度统计 
 # 使用博客模板请去掉或者更换 id 
 baidu:
-    id: 1082088ca49660f2c4f8757954f50810
+    id: null
 
 # Google Analytics
 # 使用博客模板请去掉或者更换 id
@@ -36,7 +36,7 @@ baidu:
 #
 #
 #  _post/ 下的文章更换成你自己的文章
-#  帮忙star一下，感谢~😆 地址： https://github.com/hdd2803/hdd2803.github.io
+#  帮忙star一下，感谢~😆 地址： https://github.com/kssdesummer/kssdesummer.github.io
 #
 #
 # 《--------------- 下面的信息可以自行选择是否修改 ------------------------》
