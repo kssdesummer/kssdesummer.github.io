@@ -47,7 +47,17 @@
                 {% endfor %}
               </ul>
             </nav>
-          </div>          
+          </div>
+          <div>
+            <nav class="friend">
+              <ul class="link">
+                  <li class="navigation__item">友情链接 ： </li>
+                {% for item in site.links_title %}
+                  <li class="navigation__item"><a href="{{item.url}}" title="{{item.description}}">{{item.title}}</a></li>
+                {% endfor %}
+              </ul>
+            </nav>
+          </div>
         </div>
 
 

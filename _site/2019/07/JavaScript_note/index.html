@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>JavaScriptNote</title>
+  <meta name="description" content="JavaScript部分">
+  <meta name="author" content="leopardpan">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="JavaScriptNote">
+  <meta name="twitter:description" content="JavaScript部分">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="JavaScriptNote">
+  <meta property="og:description" content="JavaScript部分">
+  
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://localhost:4000/2019/07/JavaScript_note/">
+  <link rel="alternate" type="application/rss+xml" title="兄弟会-康竞豪" href="http://localhost:4000/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+
+<!-- 站点统计 -->
+  <script
+    async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>
+
+<!-- 百度统计 -->
+  
+
+<!-- google 统计 -->
+  
+
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">        
+      <div class="nav_container">
+         <nav class="nav-menu-item" style = "float:right">
+            <i class="nav-menu-item">
+              <a href="/#blog" title="" class="blog-button">  博客主页
+              </a>
+            </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/archive" title="archive" class="btn-mobile-menu__icon">
+                      学习笔记
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/tags" title="tags" class="btn-mobile-menu__icon">
+                      标签
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/book" title="book" class="btn-mobile-menu__icon">
+                      书籍
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/about" title="about" class="btn-mobile-menu__icon">
+                      关于博主
+                  </a>
+                </i>
+            
+          </nav>
+      </div>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left">            
+            <a href="/#blog" title="前往 兄弟会-康竞豪 的主页" class="blog-button">
+                <div class="img"><img src="/images/avatar.jpg" alt="img"></div>
+                <div class="info">
+                    <div class="info-back">
+                        <h2> 
+                            
+                                Kss
+                            
+                        </h2>
+                        <p>
+                           
+                                Python / 个人学习
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 兄弟会-康竞豪" class="blog-button">兄弟会-康竞豪</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">终生学习者</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">“日事日毕，日清日高”</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        
+
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">博客主页</a></li>
+                
+                  <li class="navigation__item"><a href="/archive" title="archive">学习笔记</a></li>
+                
+                  <li class="navigation__item"><a href="/tags" title="tags">标签</a></li>
+                
+                  <li class="navigation__item"><a href="/book" title="book">书籍</a></li>
+                
+                  <li class="navigation__item"><a href="/about" title="about">关于博主</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <nav class="friend">
+              <ul class="link">
+                  <li class="navigation__item">友情链接 ： </li>
+                
+                  <li class="navigation__item"><a href="/archive" title="dashen">zl</a></li>
+                
+                  <li class="navigation__item"><a href="http://liu-bot.github.io" title="dashen">l-bot</a></li>
+                
+                  <li class="navigation__item"><a href="/book" title="dashen">lizp</a></li>
+                
+                  <li class="navigation__item"><a href="/about" title="dashen">Auk</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-clear"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">JavaScriptNote</h1>
+    <div class="post-meta">
+      <img src="/images/calendar.png" width="20px"/> 
+      <time datetime="2019-07-22 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2019-07-22</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
+    </p>
+    </div>
+  </header>
+
+  <section class="post">
+    <h1 id="javascript部分">JavaScript部分</h1>
+
+<h2 id="变量的作用域">变量的作用域</h2>
+
+<ul>
+  <li>
+    <p>全局变量</p>
+
+    <p>在函数外部声明，或者声明使不用var声明，若已有相关变量则覆盖</p>
+  </li>
+  <li>
+    <p>局部变量</p>
+
+    <p>在函数内声明，用var声明</p>
+  </li>
+  <li>
+    <p>部分函数</p>
+    <ol>
+      <li>
+        <p><code class="highlighter-rouge">typeof</code> 打印类型</p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">alert</code> 设置弹窗</p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">window.onload = 函数名;</code>	//在网页加载完调用函数</p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">window.open(url,name,features)</code> ：创建新窗口，features是窗口属性,使用伪协议</p>
+
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">js</span><span class="p">:</span>
+<span class="kd">function</span> <span class="nx">popUp</span><span class="p">(</span><span class="nx">winurl</span><span class="p">){</span>
+	<span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">winURL</span><span class="p">,</span><span class="dl">"</span><span class="s2">popUp</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">width=320,height=480</span><span class="dl">"</span><span class="p">)</span>
+<span class="p">}</span> <span class="c1">//定义一个打开320*480的新窗口popUp'</span>
+<span class="nl">html</span><span class="p">:</span>
+<span class="o">&lt;</span><span class="nx">a</span> <span class="nx">herf</span><span class="o">=</span><span class="dl">"</span><span class="s2">www.baidu.com</span><span class="dl">"</span> <span class="nx">onclick</span><span class="o">=</span><span class="dl">"</span><span class="s2">popUp(this.href);return false;</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">baidu</span><span class="o">&lt;</span><span class="sr">/a</span><span class="err">&gt;
+</span></code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h2 id="dom文档对象模型">DOM(文档对象模型)</h2>
+
+<p>​	通过HTML DOM，JavaScript能访问和改变<code class="highlighter-rouge">html</code>文档的所有内容</p>
+
+<p>​	当网页被加载时，浏览器会创建页面的文档对象模型（Document Object Model）</p>
+
+<p>​	HTML DOM:时关于如何获取、更改、添加、删除HTML元素的标准</p>
+
+<h3 id="ddocument文档">D(Document)文档：</h3>
+
+<p>​	创建一个网页加载到web浏览器时，DOM把编写的网页文档转为一个文档对象</p>
+
+<h3 id="oobject对象">O(Object)对象：</h3>
+
+<ul>
+  <li>
+    <p>定义：对象是自包含的数据集合，对象是由一些属性和方法组合在一起的数据实体</p>
+
+    <ul>
+      <li>属性：属于对象的变量</li>
+      <li>方法：对象才能调用的函数</li>
+    </ul>
+  </li>
+  <li>
+    <p>用户定义对象：创建一个实例化对象的关键字是 ：<code class="highlighter-rouge">new</code></p>
+  </li>
+  <li>
+    <p>内建对象：系统环境自带的对象能直接使用，例如：</p>
+
+    <ul>
+      <li>Math:数学公式,<code class="highlighter-rouge">Math.round</code> 四舍五入</li>
+      <li>Array：数组，<code class="highlighter-rouge">[].length</code> 数组长度;[].map(function(item)){return item+10} 将元素计算；[].filter(function(item)){if(item%2==1){return true;}筛选;</li>
+      <li><code class="highlighter-rouge">Date</code> ：日期，用<code class="highlighter-rouge">getDate()/getMonth()/getFullYear()</code>… 取值</li>
+      <li><code class="highlighter-rouge">Object.keys()</code> 键的列表；<code class="highlighter-rouge">Object..values()</code> 值的列表</li>
+    </ul>
+  </li>
+  <li>
+    <p>宿主对象：除了环境自带的对象之外预先定义好的其他对象，这些对象由它运行环境提供</p>
+
+    <p>宿主对象包括：Form表单、Image图像和Element表单元素，document可以用来获取网页上的任何一个元素的信息等。</p>
+  </li>
+</ul>
+
+<h3 id="mmodel模型">M(model)模型：</h3>
+
+<p>​	HTML DOM 模型被结构化为对象树(节点树)：</p>
+
+<p><img src="/home/k/图片/对象的HTML DOM树 .png" alt="" /></p>
+
+<h3 id="节点">节点：</h3>
+
+<p>​	节点表示网络中的一个连接点，一个网络就是有一些节点构成的集合。</p>
+
+<p>​	元素节点-&gt;文本节点-&gt;属性节点</p>
+
+<p>​	CSS(层叠样式表)：与JavaScript的声明方式很类似</p>
+
+<p>​</p>
+
+<h2 id="获取元素">获取元素</h2>
+
+<ol>
+  <li>
+    <p><code class="highlighter-rouge">getElementById(id)</code> :参数是id选择器的名字</p>
+
+    <p>​	返回值是一个对象，对应文档里的一个特定的元素节点</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">getElementsByTagName("li")</code> :参数是标签名</p>
+
+    <p>​	返回值是一个数组，对应文档里的一组特定的元素节点</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">getElementsByClassName("")</code> :参数是class属性类名</p>
+
+    <p>​	返回值是一个数组，对应文档里的一组特定的元素节点</p>
+  </li>
+  <li>
+    <p>一次性选择所有,遍历 in 拿到下标,of拿到值</p>
+
+    <p><code class="highlighter-rouge">document.querySelectAll</code></p>
+
+    <p><code class="highlighter-rouge">document.querySelect</code></p>
+  </li>
+</ol>
+
+<h2 id="获取和设置属性">获取和设置属性</h2>
+
+<ol>
+  <li>
+    <p><code class="highlighter-rouge">object.getAttribute()</code> ：参数是查询的属性名，用来获取属性下的内容，常与<code class="highlighter-rouge">getElementsByTagName</code> 合用，例如获取每行的title的内容：</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">paras</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="dl">"</span><span class="s2">li</span><span class="dl">"</span><span class="p">);</span>	<span class="c1">//获取元素li的数组</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">paras</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">paras</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">title</span><span class="dl">"</span><span class="p">);</span>	<span class="c1">//获取li的title属性</span>
+	<span class="kd">var</span> <span class="nx">u</span> <span class="o">=</span> <span class="nx">i</span><span class="o">+</span><span class="mi">1</span>
+	<span class="k">if</span> <span class="p">(</span><span class="nx">content</span><span class="p">){</span>
+		<span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">第</span><span class="dl">"</span><span class="o">+</span><span class="nx">u</span><span class="o">+</span><span class="dl">"</span><span class="s2">行：</span><span class="dl">"</span><span class="o">+</span><span class="nx">content</span><span class="p">);</span>	<span class="c1">//打印title的内容</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p>打印出每个<code class="highlighter-rouge">li</code>标签里面的<code class="highlighter-rouge">title</code>的内容</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">object.setAttribute</code>:参数是属性名，用来修改属性内容的，例如将<code class="highlighter-rouge">ul</code>的title设置为<code class="highlighter-rouge">unorder list</code>:</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">ulcon</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">unorder</span><span class="dl">"</span><span class="p">);</span>		<span class="c1">//获取id 属性为unorder的标签</span>
+<span class="nx">ulcon</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">title</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">unorder list</span><span class="dl">"</span><span class="p">);</span>		<span class="c1">//修改该标签的title的属性值</span>
+<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">ulcon</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">title</span><span class="dl">"</span><span class="p">);</span>		<span class="c1">//查看title里的内容是否被更改</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">content</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="事件处理函数">事件处理函数</h2>
+
+<ol>
+  <li>
+    <p><code class="highlighter-rouge">onmouseover</code>鼠标悬停在某个元素时触发动作</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">onmouseout</code>鼠标离开时触发</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">onclick</code>鼠标点击时触发</p>
+
+    <p>例如：点击事件，调用函数，默认设置为链接无效，各个部分以分号隔开</p>
+
+    <p>​	<code class="highlighter-rouge">onclick="showPic(this);return false;"</code></p>
+  </li>
+</ol>
+
+<h2 id="属性函数扩展">属性函数扩展</h2>
+
+<ol>
+  <li>
+    <p><code class="highlighter-rouge">childNodes</code> 属性</p>
+
+    <p>可以用来获取任何一个元素的所有子元素，得到全部子元素的数组</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 获取body的数组，有一个取出来，然后用childNodes取body的子元素</span>
+<span class="kd">function</span> <span class="nx">count_son</span><span class="p">(){</span>
+	<span class="kd">var</span> <span class="nx">body_element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="dl">"</span><span class="s2">body</span><span class="dl">"</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+	<span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="nx">body_element</span><span class="p">.</span><span class="nx">childNodes</span><span class="p">.</span><span class="nx">length</span>
+	<span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">网页共有子元素：</span><span class="dl">"</span><span class="o">+</span><span class="nx">num</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="nx">count_son</span><span class="p">;</span>	<span class="c1">//在网页加载完调用函数</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">nodeType</code> 属性：获取当前的元素节点数</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">nodeValue</code>属性：文本节点的值</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">firstChild和lastChild</code>属性：第一个和最后一个子元素</p>
+  </li>
+</ol>
+
+<h2 id="定时器">定时器</h2>
+
+<ol>
+  <li>执行一次(延时定时器)</li>
+</ol>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">t1</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">1秒钟之后执行了</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">},</span><span class="mi">1000</span><span class="p">)</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">t1</span><span class="p">)</span>  <span class="c1">// 去除定时器</span>
+</code></pre></div></div>
+
+<ol>
+  <li>重复执行(间歇定时器)</li>
+</ol>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">t2</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">每隔1秒钟执行一次</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">},</span><span class="mi">1000</span><span class="p">)</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">clearInterval</span><span class="p">(</span><span class="nx">t2</span><span class="p">)</span>  <span class="c1">// 去除定时器</span>
+</code></pre></div></div>
+
+<h3 id="内建对象的详细介绍">内建对象的详细介绍：</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">js</span><span class="err">的内建对象</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="nb">Number</span><span class="err">对象</span>
+        <span class="err">创建方式：</span>
+            <span class="kd">var</span> <span class="nx">myNum</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>  <span class="c1">// 传入参数，强转成数字类型的数据</span>
+            <span class="kd">var</span> <span class="nx">myNum</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>  <span class="c1">// 简写方式</span>
+                <span class="err">布尔类型转数字类型</span>     <span class="kc">true</span><span class="err">转成</span><span class="mi">1</span>    <span class="kc">false</span><span class="err">转成</span><span class="mi">0</span>
+                <span class="err">字符串类型转数字类型</span>   <span class="err">不能强转</span>
+        <span class="err">属性和方法：</span>
+            <span class="nx">toString</span><span class="p">()</span> <span class="err">把数字转成字符串</span>
+            <span class="nx">valueOf</span><span class="p">()</span> <span class="err">返回一个</span> <span class="nb">Number</span> <span class="err">对象的基本数字值</span>
+        <span class="err">示例：</span>
+            <span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Number</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span> <span class="c1">// 装箱</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">num</span><span class="p">);</span> <span class="c1">// object </span>
+            <span class="nx">alert</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">num</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span> <span class="c1">// string </span>
+            <span class="nx">alert</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">num</span><span class="p">.</span><span class="nx">valueOf</span><span class="p">());</span>  <span class="c1">// number 拆箱</span>
+<span class="o">--------------------------------------</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="nb">Boolean</span><span class="err">对象</span>
+        <span class="err">创建方式：</span>
+            <span class="kd">var</span> <span class="nx">bool</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Boolean</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span> <span class="c1">// 传入参数，强转成布尔类型的数据     </span>
+            <span class="kd">var</span> <span class="nx">bool</span> <span class="o">=</span> <span class="nb">Boolean</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span> <span class="c1">// 简写方式</span>
+                <span class="err">数字类型强转成布尔类型时　　　　　非零就是</span><span class="kc">true</span>            <span class="err">零就是</span><span class="kc">false</span>
+                <span class="err">字符串类型强转成布尔类型时　　　　非空字符串就是</span><span class="kc">true</span>       <span class="err">空字符串</span><span class="p">(</span><span class="dl">""</span><span class="p">)</span><span class="err">就是</span><span class="kc">false</span>
+        <span class="err">属性和方法：</span>
+            <span class="nx">toString</span><span class="p">()</span> <span class="err">把布尔转成字符串</span><span class="p">(</span><span class="err">即把逻辑值转换为字符串，并返回结果</span><span class="p">)</span>
+            <span class="nx">valueOf</span><span class="p">()</span> <span class="err">返回一个</span> <span class="nb">Boolean</span> <span class="err">对象的基本值</span><span class="p">(</span><span class="err">是</span><span class="nx">boolean</span><span class="err">类型的</span><span class="p">)</span>
+        <span class="err">示例：</span>
+            <span class="kd">var</span> <span class="nx">bool</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Boolean</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span> <span class="c1">// 装箱</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">bool</span><span class="p">);</span> <span class="c1">// object </span>
+            <span class="nx">alert</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">bool</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span> <span class="c1">// string </span>
+            <span class="nx">alert</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">bool</span><span class="p">.</span><span class="nx">valueOf</span><span class="p">());</span>  <span class="c1">// boolean 拆箱</span>
+<span class="o">--------------------------------------</span>            
+    <span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="nb">String</span><span class="err">对象</span>
+        <span class="err">创建方式：</span>
+            <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+            <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nb">String</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+                <span class="err">注意：</span><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">helllo</span><span class="dl">"</span><span class="p">;</span> 
+                <span class="c1">// 在js中此时的str不是对象，是一个伪对象，可以理解为包装类对象，也可以调用方法，但是在js中其本质不是对象哦！</span>
+                <span class="c1">// 而在java中，此时的str是一个对象。</span>
+        <span class="err">属性和方法：</span>
+            <span class="nx">length</span> <span class="err">字符串的长度属性</span>
+            
+            <span class="nx">charAt</span><span class="p">()</span> <span class="err">返回索引的字符</span>
+            <span class="nx">charCodeAt</span><span class="p">()</span> <span class="err">返回索引字符的</span><span class="nx">unicode</span>
+            <span class="nx">indexOf</span><span class="p">()</span> <span class="err">返回字符的索引</span>
+            <span class="nx">lastIndexOf</span><span class="p">()</span> <span class="err">逆向返回字符的索引</span>
+            <span class="nx">split</span><span class="p">()</span> <span class="err">将字符串按照特殊字符切割成数组</span>
+            <span class="nx">substr</span><span class="p">()</span> <span class="err">从起始索引号提取字符串中指定数目的字符</span><span class="p">(</span><span class="err">注意：第二个</span><span class="nx">s</span><span class="err">不是大写，不是驼峰式的写法哦</span><span class="p">)</span>
+            <span class="nx">substring</span><span class="p">()</span> <span class="err">提取字符串中两个指定的索引号之间的字符</span><span class="p">(</span><span class="err">包头不包尾</span><span class="p">)</span>
+            <span class="nx">toUpperCase</span><span class="p">()</span> <span class="err">转大写</span>
+        <span class="err">示例：</span>
+            <span class="c1">// var str = new String("a-b-cdc-FG");</span>
+            <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">a-b-cdc-FG</span><span class="dl">"</span><span class="p">;</span> <span class="c1">// 伪对象</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span> <span class="c1">// 10</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="mi">4</span><span class="p">));</span> <span class="c1">// c</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">charCodeAt</span><span class="p">(</span><span class="mi">4</span><span class="p">));</span> <span class="c1">// 99</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="dl">"</span><span class="s2">c</span><span class="dl">"</span><span class="p">));</span> <span class="c1">// 4</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="dl">"</span><span class="s2">c</span><span class="dl">"</span><span class="p">));</span> <span class="c1">// 6</span>
+            <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">"</span><span class="s2">-</span><span class="dl">"</span><span class="p">);</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">alert</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+            <span class="p">}</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span> <span class="c1">// b-c</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span> <span class="c1">// b (包头不包尾)</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">());</span> <span class="c1">// A-B-CDC-FG</span>
+            
+            
+            
+            <span class="nx">W3School</span><span class="err">离线手册</span><span class="p">(</span><span class="mf">2014.3</span><span class="p">.</span><span class="mi">24</span><span class="p">)</span>
+<span class="o">--------------------------------------</span>
+    <span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="nb">Array</span><span class="err">对象</span>
+        <span class="err">创建方式：</span>
+            <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span> <span class="c1">// 创建一个空数组</span>
+            <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">size</span><span class="p">);</span> <span class="c1">// 创建一个指定长度的数据(超出长度还能加元素)</span>
+            <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">element0</span><span class="p">,</span> <span class="nx">element1</span><span class="p">,</span> <span class="p">...,</span> <span class="nx">elementn</span><span class="p">);</span> <span class="c1">// 创建数组并直接实例化元素</span>
+            <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[];</span> <span class="c1">// 创建一个空数组</span>
+            <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="dl">"</span><span class="s2">java</span><span class="dl">"</span><span class="p">];</span> <span class="c1">// 创建数组并直接实例化元素</span>
+        <span class="err">属性和方法：</span>
+            <span class="nx">length</span> <span class="err">数组的长度属性</span>
+            
+            <span class="nx">join</span><span class="p">()</span> <span class="err">把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔</span>
+            <span class="nx">pop</span><span class="p">()</span> <span class="err">删除并返回数组的最后一个元素</span>
+            <span class="nx">push</span><span class="p">()</span> <span class="err">向数组的末尾添加一个或更多元素，并返回新的长度</span>
+            <span class="nx">reverse</span><span class="p">()</span> <span class="err">反转数组</span>
+            <span class="nx">sort</span><span class="p">()</span> <span class="err">对数组的元素进行排序</span><span class="p">(</span><span class="err">按照字符串字典顺序进行排序</span><span class="p">)</span>
+<span class="err">　　　　</span> <span class="err">示例：</span>
+            <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="dl">"</span><span class="s2">java</span><span class="dl">"</span><span class="p">,</span> <span class="dl">'</span><span class="s1">js</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="mi">4</span> <span class="p">];</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span> <span class="c1">// 7</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">"</span><span class="s2">-</span><span class="dl">"</span><span class="p">));</span> <span class="c1">// 3-7-1-java-js-true-4</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">pop</span><span class="p">());</span> <span class="c1">// 4</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// 3,7,1,"java",'js',true</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">"</span><span class="s2">R</span><span class="dl">"</span><span class="p">));</span> <span class="c1">// 8</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// 3,7,1,"java",'js',true,R</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">reverse</span><span class="p">());</span> <span class="c1">// 4,true,js,java,1,7,3    数组反转</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">sort</span><span class="p">());</span> <span class="c1">// 1,3,4,7,java,js,true    按照字符串字典顺序进行排序</span>
+<span class="o">--------------------------------------</span>
+    <span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="nb">Date</span><span class="err">对象</span>
+        <span class="err">创建方式：</span>    
+            <span class="kd">var</span> <span class="nx">myDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+            <span class="kd">var</span> <span class="nx">myDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="err">毫秒值</span><span class="p">);</span> <span class="c1">// 代表从1970-1-1到现在的一个毫秒值</span>
+        <span class="err">属性和方法：</span>
+            <span class="nx">getFullYear</span><span class="p">()</span> <span class="err">年</span>
+            <span class="nx">getMonth</span><span class="p">()</span> <span class="err">月</span> <span class="mi">0</span><span class="o">-</span><span class="mi">11</span>
+            <span class="nx">getDate</span><span class="p">()</span> <span class="err">日</span> <span class="mi">1</span><span class="o">-</span><span class="mi">31</span>
+            <span class="nx">getDay</span><span class="p">()</span> <span class="err">星期</span> <span class="mi">0</span><span class="o">-</span><span class="mi">6</span><span class="err">（星期日是</span><span class="mi">0</span><span class="err">）</span>
+            <span class="nx">getTime</span><span class="p">()</span> <span class="err">返回</span><span class="mi">1970</span><span class="err">年</span><span class="mi">1</span><span class="err">月</span><span class="mi">1</span><span class="err">日午夜到指定日期（字符串）的毫秒数</span>
+            <span class="nx">toLocalString</span><span class="p">()</span> <span class="err">根据本地时间格式，把</span> <span class="nb">Date</span> <span class="err">对象转换为字符串</span>
+        <span class="err">示例：</span>
+            <span class="kd">var</span> <span class="nx">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">date</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span> <span class="c1">// Mon Apr 23 2018 09:38:13 GMT+0800 (中国标准时间)</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">date</span><span class="p">.</span><span class="nx">toLocaleString</span><span class="p">());</span> <span class="c1">// 2018/4/23 上午9:38:13</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">year:</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">date</span><span class="p">.</span><span class="nx">getFullYear</span><span class="p">());</span> <span class="c1">// 2018</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">month:</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">date</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">());</span> <span class="c1">// 3</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">date:</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">date</span><span class="p">.</span><span class="nx">getDate</span><span class="p">());</span> <span class="c1">// 23</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">day:</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">date</span><span class="p">.</span><span class="nx">getDay</span><span class="p">());</span> <span class="c1">// 1</span>
+            <span class="kd">var</span> <span class="nx">time1</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nx">getTime</span><span class="p">();</span>
+            <span class="kd">var</span> <span class="nx">time2</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">;</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">time1</span> <span class="o">+</span> <span class="nx">time2</span><span class="p">).</span><span class="nx">toLocaleString</span><span class="p">());</span> <span class="c1">// 2018/4/26 上午9:38:13</span>
+<span class="o">--------------------------------------</span>
+    <span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="nb">Math</span><span class="err">对象</span>
+        <span class="err">创建方式：</span>    
+            <span class="nb">Math</span> <span class="err">对象并不像</span> <span class="nb">Date</span> <span class="err">和</span> <span class="nb">String</span> <span class="err">那样是对象的类，因此没有构造函数</span> <span class="nb">Math</span><span class="p">()</span><span class="err">，像</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">()</span> <span class="err">这样的函数只是函数，不是某个对象的方法。</span>
+            <span class="err">您无需创建它，通过把</span> <span class="nb">Math</span> <span class="err">作为对象使用就可以调用其所有属性和方法。</span><span class="p">(</span><span class="err">相当于</span><span class="nx">java</span><span class="err">中的静态成员变量和静态成员方法</span><span class="p">)</span>
+        <span class="err">属性和方法：</span>
+            <span class="nx">PI</span> <span class="err">圆周率</span>
+            
+            <span class="nx">abs</span><span class="p">()</span> <span class="err">绝对值</span>
+            <span class="nx">ceil</span><span class="p">()</span> <span class="err">对数进行向上舍入</span>
+            <span class="nx">floor</span><span class="p">()</span> <span class="err">对数进行向下舍入</span>
+            <span class="nx">pow</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="err">返回</span> <span class="nx">x</span> <span class="err">的</span> <span class="nx">y</span> <span class="err">次幂</span>
+            <span class="nx">random</span><span class="p">()</span> <span class="mi">0</span><span class="o">-</span><span class="mi">1</span><span class="err">之间的随机数</span><span class="p">[</span><span class="mf">0.1</span><span class="p">)</span>
+            <span class="nx">round</span><span class="p">()</span> <span class="err">四舍五入</span>
+        <span class="err">示例：</span>
+            <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">-897</span><span class="dl">"</span><span class="p">;</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">x</span><span class="p">));</span> <span class="c1">// 897</span>
+            <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mf">12.34</span><span class="p">;</span>
+            <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+            <span class="kd">var</span> <span class="nx">z</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">x</span><span class="p">));</span> <span class="c1">// 13</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">x</span><span class="p">));</span> <span class="c1">// 12</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">x</span><span class="p">));</span> <span class="c1">// 12</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="nx">y</span><span class="p">,</span> <span class="nx">z</span><span class="p">));</span> <span class="c1">// 16</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">());</span> <span class="c1">// 0-1之间的随机数[0.1)        </span>
+<span class="o">--------------------------------------</span>
+    <span class="p">(</span><span class="mi">7</span> <span class="p">)</span><span class="nb">RegExp</span><span class="err">对象</span>
+        <span class="err">创建方式：</span>    
+            <span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">pattern</span><span class="p">);</span>
+            <span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="sr">/^正则规则$/</span><span class="p">;</span>
+        <span class="err">规则的写法：</span>
+            <span class="err">方括号用于查找某个范围内的字符：</span>
+                <span class="p">[</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="p">]</span>    <span class="err">查找任何从</span> <span class="mi">0</span> <span class="err">至</span> <span class="mi">9</span> <span class="err">的数字</span> 
+                <span class="p">[</span><span class="nx">A</span><span class="o">-</span><span class="nx">Z</span><span class="p">]</span>    <span class="err">查找任何从大写</span> <span class="nx">A</span> <span class="err">到大写</span> <span class="nx">Z</span> <span class="err">的字符</span>
+                <span class="p">[</span><span class="nx">a</span><span class="o">-</span><span class="nx">z</span><span class="p">]</span>    <span class="err">查找任何从小写</span> <span class="nx">a</span> <span class="err">到小写</span> <span class="nx">z</span> <span class="err">的字符</span>
+                <span class="p">[</span><span class="nx">A</span><span class="o">-</span><span class="nx">z</span><span class="p">]</span>    <span class="err">查找任何从大写</span> <span class="nx">A</span> <span class="err">到小写</span> <span class="nx">z</span> <span class="err">的字符</span>
+                <span class="p">[</span><span class="nx">abc</span><span class="p">]</span>    <span class="err">查找方括号之间的任何字符</span>
+                <span class="p">[</span><span class="o">^</span><span class="nx">abc</span><span class="p">]</span>   <span class="err">查找任何不在方括号之间的字符</span>
+            
+            <span class="err">元字符（</span><span class="nx">Metacharacter</span><span class="err">）是拥有特殊含义的字符：</span>
+                <span class="p">.</span>        <span class="err">查找单个字符，除了换行和行结束符</span>
+                <span class="err">\</span><span class="nx">d</span>       <span class="err">查找数字</span>
+                <span class="err">\</span><span class="nx">D</span>       <span class="err">查找非数字字符</span>
+                <span class="err">\</span><span class="nx">w</span>       <span class="err">查找单词字符</span>
+                <span class="err">\</span><span class="nx">W</span>       <span class="err">查找非单词字符</span>
+                <span class="err">\</span><span class="nx">s</span>       <span class="err">查找空白字符</span>
+                <span class="err">\</span><span class="nx">S</span>       <span class="err">查找非空白字符</span>
+                <span class="nx">b</span><span class="err">\</span>       <span class="err">匹配单词边界</span>
+                <span class="nx">B</span><span class="err">\</span>       <span class="err">匹配非单词边界</span>
+            
+            <span class="err">量词：</span>
+                <span class="nx">n</span><span class="o">+</span>       <span class="err">出现至少一次</span>
+                <span class="nx">n</span><span class="o">*</span>       <span class="err">出现</span><span class="mi">0</span><span class="err">次或多次</span>
+                <span class="nx">n</span><span class="p">?</span>       <span class="err">出现</span><span class="mi">0</span><span class="err">次或</span><span class="mi">1</span><span class="err">次</span>
+                <span class="p">{</span><span class="mi">5</span><span class="p">}</span>      <span class="err">出现</span><span class="mi">5</span><span class="err">次</span>
+                <span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">}</span>    <span class="err">出现</span><span class="mi">2</span><span class="err">到</span><span class="mi">8</span><span class="err">次</span>
+        <span class="err">方法：</span>    
+            <span class="nx">test</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="err">检索字符串中指定的值。返回</span> <span class="kc">true</span> <span class="err">或</span> <span class="kc">false</span>
+        <span class="err">示例：</span>
+            <span class="err">校验邮箱：</span>
+                <span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="sr">/^</span><span class="se">[</span><span class="sr">A-z</span><span class="se">]</span><span class="sr">+</span><span class="se">[</span><span class="sr">A-z0-9_-</span><span class="se">]</span><span class="sr">*</span><span class="se">\@[</span><span class="sr">A-z0-9</span><span class="se">]</span><span class="sr">+</span><span class="se">\.[</span><span class="sr">A-z</span><span class="se">]</span><span class="sr">+$/</span><span class="p">;</span>
+                <span class="kd">var</span> <span class="nx">email</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">haohao_827@163.com</span><span class="dl">"</span><span class="p">;</span>
+                <span class="nx">alert</span><span class="p">(</span><span class="nx">reg</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">email</span><span class="p">));</span>
+</code></pre></div></div>
+
+<h3 id="宿主对象的详细介绍">宿主对象的详细介绍：</h3>
+
+<pre><code class="language-Navigator对象：">Forms对象： 
+	是一个数组，包含了文档中所有的表单（）。要引用单个表单，可以用 document.forms[x]，但是一般来说，人们都会这样做：在标记中加上“name=”…“”属性，那么直接用“document.&lt;表单名&gt;”就可以引用了。 
+Images对象： 
+	图片对象 document.images[] 是一个数组，包含了文档中所 有的图片（）。
+Document对象： 
+	文档对象是JavaScript 中window 和frames对象的一个属性,是显示于窗口或框架内的一个文档。描述当前窗口或指定窗口对象的文档。它包含了文档从到的内容。 
+浏览器对象:
+	包含了正在使用的 Navigator 的版本信息。反映了当前使用的浏览器的资料。JavaScript 客户端运行时刻引擎自动创建 navigator 对象。 
+Window对象： 
+	表示的是浏览器窗口，最顶层的对象, window的属性对应于整个窗口 。 
+Frame 对象： 
+	是 window 对象。用最容易理解的话说，每一个HTML 文件占用一个 window 对象， 包括定义框架的网页 （“框架网页”） 
+Location对象： 
+	地址对象 它描述的是某一个窗口对象所打开的地址。 
+	window.location = “链接地址”; 
+History对象： 
+	历史对象包含了用户已浏览的 URL 的信息，是指历史对象指浏览器的浏览历史。 
+	*back() 后退，跟按下“后退”键是等效的。 
+	*forward() 前进，跟按下“前进”键是等效的。 
+Links对象： 
+	是一个数组， 包含了文档中所有连接标记 （包含 href 属性的a标记和map标记段里的area标记），按照在文档中的次序，从 0 开始给每个连接标记定义了一个下标。 
+Archors对象： 
+	是一个数组，包含了文档中所有锚标记（包含 name 属 性的a标记）， 按照在文档中的次序， 从 0 开始给每个锚标记定义了一个下标。 
+
+
+</code></pre>
+
+
+
+  </section>
+</article>
+
+<section>
+
+            <div class="content-play">
+              <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">打赏一个呗</a></p>
+              <div class="hide_box-play"></div>
+              <div class="shang_box-play">
+                <a class="shang_close-play" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img src="/images/payimg/close.jpg" alt="取消" /></a>
+                <div class="shang_tit-play">
+                  <p>感谢您的支持，我会继续努力的!</p>
+                </div>
+                <div class="shang_payimg">
+                    <img src="/images/payimg/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+                </div>
+              <div class="shang_payimg">    
+                    <img src="/images/payimg/weipayimg.jpg" alt="扫码支持" title="扫一扫" />
+                </div>
+                <div class="pay_explain">扫码打赏，你说多少就多少</div>
+                <div class="shang_payselect">
+                  <div class="pay_item checked" data-id="alipay">
+                    <span class="pay_logo"><img src="/images/payimg/alipay.jpg" alt="支付宝" /></span>
+                  </div>
+                  <div class="pay_item" data-id="weipay">
+                    <span class="pay_logo"><img src="/images/payimg/wechat.jpg" alt="微信" /></span>
+                  </div>
+                </div>
+                <div class="shang_info-play">
+                  <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+                </div>
+              </div>
+            </div>
+            <script type="text/javascript">
+            function dashangToggle(){
+              $(".hide_box-play").fadeToggle();
+              $(".shang_box-play").fadeToggle();
+            }
+            </script>
+
+            <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';"></div>
+
+            <style type="text/css">
+              .content-play{width:80%;margin-top: 20px;margin-bottom: 10px;height:40px;}
+              .hide_box-play{z-index:999;filter:alpha(opacity=50);background:#666;opacity: 0.5;-moz-opacity: 0.5;left:0;top:0;height:99%;width:100%;position:fixed;display:none;}
+              .shang_box-play{width:540px;height:540px;padding:10px;background-color:#fff;border-radius:10px;position:fixed;z-index:1000;left:50%;top:50%;margin-left:-280px;margin-top:-280px;border:1px dotted #dedede;display:none;}
+              .shang_box-play img{border:none;border-width:0;}
+              .dashang{display:block;width:100px;margin:5px auto;height:25px;line-height:25px;padding:10px;background-color:#E74851;color:#fff;text-align:center;text-decoration:none;border-radius:10px;font-weight:bold;font-size:16px;transition: all 0.3s;}
+              .dashang:hover{opacity:0.8;padding:15px;font-size:18px;}
+              .shang_close-play{float:right;display:inline-block;
+                margin-right: 10px;margin-top: 20px;
+              }
+              .shang_logo{display:block;text-align:center;margin:20px auto;}
+              .shang_tit-play{width: 100%;height: 75px;text-align: center;line-height: 66px;color: #a3a3a3;font-size: 16px;background: url('/images/payimg/cy-reward-title-bg.jpg');font-family: 'Microsoft YaHei';margin-top: 7px;margin-right:2px;}
+              .shang_tit-play p{color:#a3a3a3;text-align:center;font-size:16px;}
+              .shang_payimg{width:140px;padding:10px;padding-left: 80px; /*border:6px solid #EA5F00;**/margin:0 auto;border-radius:3px;height:140px;display:inline-block;}
+              .shang_payimg img{display:inline-block;margin-right:10px;float:left;text-align:center;width:140px;height:140px; }
+              .pay_explain{text-align:center;margin:10px auto;font-size:12px;color:#545454;}
+              .shang_payselect{text-align:center;margin:0 auto;margin-top:40px;cursor:pointer;height:60px;width:500px;margin-left:110px;}
+              .shang_payselect .pay_item{display:inline-block;margin-right:140px;float:left;}
+              .shang_info-play{clear:both;}
+              .shang_info-play p,.shang_info-play a{color:#C3C3C3;text-align:center;font-size:12px;text-decoration:none;line-height:2em;}
+            </style>
+
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2019/07/JavaScript%E8%B5%84%E6%96%99/" data-toggle="tooltip" data-placement="top" title="《JavaScript》">上一篇：  <span>《JavaScript》</span>
+            </a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/2019/07/Nodejs/" data-toggle="tooltip" data-placement="top" title="NodeJSNote">下一篇：  <span>NodeJSNote</span>
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+<section class="post-comments">
+
+  
+    <div id="uyan_frame"></div>
+
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=123456"></script>
+
+  
+
+</section>
+
+
+            <section class="footer">
+    <footer>
+        <div class = "footer_div">  
+        <nav class="cover-navigation navigation--social">
+          <ul class="navigation">
+
+          
+          <!-- Weibo -->
+          <li class="navigation__item_social">
+            <a href="http://weibo.com/15518103321" title="@15518103321 的微博" target="_blank">
+              <i class='social fa fa-weibo fa-2x'></i>
+              <span class="label">Weibo</span>
+            </a>
+          </li>
+          
+
+          
+          <!-- Github -->
+          <li class="navigation__item_social">
+            <a href="https://github.com/kssdesummer" title="@kssdesummer 的 Github" target="_blank">
+              <i class='social fa fa-github fa-2x'></i>
+              <span class="label">Github</span>
+            </a>
+          </li>
+          
+          
+          
+
+          
+
+          <!-- RSS -->
+          <li class="navigation__item_social">
+            <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+              <i class='social fa fa-rss fa-2x'></i>
+              <span class="label">RSS</span>
+            </a>
+          </li>
+
+          
+          <!-- Email -->
+          <li class="navigation__item_social">
+            <a href="https://mail.qq.com/cgi-bin/loginpage" title="Contact me">
+              <i class='social fa fa-envelope fa-2x'></i>
+              <span class="label">Email</span>
+            </a>
+          </li>
+          
+
+          </ul>
+        </nav>
+
+        </div>
+
+        <div class = "footer_div">  
+           <p class="copyright text-muted">
+            Copyright &copy; 兄弟会-康竞豪 2019 Theme by <a href="https://kssdesummer.github.io/">Kss</a> |
+            <iframe
+                style="margin-left: 2px; margin-bottom:-5px;"
+                frameborder="0" scrolling="0" width="91px" height="20px"
+                src="https://ghbtns.com/github-btn.html?user=hdd2803&repo=hdd2803.github.io&type=star&count=true" >
+            </iframe>
+            </p>
+        	<div align="right">
+    			<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+          <!-- 访问统计 -->
+          <span id="busuanzi_container_site_pv">
+            本站总访问量
+            <span id="busuanzi_value_site_pv"></span>次
+          </span>
+
+        </div>
+        <div>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+  </body>
+
+</html>

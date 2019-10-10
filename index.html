@@ -6,7 +6,8 @@ layout: default
 
   <ol class="post-list">
     {% for post in paginator.posts %}
-    <li>
+      {% if post.tag != 'book' %}
+        <li>
       <h2 class="post-list__post-title post-title"><a href="{{ post.url }}" title="访问 {{ post.title }}">{{ post.title }}</a></h2>
       <p class="excerpt">{{ post.content | strip_html | strip_newlines | truncate: 250 }}&hellip;</p>
       <div class="post-list__meta">
@@ -27,6 +28,7 @@ layout: default
       </div>
       <!-- <hr class="post-list__divider" /> -->
     </li>
+      {% endif %}
     {% endfor %}
   </ol>
 

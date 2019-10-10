@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>Sass的使用方法</title>
+  <meta name="description" content="Sass的安装和使用">
+  <meta name="author" content="leopardpan">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Sass的使用方法">
+  <meta name="twitter:description" content="Sass的安装和使用">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Sass的使用方法">
+  <meta property="og:description" content="Sass的安装和使用">
+  
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://localhost:4000/2019/08/Sass%E7%9A%84%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/">
+  <link rel="alternate" type="application/rss+xml" title="兄弟会-康竞豪" href="http://localhost:4000/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+
+<!-- 站点统计 -->
+  <script
+    async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>
+
+<!-- 百度统计 -->
+  
+
+<!-- google 统计 -->
+  
+
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">        
+      <div class="nav_container">
+         <nav class="nav-menu-item" style = "float:right">
+            <i class="nav-menu-item">
+              <a href="/#blog" title="" class="blog-button">  博客主页
+              </a>
+            </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/archive" title="archive" class="btn-mobile-menu__icon">
+                      学习笔记
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/tags" title="tags" class="btn-mobile-menu__icon">
+                      标签
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/book" title="book" class="btn-mobile-menu__icon">
+                      书籍
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/about" title="about" class="btn-mobile-menu__icon">
+                      关于博主
+                  </a>
+                </i>
+            
+          </nav>
+      </div>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left">            
+            <a href="/#blog" title="前往 兄弟会-康竞豪 的主页" class="blog-button">
+                <div class="img"><img src="/images/avatar.jpg" alt="img"></div>
+                <div class="info">
+                    <div class="info-back">
+                        <h2> 
+                            
+                                Kss
+                            
+                        </h2>
+                        <p>
+                           
+                                Python / 个人学习
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 兄弟会-康竞豪" class="blog-button">兄弟会-康竞豪</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">终生学习者</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">“日事日毕，日清日高”</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        
+
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">博客主页</a></li>
+                
+                  <li class="navigation__item"><a href="/archive" title="archive">学习笔记</a></li>
+                
+                  <li class="navigation__item"><a href="/tags" title="tags">标签</a></li>
+                
+                  <li class="navigation__item"><a href="/book" title="book">书籍</a></li>
+                
+                  <li class="navigation__item"><a href="/about" title="about">关于博主</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <nav class="friend">
+              <ul class="link">
+                  <li class="navigation__item">友情链接 ： </li>
+                
+                  <li class="navigation__item"><a href="/archive" title="dashen">zl</a></li>
+                
+                  <li class="navigation__item"><a href="http://liu-bot.github.io" title="dashen">l-bot</a></li>
+                
+                  <li class="navigation__item"><a href="/book" title="dashen">lizp</a></li>
+                
+                  <li class="navigation__item"><a href="/about" title="dashen">Auk</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-clear"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">Sass的使用方法</h1>
+    <div class="post-meta">
+      <img src="/images/calendar.png" width="20px"/> 
+      <time datetime="2019-08-10 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2019-08-10</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
+    </p>
+    </div>
+  </header>
+
+  <section class="post">
+    <h1 id="sass的安装和使用">Sass的安装和使用</h1>
+
+<h2 id="安装sass和compass">安装Sass和Compass</h2>
+
+<p>​	从官网<a href="http://rubyinstaller.org/downloads">下载Ruby</a>并安装</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//安装如下(如mac安装遇到权限问题需加 sudo gem install sass)
+gem install sass
+gem install compass
+</code></pre></div></div>
+
+<h2 id="命令编译">命令编译</h2>
+
+<ol>
+  <li>
+    <p>单文件转换命令</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sass input.scss output.css
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>单文件监听命令,input.scss 表示编译前的文件</p>
+
+    <pre><code class="language-终端命令">sass --watch input.scss:output.css
+</code></pre>
+  </li>
+  <li>
+    <p>监听整个目录</p>
+
+    <pre><code class="language-终端命令">sass --watch 文件夹名字:编译过后的文件夹名字
+</code></pre>
+  </li>
+</ol>
+
+<h2 id="命令行配置选项">命令行配置选项</h2>
+
+<p>​	命令行编译sass有配置选项,如果编译过后css排版 , 生成调试map , 开启debug信息等 , 可通过使用命令 sass-v 查看详细信息 , 我们一般用两种: –style  –sourcemap</p>
+
+<pre><code class="language-终端命令">// 编译格式
+sass --watch input.scss:output.css --style compact
+// 编译添加调试map
+sass --watch input.scss:output.css --sourcemap
+// 开启debug信息
+sass --watch input.scss:output.css --debug-info
+</code></pre>
+
+<ul>
+  <li>
+    <p>–style 表示解析后的css是什么排版</p>
+
+    <p>sass内置有四中编译格式: nested	expanded	compact	compressed</p>
+  </li>
+  <li>
+    <p>–sourcemap 表示开启sourcemap调试,开启sourcemap调试后,会生成一个后缀名为.css,map文件</p>
+  </li>
+</ul>
+
+<h2 id="四种编译排版演示">四种编译排版演示</h2>
+
+<h3 id="未编译模式">未编译模式</h3>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">400px</span><span class="p">;</span>
+  <span class="err">&amp;-title</span> <span class="err">{</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+    <span class="nl">line-height</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="err">}</span>
+</code></pre></div></div>
+
+<h3 id="nested-编译排版格式">nested 编译排版格式</h3>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/*命令行内容*/</span>
+<span class="nt">sass</span> <span class="nt">style</span><span class="nc">.scss</span><span class="nd">:style</span><span class="nc">.css</span> <span class="nt">--style</span> <span class="nt">nested</span>
+
+<span class="c">/*编译过后样式*/</span>
+<span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">400px</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nc">.box-title</span> <span class="p">{</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+    <span class="nl">line-height</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="expand-编译排版格式">expand 编译排版格式</h3>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/*命令行内容*/</span>
+<span class="nt">sass</span> <span class="nt">style</span><span class="nc">.scss</span><span class="nd">:style</span><span class="nc">.css</span> <span class="nt">--style</span> <span class="nt">expanded</span>
+
+<span class="c">/*编译过后样式*/</span>
+<span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">400px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.box-title</span> <span class="p">{</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="compact-编译排版格式">compact 编译排版格式</h3>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/*命令行内容*/</span>
+<span class="nt">sass</span> <span class="nt">style</span><span class="nc">.scss</span><span class="nd">:style</span><span class="nc">.css</span> <span class="nt">--style</span> <span class="nt">compact</span>
+
+<span class="c">/*编译过后样式*/</span>
+<span class="nc">.box</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span> <span class="nl">height</span><span class="p">:</span> <span class="m">400px</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.box-title</span> <span class="p">{</span> <span class="nl">height</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span> <span class="nl">line-height</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="compressed-编译排版格式">compressed 编译排版格式</h3>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/*命令行内容*/</span>
+<span class="nt">sass</span> <span class="nt">style</span><span class="nc">.scss</span><span class="nd">:style</span><span class="nc">.css</span> <span class="nt">--style</span> <span class="nt">compressed</span>
+
+<span class="c">/*编译过后样式*/</span>
+<span class="nc">.box</span><span class="p">{</span><span class="nl">width</span><span class="p">:</span><span class="m">300px</span><span class="p">;</span><span class="nl">height</span><span class="p">:</span><span class="m">400px</span><span class="p">}</span><span class="nc">.box-title</span><span class="p">{</span><span class="nl">height</span><span class="p">:</span><span class="m">30px</span><span class="p">;</span><span class="nl">line-height</span><span class="p">:</span><span class="m">30px</span><span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="sass-快速入门">Sass 快速入门</h1>
+
+<h3 id="使用变量">使用变量</h3>
+
+<p>​	sass引入变量,可以反复使用定义的变量,使用$符号来标识变量</p>
+
+<h3 id="变量声明">变量声明</h3>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$p-color</span><span class="p">:</span><span class="mh">#F90</span>
+</code></pre></div></div>
+
+<p>​	声明一个变量为 $p-color ,当使用颜色时可以直接调用,声明之后不会立刻生效,只有在后面的调用了才会生效</p>
+
+<p>​	变量的作用于与一般的相同</p>
+
+<h3 id="变量引用">变量引用</h3>
+
+<p>​	当声明了一个变量,只要改变了变量的值,后面被引用的地方也会跟着改变</p>
+
+<h3 id="变量名中的-_">变量名中的-_</h3>
+
+<p>​	两者是相同的,看使用者的习惯</p>
+
+<h2 id="嵌套css规则">嵌套CSS规则</h2>
+
+<p>​	CSS中重复写选择器,Sass可以解决这个苦恼的事情</p>
+
+<p>​	sass</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">#content</span> <span class="p">{</span>
+  <span class="nt">article</span> <span class="p">{</span>
+    <span class="nt">h1</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="mh">#333</span> <span class="p">}</span>
+    <span class="nt">p</span> <span class="p">{</span> <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">1</span><span class="mi">.4em</span> <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="nt">aside</span> <span class="p">{</span> <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#EEE</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>​	编译后:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">#content</span> <span class="nt">article</span> <span class="nt">h1</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="m">#333</span> <span class="p">}</span>
+<span class="nf">#content</span> <span class="nt">article</span> <span class="nt">p</span> <span class="p">{</span> <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">1.4em</span> <span class="p">}</span>
+<span class="nf">#content</span> <span class="nt">aside</span> <span class="p">{</span> <span class="nl">background-color</span><span class="p">:</span> <span class="m">#EEE</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<p>​	上边的例子，会在输出<code class="highlighter-rouge">css</code>时把它转换成跟你之前看到的一样的效果。这个过程中，<code class="highlighter-rouge">sass</code>用了两步，每一步都是像打开俄罗斯套娃那样把里边的嵌套规则块一个个打开。首先，把<code class="highlighter-rouge">#content</code>（父级）这个<code class="highlighter-rouge">id</code>放到<code class="highlighter-rouge">article</code>选择器（子级）和<code class="highlighter-rouge">aside</code>选择器（子级）的前边:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">#content</span> <span class="p">{</span>
+  <span class="nt">article</span> <span class="p">{</span>
+    <span class="nt">h1</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="mh">#333</span> <span class="p">}</span>
+    <span class="nt">p</span> <span class="p">{</span> <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">1</span><span class="mi">.4em</span> <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="nn">#content</span> <span class="nt">aside</span> <span class="p">{</span> <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#EEE</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c">/* 编译后 */</span>
+<span class="nf">#content</span> <span class="nt">article</span> <span class="nt">h1</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="m">#333</span> <span class="p">}</span>
+<span class="nf">#content</span> <span class="nt">article</span> <span class="nt">p</span> <span class="p">{</span> <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">1.4em</span> <span class="p">}</span>
+<span class="nf">#content</span> <span class="nt">aside</span> <span class="p">{</span> <span class="nl">background-color</span><span class="p">:</span> <span class="m">#EEE</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="父选择器-">父选择器 &amp;</h3>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">article</span> <span class="nt">a</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+  <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">article</span> <span class="nt">a</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span> <span class="p">}</span>
+<span class="nt">article</span> <span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="群组选择器的嵌套">群组选择器的嵌套</h3>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">nav</span><span class="o">,</span> <span class="nt">aside</span> <span class="p">{</span>
+  <span class="nt">a</span> <span class="p">{</span><span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">nav</span> <span class="nt">a</span><span class="o">,</span> <span class="nt">aside</span> <span class="nt">a</span> <span class="p">{</span><span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="子组合选择器和同层组合选择器----">子组合选择器和同层组合选择器: &gt; / + /~</h3>
+
+<p>​	<code class="highlighter-rouge">&gt;</code> 是选择一个元素的直接子元素,即紧跟着的子元素</p>
+
+<p>​	<code class="highlighter-rouge">+</code> 是选择一个元素后紧跟的元素,同层</p>
+
+<p>​	<code class="highlighter-rouge">~</code> 是选择一个元素后同层的所有的该元素</p>
+
+<h3 id="嵌套属性">嵌套属性</h3>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">nav</span> <span class="p">{</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="p">{</span>
+  <span class="na">style</span><span class="p">:</span> <span class="nb">solid</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="mh">#ccc</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">nav</span> <span class="p">{</span>
+  <span class="nl">border-style</span><span class="p">:</span> <span class="nb">solid</span><span class="p">;</span>
+  <span class="nl">border-width</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
+  <span class="nl">border-color</span><span class="p">:</span> <span class="m">#ccc</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="导入sass文件">导入SASS文件</h2>
+
+<p>​	用@import规则导入其他的css文件:</p>
+
+<p>​	@import “colors”; 导入 colors.scss</p>
+
+<p>​	@import “mixins”; 导入mixins.scss</p>
+
+<p>​	@import “grid”; 导入grid.scss</p>
+
+<h3 id="使用sass部分文件">使用SASS部分文件</h3>
+
+<p>​	sass布局文件以下划线开头,sass就不会在编译时单独编译这个文件输出css,而当作文件导入</p>
+
+<h3 id="默认变量值">默认变量值</h3>
+
+<p>​	使用sass的!defaullt标签:如果这个变量被声明赋值了,那就用它声明的值,否则就用默认值</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$fancybox-width</span><span class="p">:</span> <span class="m">400px</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nc">.fancybox</span> <span class="p">{</span>
+<span class="nl">width</span><span class="p">:</span> <span class="nv">$fancybox-width</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>​	在上例中，如果用户在导入你的<code class="highlighter-rouge">sass</code>局部文件之前声明了一个<code class="highlighter-rouge">$fancybox-width</code>变量，那么你的局部文件中对<code class="highlighter-rouge">$fancybox-width</code>赋值<code class="highlighter-rouge">400px</code>的操作就无效。如果用户没有做这样的声明，则<code class="highlighter-rouge">$fancybox-width</code>将默认为<code class="highlighter-rouge">400px</code>。</p>
+
+<p>​	接下来我们将学习嵌套导入，它允许只在某一个选择器的范围内导入<code class="highlighter-rouge">sass</code>局部文件。</p>
+
+<h3 id="嵌套导入">嵌套导入</h3>
+
+<p>​	跟原生的<code class="highlighter-rouge">css</code>不同，<code class="highlighter-rouge">sass</code>允许<code class="highlighter-rouge">@import</code>命令写在<code class="highlighter-rouge">css</code>规则内。这种导入方式下，生成对应的<code class="highlighter-rouge">css</code>文件时，局部文件会被直接插入到<code class="highlighter-rouge">css</code>规则内导入它的地方。举例说明，有一个名为<code class="highlighter-rouge">_blue-theme.scss</code>的局部文件，内容如下：</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">aside</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>​	然后把它导入到一个CSS规则内，如下所示：</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.blue-theme</span> <span class="p">{</span><span class="err">@import</span> <span class="err">"blue-theme"</span><span class="p">}</span>
+
+<span class="o">//</span><span class="err">生成的结果跟你直接在</span><span class="nc">.blue-theme</span><span class="err">选择器内写</span><span class="nt">_blue-theme</span><span class="nc">.scss</span><span class="err">文件的内容完全一样。</span>
+
+<span class="nc">.blue-theme</span> <span class="p">{</span>
+  <span class="err">aside</span> <span class="err">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="err">}</span>
+</code></pre></div></div>
+
+<p>​	被导入的局部文件中定义的所有变量和混合器，也会在这个规则范围内生效。这些变量和混合器不会全局有效，这样我们就可以通过嵌套导入只对站点中某一特定区域运用某种颜色主题或其他通过变量配置的样式。</p>
+
+<p>​	有时，可用<code class="highlighter-rouge">css</code>原生的<code class="highlighter-rouge">@import</code>机制，在浏览器中下载必需的<code class="highlighter-rouge">css</code>文件。<code class="highlighter-rouge">sass</code>也提供了几种方法来达成这种需求。</p>
+
+<h3 id="原声的css导入">原声的CSS导入</h3>
+
+<p>​	由于<code class="highlighter-rouge">sass</code>兼容原生的<code class="highlighter-rouge">css</code>，所以它也支持原生的<code class="highlighter-rouge">CSS@import</code>。尽管通常在<code class="highlighter-rouge">sass</code>中使用<code class="highlighter-rouge">@import</code>时，<code class="highlighter-rouge">sass</code>会尝试找到对应的<code class="highlighter-rouge">sass</code>文件并导入进来，但在下列三种情况下会生成原生的<code class="highlighter-rouge">CSS@import</code>，尽管这会造成浏览器解析<code class="highlighter-rouge">css</code>时的额外下载：</p>
+
+<ul>
+  <li>被导入文件的名字以<code class="highlighter-rouge">.css</code>结尾；</li>
+  <li>被导入文件的名字是一个URL地址（比如http://www.sass.hk/css/css.css），由此可用谷歌字体API提供的相应服务；</li>
+  <li>被导入文件的名字是<code class="highlighter-rouge">CSS</code>的url()值。</li>
+</ul>
+
+<p>这就是说，你不能用<code class="highlighter-rouge">sass</code>的<code class="highlighter-rouge">@import</code>直接导入一个原始的<code class="highlighter-rouge">css</code>文件，因为<code class="highlighter-rouge">sass</code>会认为你想用<code class="highlighter-rouge">css</code>原生的<code class="highlighter-rouge">@import</code>。但是，因为<code class="highlighter-rouge">sass</code>的语法完全兼容<code class="highlighter-rouge">css</code>，所以你可以把原始的<code class="highlighter-rouge">css</code>文件改名为<code class="highlighter-rouge">.scss</code>后缀，即可直接导入了。</p>
+
+<h3 id="静默注释">静默注释</h3>
+
+<p>​	文件导入是保证<code class="highlighter-rouge">sass</code>的代码可维护性和可读性的重要一环。次之但亦非常重要的就是注释了。注释可以帮助样式作者记录写<code class="highlighter-rouge">sass</code>的过程中的想法。在原生的<code class="highlighter-rouge">css</code>中，注释对于其他人是直接可见的，但<code class="highlighter-rouge">sass</code>提供了一种方式可在生成的<code class="highlighter-rouge">css</code>文件中按需抹掉相应的注释。</p>
+
+<p>​	提供了一种不同于<code class="highlighter-rouge">css</code>标准注释格式<code class="highlighter-rouge">/* ... */</code>的注释语法，即静默注释，其内容不会出现在生成的<code class="highlighter-rouge">css</code>文件中</p>
+
+<h3 id="混合器">混合器</h3>
+
+<p>​	混合器使用@mixin标识定义</p>
+
+<p>​	例如定义一个跨浏览器的圆角边框</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="nf">rounded-corners</span> <span class="p">{</span>
+  <span class="na">-moz-border-radius</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+  <span class="na">-webkit-border-radius</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>​	通过@include 调用</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">notice</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="mh">#00aa00</span><span class="p">;</span>
+  <span class="k">@include</span> <span class="nd">rounded-corners</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">//</span><span class="nt">sass</span><span class="err">最终生成：</span>
+<span class="nc">.notice</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="m">#00aa00</span><span class="p">;</span>
+  <span class="nl">-moz-border-radius</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+  <span class="nl">-webkit-border-radius</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="何时使用混合器">何时使用混合器</h4>
+
+<p>​	<code class="highlighter-rouge">sass</code>同样允许你把<code class="highlighter-rouge">css</code>规则放在混合器中</p>
+
+<p>​	能够归类的有相似属性的,可以组成一个混合器</p>
+
+<h4 id="混合器css规则">混合器CSS规则</h4>
+
+<p>​	混合器中不仅可以包含属性，也可以包含<code class="highlighter-rouge">css</code>规则，包含选择器和选择器中的属性，如下代码:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@mixin no-bullets {
+  list-style: none;
+  li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0px;
+  }
+}
+</code></pre></div></div>
+
+<p>​	当一个包含<code class="highlighter-rouge">css</code>规则的混合器通过<code class="highlighter-rouge">@include</code>包含在一个父规则中时，在混合器中的规则最终会生成父规则中的嵌套规则。举个例子，看看下边的<code class="highlighter-rouge">sass</code>代码，这个例子中使用了<code class="highlighter-rouge">no-bullets</code>这个混合器：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ul.plain {
+  color: #444;
+  @include no-bullets;
+}
+</code></pre></div></div>
+
+<p>​	<code class="highlighter-rouge">sass</code>的<code class="highlighter-rouge">@include</code>指令会将引入混合器的那行代码替换成混合器里边的内容。最终，上边的例子如下代码:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ul.plain {
+  color: #444;
+  list-style: none;
+}
+ul.plain li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+}
+</code></pre></div></div>
+
+<p>​	混合器中的规则甚至可以使用<code class="highlighter-rouge">sass</code>的父选择器标识符<code class="highlighter-rouge">&amp;</code>。使用起来跟不用混合器时一样，<code class="highlighter-rouge">sass</code>解开嵌套规则时，用父规则中的选择器替代<code class="highlighter-rouge">&amp;</code>。</p>
+
+<h4 id="混合器传参">混合器传参</h4>
+
+<p>混合器并不一定总得生成相同的样式。可以通过在<code class="highlighter-rouge">@include</code>混合器时给混合器传参，来定制混合器生成的精确样式。当<code class="highlighter-rouge">@include</code>混合器时，参数其实就是可以赋值给<code class="highlighter-rouge">css</code>属性值的变量。如果你写过<code class="highlighter-rouge">JavaScript</code>，这种方式跟<code class="highlighter-rouge">JavaScript</code>的<code class="highlighter-rouge">function</code>很像：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@mixin link-colors($normal, $hover, $visited) {
+  color: $normal;
+  &amp;:hover { color: $hover; }
+  &amp;:visited { color: $visited; }
+}
+</code></pre></div></div>
+
+<p>当混合器被<code class="highlighter-rouge">@include</code>时，你可以把它当作一个<code class="highlighter-rouge">css</code>函数来传参。如果你像下边这样写：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a {
+  @include link-colors(blue, red, green);
+}
+
+//Sass最终生成的是：
+
+a { color: blue; }
+a:hover { color: red; }
+a:visited { color: green; }
+</code></pre></div></div>
+
+<p>当你@include混合器时，有时候可能会很难区分每个参数是什么意思，参数之间是一个什么样的顺序。为了解决这个问题，<code class="highlighter-rouge">sass</code>允许通过语法<code class="highlighter-rouge">$name: value</code>的形式指定每个参数的值。这种形式的传参，参数顺序就不必再在乎了，只需要保证没有漏掉参数即可：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a {
+    @include link-colors(
+      $normal: blue,
+      $visited: green,
+      $hover: red
+  );
+}
+</code></pre></div></div>
+
+<p>尽管给混合器加参数来实现定制很好，但是有时有些参数我们没有定制的需要，这时候也需要赋值一个变量就变成很痛苦的事情了。所以<code class="highlighter-rouge">sass</code>允许混合器声明时给参数赋默认值。</p>
+
+<h4 id="默认值传参">默认值传参</h4>
+
+<p>为了在<code class="highlighter-rouge">@include</code>混合器时不必传入所有的参数，我们可以给参数指定一个默认值。参数默认值使用<code class="highlighter-rouge">$name: default-value</code>的声明形式，默认值可以是任何有效的<code class="highlighter-rouge">css</code>属性值，甚至是其他参数的引用，如下代码：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@mixin link-colors(
+    $normal,
+    $hover: $normal,
+    $visited: $normal
+  )
+{
+  color: $normal;
+  &amp;:hover { color: $hover; }
+  &amp;:visited { color: $visited; }
+}
+</code></pre></div></div>
+
+<p>如果像下边这样调用：<code class="highlighter-rouge">@include link-colors(red)</code> <code class="highlighter-rouge">$hover</code>和<code class="highlighter-rouge">$visited</code>也会被自动赋值为<code class="highlighter-rouge">red</code>。</p>
+
+<p>混合器只是<code class="highlighter-rouge">sass</code>样式重用特性中的一个。我们已经了解到混合器主要用于样式展示层的重用，如果你想重用语义化的类呢？这就涉及<code class="highlighter-rouge">sass</code>的另一个重要的重用特性：选择器继承。</p>
+
+<h3 id="选择器继承">选择器继承</h3>
+
+<p>​	实现继承 @extend</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//通过选择器继承继承样式</span>
+<span class="nc">.error</span> <span class="p">{</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">red</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#fdd</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.seriousError</span> <span class="p">{</span>
+  <span class="k">@extend</span> <span class="nc">.error</span><span class="p">;</span>
+  <span class="nl">border-width</span><span class="p">:</span> <span class="m">3px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>在上边的代码中，<code class="highlighter-rouge">.seriousError</code>将会继承样式表中任何位置处为<code class="highlighter-rouge">.error</code>定义的所有样式。以<code class="highlighter-rouge">class="seriousError"</code> 修饰的<code class="highlighter-rouge">html</code>元素最终的展示效果就好像是<code class="highlighter-rouge">class="seriousError error"</code>。相关元素不仅会拥有一个<code class="highlighter-rouge">3px</code>宽的边框，而且这个边框将变成红色的，这个元素同时还会有一个浅红色的背景，因为这些都是在<code class="highlighter-rouge">.error</code>里边定义的样式。</p>
+
+<p><code class="highlighter-rouge">.seriousError</code>不仅会继承<code class="highlighter-rouge">.error</code>自身的所有样式，任何跟<code class="highlighter-rouge">.error</code>有关的组合选择器样式也会被<code class="highlighter-rouge">.seriousError</code>以组合选择器的形式继承，如下代码:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//.seriousError从.error继承样式
+.error a{  //应用到.seriousError a
+  color: red;
+  font-weight: 100;
+}
+h1.error { //应用到hl.seriousError
+  font-size: 1.2rem;
+}
+</code></pre></div></div>
+
+<p>如上所示，在<code class="highlighter-rouge">class="seriousError"</code>的<code class="highlighter-rouge">html</code>元素内的超链接也会变成红色和粗体</p>
+
+<h4 id="何时使用继承">何时使用继承</h4>
+
+<p>​	想象一下你正在编写一个页面，给<code class="highlighter-rouge">html</code>元素添加类名，你发现你的某个类（比如说<code class="highlighter-rouge">.seriousError</code>）另一个类（比如说<code class="highlighter-rouge">.error</code>）的细化。你会怎么做？</p>
+
+<ul>
+  <li>你可以为这两个类分别写相同的样式，但是如果有大量的重复怎么办？使用<code class="highlighter-rouge">sass</code>时，我们提倡的就是不要做重复的工作。</li>
+  <li>你可以使用一个选择器组（比如说<code class="highlighter-rouge">.error</code><code class="highlighter-rouge">.seriousError</code>）给这两个选择器写相同的样式。如果.error的所有样式都在同一个地方，这种做法很好，但是如果是分散在样式表的不同地方呢？再这样做就困难多了。</li>
+  <li>你可以使用一个混合器为这两个类提供相同的样式，但当<code class="highlighter-rouge">.error</code>的样式修饰遍布样式表中各处时，这种做法面临着跟使用选择器组一样的问题。这两个类也不是恰好有相同的 样式。你应该更清晰地表达这种关系。</li>
+  <li>综上所述你应该使用<code class="highlighter-rouge">@extend</code>。让<code class="highlighter-rouge">.seriousError</code>从<code class="highlighter-rouge">.error</code>继承样式，使两者之间的关系非常清晰。更重要的是无论你在样式表的哪里使用<code class="highlighter-rouge">.error</code><code class="highlighter-rouge">.seriousError</code>都会继承其中的样式。</li>
+</ul>
+
+<h4 id="继承的高级用法">继承的高级用法</h4>
+
+<p>​	定义了一个名为<code class="highlighter-rouge">disabled</code>的类，样式修饰使它看上去像一个灰掉的超链接。通过继承a这一超链接元素来实现：</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.disabled</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">gray</span><span class="p">;</span>
+  <span class="k">@extend</span> <span class="nt">a</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>关于<code class="highlighter-rouge">@extend</code>有两个要点你应该知道。</p>
+
+<ul>
+  <li>跟混合器相比，继承生成的<code class="highlighter-rouge">css</code>代码相对更少。因为继承仅仅是重复选择器，而不会重复属性，所以使用继承往往比混合器生成的<code class="highlighter-rouge">css</code>体积更小。如果你非常关心你站点的速度，请牢记这一点。</li>
+  <li>继承遵从<code class="highlighter-rouge">css</code>层叠的规则。当两个不同的<code class="highlighter-rouge">css</code>规则应用到同一个<code class="highlighter-rouge">html</code>元素上时，并且这两个不同的<code class="highlighter-rouge">css</code>规则对同一属性的修饰存在不同的值，<code class="highlighter-rouge">css</code>层叠规则会决定应用哪个样式。相当直观：通常权重更高的选择器胜出，如果权重相同，定义在后边的规则胜出。</li>
+</ul>
+
+<p>避免以下的用法</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.foo .bar { @extend .baz; }
+.bip .baz { a: b; }
+</code></pre></div></div>
+
+<h2 id="if">if</h2>
+
+<p>当 <code class="highlighter-rouge">@if</code> 的表达式返回值不是 <code class="highlighter-rouge">false</code> 或者 <code class="highlighter-rouge">null</code> 时，条件成立，输出 <code class="highlighter-rouge">{}</code> 内的代码：</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="k">@if</span> <span class="m">1</span> <span class="o">+</span> <span class="m">1</span> <span class="o">==</span> <span class="m">2</span> <span class="p">{</span> <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span><span class="p">;</span> <span class="p">}</span>
+  <span class="k">@if</span> <span class="m">5</span> <span class="o">&lt;</span> <span class="m">3</span> <span class="p">{</span> <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">dotted</span><span class="p">;</span> <span class="p">}</span>
+  <span class="k">@if</span> <span class="n">null</span>  <span class="p">{</span> <span class="nl">border</span><span class="p">:</span> <span class="m">3px</span> <span class="nb">double</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>编译为</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="for">@for</h2>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">3</span> <span class="p">{</span>
+  <span class="nc">.item-</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">2em</span> <span class="o">*</span> <span class="nv">$i</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>编译为</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.item-1</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.item-2</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">4em</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.item-3</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">6em</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="each">@each</h2>
+
+<p><code class="highlighter-rouge">@each</code> 将变量 <code class="highlighter-rouge">$var</code> 作用于值列表中的每一个项目，然后输出结果，例如：</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@each</span> <span class="nv">$animal</span> <span class="n">in</span> <span class="n">puma</span><span class="o">,</span> <span class="n">sea-slug</span><span class="o">,</span> <span class="n">egret</span><span class="o">,</span> <span class="n">salamander</span> <span class="p">{</span>
+  <span class="nc">.</span><span class="si">#{</span><span class="nv">$animal</span><span class="si">}</span><span class="nc">-icon</span> <span class="p">{</span>
+    <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('/images/</span><span class="si">#{</span><span class="nv">$animal</span><span class="si">}</span><span class="sx">.png')</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>编译为</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.puma-icon</span> <span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('/images/puma.png')</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.sea-slug-icon</span> <span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('/images/sea-slug.png')</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.egret-icon</span> <span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('/images/egret.png')</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.salamander-icon</span> <span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('/images/salamander.png')</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="while">while</h2>
+
+<p><code class="highlighter-rouge">@while</code> 指令重复输出格式直到表达式返回结果为 <code class="highlighter-rouge">false</code>。这样可以实现比 <code class="highlighter-rouge">@for</code> 更复杂的循环，只是很少会用到。例如：</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$i</span><span class="p">:</span> <span class="m">6</span><span class="p">;</span>
+<span class="k">@while</span> <span class="nv">$i</span> <span class="o">&gt;</span> <span class="m">0</span> <span class="p">{</span>
+  <span class="nc">.item-</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">2em</span> <span class="o">*</span> <span class="nv">$i</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nv">$i</span><span class="p">:</span> <span class="nv">$i</span> <span class="o">-</span> <span class="m">2</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cm">/*结果*/</span>
+<span class="nc">.item-6</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">12em</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nc">.item-4</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">8em</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nc">.item-2</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">4em</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="参考链接">参考链接</h2>
+
+<p>https://www.sass.hk/skill/</p>
+
+<p>css</p>
+
+<p>将过度效果显示为0.5秒,transition : all 0.5s;</p>
+
+
+  </section>
+</article>
+
+<section>
+
+            <div class="content-play">
+              <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">打赏一个呗</a></p>
+              <div class="hide_box-play"></div>
+              <div class="shang_box-play">
+                <a class="shang_close-play" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img src="/images/payimg/close.jpg" alt="取消" /></a>
+                <div class="shang_tit-play">
+                  <p>感谢您的支持，我会继续努力的!</p>
+                </div>
+                <div class="shang_payimg">
+                    <img src="/images/payimg/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+                </div>
+              <div class="shang_payimg">    
+                    <img src="/images/payimg/weipayimg.jpg" alt="扫码支持" title="扫一扫" />
+                </div>
+                <div class="pay_explain">扫码打赏，你说多少就多少</div>
+                <div class="shang_payselect">
+                  <div class="pay_item checked" data-id="alipay">
+                    <span class="pay_logo"><img src="/images/payimg/alipay.jpg" alt="支付宝" /></span>
+                  </div>
+                  <div class="pay_item" data-id="weipay">
+                    <span class="pay_logo"><img src="/images/payimg/wechat.jpg" alt="微信" /></span>
+                  </div>
+                </div>
+                <div class="shang_info-play">
+                  <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+                </div>
+              </div>
+            </div>
+            <script type="text/javascript">
+            function dashangToggle(){
+              $(".hide_box-play").fadeToggle();
+              $(".shang_box-play").fadeToggle();
+            }
+            </script>
+
+            <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';"></div>
+
+            <style type="text/css">
+              .content-play{width:80%;margin-top: 20px;margin-bottom: 10px;height:40px;}
+              .hide_box-play{z-index:999;filter:alpha(opacity=50);background:#666;opacity: 0.5;-moz-opacity: 0.5;left:0;top:0;height:99%;width:100%;position:fixed;display:none;}
+              .shang_box-play{width:540px;height:540px;padding:10px;background-color:#fff;border-radius:10px;position:fixed;z-index:1000;left:50%;top:50%;margin-left:-280px;margin-top:-280px;border:1px dotted #dedede;display:none;}
+              .shang_box-play img{border:none;border-width:0;}
+              .dashang{display:block;width:100px;margin:5px auto;height:25px;line-height:25px;padding:10px;background-color:#E74851;color:#fff;text-align:center;text-decoration:none;border-radius:10px;font-weight:bold;font-size:16px;transition: all 0.3s;}
+              .dashang:hover{opacity:0.8;padding:15px;font-size:18px;}
+              .shang_close-play{float:right;display:inline-block;
+                margin-right: 10px;margin-top: 20px;
+              }
+              .shang_logo{display:block;text-align:center;margin:20px auto;}
+              .shang_tit-play{width: 100%;height: 75px;text-align: center;line-height: 66px;color: #a3a3a3;font-size: 16px;background: url('/images/payimg/cy-reward-title-bg.jpg');font-family: 'Microsoft YaHei';margin-top: 7px;margin-right:2px;}
+              .shang_tit-play p{color:#a3a3a3;text-align:center;font-size:16px;}
+              .shang_payimg{width:140px;padding:10px;padding-left: 80px; /*border:6px solid #EA5F00;**/margin:0 auto;border-radius:3px;height:140px;display:inline-block;}
+              .shang_payimg img{display:inline-block;margin-right:10px;float:left;text-align:center;width:140px;height:140px; }
+              .pay_explain{text-align:center;margin:10px auto;font-size:12px;color:#545454;}
+              .shang_payselect{text-align:center;margin:0 auto;margin-top:40px;cursor:pointer;height:60px;width:500px;margin-left:110px;}
+              .shang_payselect .pay_item{display:inline-block;margin-right:140px;float:left;}
+              .shang_info-play{clear:both;}
+              .shang_info-play p,.shang_info-play a{color:#C3C3C3;text-align:center;font-size:12px;text-decoration:none;line-height:2em;}
+            </style>
+
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2019/08/CSS3%E5%BC%B9%E6%80%A7%E7%9B%92%E5%AD%90/" data-toggle="tooltip" data-placement="top" title="Flex弹性盒子">上一篇：  <span>Flex弹性盒子</span>
+            </a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/2019/08/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99%E8%B5%84%E6%96%99/" data-toggle="tooltip" data-placement="top" title="《设计原则》">下一篇：  <span>《设计原则》</span>
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+<section class="post-comments">
+
+  
+    <div id="uyan_frame"></div>
+
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=123456"></script>
+
+  
+
+</section>
+
+
+            <section class="footer">
+    <footer>
+        <div class = "footer_div">  
+        <nav class="cover-navigation navigation--social">
+          <ul class="navigation">
+
+          
+          <!-- Weibo -->
+          <li class="navigation__item_social">
+            <a href="http://weibo.com/15518103321" title="@15518103321 的微博" target="_blank">
+              <i class='social fa fa-weibo fa-2x'></i>
+              <span class="label">Weibo</span>
+            </a>
+          </li>
+          
+
+          
+          <!-- Github -->
+          <li class="navigation__item_social">
+            <a href="https://github.com/kssdesummer" title="@kssdesummer 的 Github" target="_blank">
+              <i class='social fa fa-github fa-2x'></i>
+              <span class="label">Github</span>
+            </a>
+          </li>
+          
+          
+          
+
+          
+
+          <!-- RSS -->
+          <li class="navigation__item_social">
+            <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+              <i class='social fa fa-rss fa-2x'></i>
+              <span class="label">RSS</span>
+            </a>
+          </li>
+
+          
+          <!-- Email -->
+          <li class="navigation__item_social">
+            <a href="https://mail.qq.com/cgi-bin/loginpage" title="Contact me">
+              <i class='social fa fa-envelope fa-2x'></i>
+              <span class="label">Email</span>
+            </a>
+          </li>
+          
+
+          </ul>
+        </nav>
+
+        </div>
+
+        <div class = "footer_div">  
+           <p class="copyright text-muted">
+            Copyright &copy; 兄弟会-康竞豪 2019 Theme by <a href="https://kssdesummer.github.io/">Kss</a> |
+            <iframe
+                style="margin-left: 2px; margin-bottom:-5px;"
+                frameborder="0" scrolling="0" width="91px" height="20px"
+                src="https://ghbtns.com/github-btn.html?user=hdd2803&repo=hdd2803.github.io&type=star&count=true" >
+            </iframe>
+            </p>
+        	<div align="right">
+    			<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+          <!-- 访问统计 -->
+          <span id="busuanzi_container_site_pv">
+            本站总访问量
+            <span id="busuanzi_value_site_pv"></span>次
+          </span>
+
+        </div>
+        <div>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+  </body>
+
+</html>

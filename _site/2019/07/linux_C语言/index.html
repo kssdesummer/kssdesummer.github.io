@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>Linux_C语言</title>
+  <meta name="description" content="Linux编辑器：">
+  <meta name="author" content="leopardpan">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Linux_C语言">
+  <meta name="twitter:description" content="Linux编辑器：">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Linux_C语言">
+  <meta property="og:description" content="Linux编辑器：">
+  
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://localhost:4000/2019/07/linux_C%E8%AF%AD%E8%A8%80/">
+  <link rel="alternate" type="application/rss+xml" title="兄弟会-康竞豪" href="http://localhost:4000/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+
+<!-- 站点统计 -->
+  <script
+    async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>
+
+<!-- 百度统计 -->
+  
+
+<!-- google 统计 -->
+  
+
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">        
+      <div class="nav_container">
+         <nav class="nav-menu-item" style = "float:right">
+            <i class="nav-menu-item">
+              <a href="/#blog" title="" class="blog-button">  博客主页
+              </a>
+            </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/archive" title="archive" class="btn-mobile-menu__icon">
+                      学习笔记
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/tags" title="tags" class="btn-mobile-menu__icon">
+                      标签
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/book" title="book" class="btn-mobile-menu__icon">
+                      书籍
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/about" title="about" class="btn-mobile-menu__icon">
+                      关于博主
+                  </a>
+                </i>
+            
+          </nav>
+      </div>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left">            
+            <a href="/#blog" title="前往 兄弟会-康竞豪 的主页" class="blog-button">
+                <div class="img"><img src="/images/avatar.jpg" alt="img"></div>
+                <div class="info">
+                    <div class="info-back">
+                        <h2> 
+                            
+                                Kss
+                            
+                        </h2>
+                        <p>
+                           
+                                Python / 个人学习
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 兄弟会-康竞豪" class="blog-button">兄弟会-康竞豪</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">终生学习者</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">“日事日毕，日清日高”</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        
+
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">博客主页</a></li>
+                
+                  <li class="navigation__item"><a href="/archive" title="archive">学习笔记</a></li>
+                
+                  <li class="navigation__item"><a href="/tags" title="tags">标签</a></li>
+                
+                  <li class="navigation__item"><a href="/book" title="book">书籍</a></li>
+                
+                  <li class="navigation__item"><a href="/about" title="about">关于博主</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <nav class="friend">
+              <ul class="link">
+                  <li class="navigation__item">友情链接 ： </li>
+                
+                  <li class="navigation__item"><a href="/archive" title="dashen">zl</a></li>
+                
+                  <li class="navigation__item"><a href="http://liu-bot.github.io" title="dashen">l-bot</a></li>
+                
+                  <li class="navigation__item"><a href="/book" title="dashen">lizp</a></li>
+                
+                  <li class="navigation__item"><a href="/about" title="dashen">Auk</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-clear"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">Linux_C语言</h1>
+    <div class="post-meta">
+      <img src="/images/calendar.png" width="20px"/> 
+      <time datetime="2019-07-19 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2019-07-19</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
+    </p>
+    </div>
+  </header>
+
+  <section class="post">
+    <h2 id="linux编辑器">Linux编辑器：</h2>
+
+<ul>
+  <li>
+    <p>vim</p>
+  </li>
+  <li>
+    <p>emacs</p>
+  </li>
+  <li>
+    <p>c语言编译器：gcc编译器</p>
+  </li>
+</ul>
+
+<h2 id="c语言基本语法">C语言基本语法：</h2>
+
+<ol>
+  <li>
+    <p>导入头文件</p>
+
+    <p>#include &lt;&gt; 导入系统的</p>
+
+    <ol>
+      <li>stdio.h定义输入输出流</li>
+    </ol>
+
+    <p>#include “ “ 导入文件里的</p>
+  </li>
+  <li>
+    <p>将mian函数与调用函数分开：</p>
+
+    <p>​	在vim里打开多个文件：</p>
+
+    <ol>
+      <li>ESC进入命令行：:sp 新文件的名字</li>
+      <li>ESC进入命令行：ctrl + w + 下箭头，回到原来的的窗口</li>
+      <li>把除了main函数的，函数剪切，函数a行，ESC，a+dd 剪切</li>
+      <li>ESC进入命令行：ctrl + w + 上箭头，新窗口</li>
+      <li>ESC，：p 粘贴</li>
+      <li>ESC进入命令行：ctrl + w + 下箭头，回到原来的的窗口，加上#include “新文件名”</li>
+      <li>ESC,:wqa ，保存所有并退出</li>
+      <li><code class="highlighter-rouge">gcc demo.c -o mian.out</code> 文件单个名字就能运行，-o 表示将编译结果重命名</li>
+    </ol>
+
+    <p>分开编译：</p>
+    <ol>
+      <li>
+        <p><code class="highlighter-rouge">gcc -c demo.c -o max.o</code>	//生成一个中间文件max.o</p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">vim max.h</code> //写上max.o的参数，函数的类型，不要忘了加“；”</p>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. int max(int a,int b);
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>在demo加头文件 <code class="highlighter-rouge">#include "max.h"</code></p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>main函数：</p>
+
+    <ul>
+      <li>
+        <p>主函数：程序运行的时候第一个调用和寻找的函数，main(int argv,char* argc[])</p>
+
+        <p>​	argv：是执行了几个参数</p>
+
+        <p>​	argc[]:执行了什么参数</p>
+
+        <p>​	scanf(“%d”,&amp;a)</p>
+
+        <p>​	printf(“%d”,a)</p>
+      </li>
+      <li>
+        <p>标准的输入、输出、错误流：</p>
+
+        <p>stdout：输出</p>
+
+        <p>stdin：输入</p>
+
+        <p>stderr：错误</p>
+
+        <p>//printf(“input”)</p>
+
+        <p>fprintf(stdout，”input”)往文件里写入，默认</p>
+
+        <p>//scanf(“%d”,&amp;a)代码</p>
+
+        <p>fscanf(stdin,”%d”,&amp;a)键盘输入</p>
+
+        <p>fprintf(stderr,”error”)//标准错误流</p>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="编译较大的源代码">编译较大的源代码：</h2>
+
+<ul>
+  <li>make:
+    <ol>
+      <li>可以把大型的分成很多个模块</li>
+      <li>快速整理和编译源码</li>
+      <li>内部也是使用的gcc</li>
+    </ol>
+  </li>
+  <li>编码过程
+    <ol>
+      <li><code class="highlighter-rouge">make -v</code> //查看是否安装make</li>
+      <li><code class="highlighter-rouge">apt-get install make </code> //没有的话就安装</li>
+      <li><code class="highlighter-rouge">vim Makefile</code> //#注释；接着编写Makefile</li>
+      <li><code class="highlighter-rouge">hello.out:max.o min.o hello.c</code> //生存链接</li>
+      <li>tab（8空格）gcc max.o min.o hello.c -o hello.out</li>
+      <li><code class="highlighter-rouge">max.o:max.c</code></li>
+      <li>tab（8空格）gcc -c max.c</li>
+      <li><code class="highlighter-rouge">min.o:min.c</code></li>
+      <li>tab（8空格）gcc -c min.c</li>
+      <li>make //编译了一个Makefile文件，生成了一个hello.out文件</li>
+    </ol>
+  </li>
+  <li>
+    <p>vim里面的命令：</p>
+
+    <p>​	剪切：命令行模式：ndd，从光标乡下n行</p>
+
+    <p>​	复制：nyy</p>
+
+    <p>​	粘贴：p</p>
+  </li>
+  <li>
+    <p>终端命令：
+删除.o文件：`rm *.o
+echo：命令echo $?</p>
+
+    <p>​		运行完一个文件之后，运行这个，然后返回值为0时表示成功</p>
+
+    <p>​		假如程序里面写的是return 101；在执行.c文件之后，echo得到的值是101，这个时候运行.out &amp;&amp; ls，此时的ls是不会运行的，因为它的echo为101表示的是异常，虽然.out的结果年呢个执行，但之后的连接起来的其他命令不会执行</p>
+  </li>
+</ul>
+
+<h2 id="重定向">重定向：</h2>
+
+<ul>
+  <li>
+    <p>输出流重定向：</p>
+
+    <p>命令 1» a.txt 将输出内容重定向到a.txt；其中1可以不写默认，追加模式</p>
+
+    <p>命令 1&gt; a.txt 	覆盖到a.txt</p>
+  </li>
+  <li>
+    <p>输入流重定向：</p>
+
+    <p>命令 1&lt; a.txt 将a.txt内容输出到命令；其中1可以不写默认</p>
+  </li>
+  <li>
+    <p>错误流重定向</p>
+
+    <p>命令 2 » a.txt 将标准的错误流重定向到a.txt</p>
+  </li>
+</ul>
+
+<h2 id="管道的原理及应用">管道的原理及应用：</h2>
+
+<p>​	管道就是相当与一个既输入又输出的通道，跟grep结合使用</p>
+
+<p>​	grep ：相当于搜索</p>
+
+<p>​	<code class="highlighter-rouge">ls /etc/ | grep ad</code>	//查找etc文件夹里所有带有ad的文件</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>​	a.out</td>
+      <td>b.out	//将a.out的输出结果当作b.out的输入流</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="指针">指针：</h2>
+
+<p>​	即不同函数体间的传值，传值方传数值加取地址符号&amp;a，接收方用指针指向接收值所在的位置*a取值</p>
+
+<p>​	声明一个指针变量：int *a = &amp;a</p>
+
+<h2 id="gdb工具的使用">gdb工具的使用：</h2>
+
+<p>​	用 gcc -g 文件名 编译的文件可以用gdb进行调试</p>
+
+<p>​	gdb进入到调试模式</p>
+
+<p>​	start 开始执行项目</p>
+
+<p>​	回车=重复上一次操作</p>
+
+<p>​	l：查看代码</p>
+
+<p>​	n： 执行下一步</p>
+
+<p>​	p 参数 ：查看参数的值</p>
+
+<p>​	q ：退出</p>
+
+<p>​	bt：函数堆栈，当前使用的函数在上面</p>
+
+<p>​	f n：切换到数字n的堆栈</p>
+
+<p>​	s：查看内存地址</p>
+
+<h2 id="计算机中的数据表示方法">计算机中的数据表示方法：</h2>
+
+<p>​	1bytes = 8bit</p>
+
+<h2 id="内存管理">内存管理：</h2>
+
+<p>​	32位操作系统只能呢个使用4G内存，2的32次幂。</p>
+
+<p>​		cpu的地址总线是32位，寻址空间32位</p>
+
+<p>​		32位：给内存的编号只能到32个二进制位</p>
+
+ 	操作系统会给所有的内存进行编号，编号就是唯一的内存字节的地址
+
+<p>​	内存分配：</p>
+
+<p>​		栈和内存之间的是自由分配内存</p>
+
+<p><img src="/home/k/图片/系统内存分配.png" alt="**系统内存分配**" /></p>
+
+<p>栈：先进后出</p>
+
+
+
+  </section>
+</article>
+
+<section>
+
+            <div class="content-play">
+              <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">打赏一个呗</a></p>
+              <div class="hide_box-play"></div>
+              <div class="shang_box-play">
+                <a class="shang_close-play" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img src="/images/payimg/close.jpg" alt="取消" /></a>
+                <div class="shang_tit-play">
+                  <p>感谢您的支持，我会继续努力的!</p>
+                </div>
+                <div class="shang_payimg">
+                    <img src="/images/payimg/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+                </div>
+              <div class="shang_payimg">    
+                    <img src="/images/payimg/weipayimg.jpg" alt="扫码支持" title="扫一扫" />
+                </div>
+                <div class="pay_explain">扫码打赏，你说多少就多少</div>
+                <div class="shang_payselect">
+                  <div class="pay_item checked" data-id="alipay">
+                    <span class="pay_logo"><img src="/images/payimg/alipay.jpg" alt="支付宝" /></span>
+                  </div>
+                  <div class="pay_item" data-id="weipay">
+                    <span class="pay_logo"><img src="/images/payimg/wechat.jpg" alt="微信" /></span>
+                  </div>
+                </div>
+                <div class="shang_info-play">
+                  <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+                </div>
+              </div>
+            </div>
+            <script type="text/javascript">
+            function dashangToggle(){
+              $(".hide_box-play").fadeToggle();
+              $(".shang_box-play").fadeToggle();
+            }
+            </script>
+
+            <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';"></div>
+
+            <style type="text/css">
+              .content-play{width:80%;margin-top: 20px;margin-bottom: 10px;height:40px;}
+              .hide_box-play{z-index:999;filter:alpha(opacity=50);background:#666;opacity: 0.5;-moz-opacity: 0.5;left:0;top:0;height:99%;width:100%;position:fixed;display:none;}
+              .shang_box-play{width:540px;height:540px;padding:10px;background-color:#fff;border-radius:10px;position:fixed;z-index:1000;left:50%;top:50%;margin-left:-280px;margin-top:-280px;border:1px dotted #dedede;display:none;}
+              .shang_box-play img{border:none;border-width:0;}
+              .dashang{display:block;width:100px;margin:5px auto;height:25px;line-height:25px;padding:10px;background-color:#E74851;color:#fff;text-align:center;text-decoration:none;border-radius:10px;font-weight:bold;font-size:16px;transition: all 0.3s;}
+              .dashang:hover{opacity:0.8;padding:15px;font-size:18px;}
+              .shang_close-play{float:right;display:inline-block;
+                margin-right: 10px;margin-top: 20px;
+              }
+              .shang_logo{display:block;text-align:center;margin:20px auto;}
+              .shang_tit-play{width: 100%;height: 75px;text-align: center;line-height: 66px;color: #a3a3a3;font-size: 16px;background: url('/images/payimg/cy-reward-title-bg.jpg');font-family: 'Microsoft YaHei';margin-top: 7px;margin-right:2px;}
+              .shang_tit-play p{color:#a3a3a3;text-align:center;font-size:16px;}
+              .shang_payimg{width:140px;padding:10px;padding-left: 80px; /*border:6px solid #EA5F00;**/margin:0 auto;border-radius:3px;height:140px;display:inline-block;}
+              .shang_payimg img{display:inline-block;margin-right:10px;float:left;text-align:center;width:140px;height:140px; }
+              .pay_explain{text-align:center;margin:10px auto;font-size:12px;color:#545454;}
+              .shang_payselect{text-align:center;margin:0 auto;margin-top:40px;cursor:pointer;height:60px;width:500px;margin-left:110px;}
+              .shang_payselect .pay_item{display:inline-block;margin-right:140px;float:left;}
+              .shang_info-play{clear:both;}
+              .shang_info-play p,.shang_info-play a{color:#C3C3C3;text-align:center;font-size:12px;text-decoration:none;line-height:2em;}
+            </style>
+
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2019/07/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/" data-toggle="tooltip" data-placement="top" title="Git操作流程">上一篇：  <span>Git操作流程</span>
+            </a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/2019/07/JavaScript%E8%B5%84%E6%96%99/" data-toggle="tooltip" data-placement="top" title="《JavaScript》">下一篇：  <span>《JavaScript》</span>
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+<section class="post-comments">
+
+  
+    <div id="uyan_frame"></div>
+
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=123456"></script>
+
+  
+
+</section>
+
+
+            <section class="footer">
+    <footer>
+        <div class = "footer_div">  
+        <nav class="cover-navigation navigation--social">
+          <ul class="navigation">
+
+          
+          <!-- Weibo -->
+          <li class="navigation__item_social">
+            <a href="http://weibo.com/15518103321" title="@15518103321 的微博" target="_blank">
+              <i class='social fa fa-weibo fa-2x'></i>
+              <span class="label">Weibo</span>
+            </a>
+          </li>
+          
+
+          
+          <!-- Github -->
+          <li class="navigation__item_social">
+            <a href="https://github.com/kssdesummer" title="@kssdesummer 的 Github" target="_blank">
+              <i class='social fa fa-github fa-2x'></i>
+              <span class="label">Github</span>
+            </a>
+          </li>
+          
+          
+          
+
+          
+
+          <!-- RSS -->
+          <li class="navigation__item_social">
+            <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+              <i class='social fa fa-rss fa-2x'></i>
+              <span class="label">RSS</span>
+            </a>
+          </li>
+
+          
+          <!-- Email -->
+          <li class="navigation__item_social">
+            <a href="https://mail.qq.com/cgi-bin/loginpage" title="Contact me">
+              <i class='social fa fa-envelope fa-2x'></i>
+              <span class="label">Email</span>
+            </a>
+          </li>
+          
+
+          </ul>
+        </nav>
+
+        </div>
+
+        <div class = "footer_div">  
+           <p class="copyright text-muted">
+            Copyright &copy; 兄弟会-康竞豪 2019 Theme by <a href="https://kssdesummer.github.io/">Kss</a> |
+            <iframe
+                style="margin-left: 2px; margin-bottom:-5px;"
+                frameborder="0" scrolling="0" width="91px" height="20px"
+                src="https://ghbtns.com/github-btn.html?user=hdd2803&repo=hdd2803.github.io&type=star&count=true" >
+            </iframe>
+            </p>
+        	<div align="right">
+    			<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+          <!-- 访问统计 -->
+          <span id="busuanzi_container_site_pv">
+            本站总访问量
+            <span id="busuanzi_value_site_pv"></span>次
+          </span>
+
+        </div>
+        <div>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+  </body>
+
+</html>

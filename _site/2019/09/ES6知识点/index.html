@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>ES6元素更新</title>
+  <meta name="description" content="声明变量的方法">
+  <meta name="author" content="leopardpan">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ES6元素更新">
+  <meta name="twitter:description" content="声明变量的方法">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ES6元素更新">
+  <meta property="og:description" content="声明变量的方法">
+  
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://localhost:4000/2019/09/ES6%E7%9F%A5%E8%AF%86%E7%82%B9/">
+  <link rel="alternate" type="application/rss+xml" title="兄弟会-康竞豪" href="http://localhost:4000/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+
+<!-- 站点统计 -->
+  <script
+    async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>
+
+<!-- 百度统计 -->
+  
+
+<!-- google 统计 -->
+  
+
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">        
+      <div class="nav_container">
+         <nav class="nav-menu-item" style = "float:right">
+            <i class="nav-menu-item">
+              <a href="/#blog" title="" class="blog-button">  博客主页
+              </a>
+            </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/archive" title="archive" class="btn-mobile-menu__icon">
+                      学习笔记
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/tags" title="tags" class="btn-mobile-menu__icon">
+                      标签
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/book" title="book" class="btn-mobile-menu__icon">
+                      书籍
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/about" title="about" class="btn-mobile-menu__icon">
+                      关于博主
+                  </a>
+                </i>
+            
+          </nav>
+      </div>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left">            
+            <a href="/#blog" title="前往 兄弟会-康竞豪 的主页" class="blog-button">
+                <div class="img"><img src="/images/avatar.jpg" alt="img"></div>
+                <div class="info">
+                    <div class="info-back">
+                        <h2> 
+                            
+                                Kss
+                            
+                        </h2>
+                        <p>
+                           
+                                Python / 个人学习
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 兄弟会-康竞豪" class="blog-button">兄弟会-康竞豪</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">终生学习者</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">“日事日毕，日清日高”</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        
+
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">博客主页</a></li>
+                
+                  <li class="navigation__item"><a href="/archive" title="archive">学习笔记</a></li>
+                
+                  <li class="navigation__item"><a href="/tags" title="tags">标签</a></li>
+                
+                  <li class="navigation__item"><a href="/book" title="book">书籍</a></li>
+                
+                  <li class="navigation__item"><a href="/about" title="about">关于博主</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <nav class="friend">
+              <ul class="link">
+                  <li class="navigation__item">友情链接 ： </li>
+                
+                  <li class="navigation__item"><a href="/archive" title="dashen">zl</a></li>
+                
+                  <li class="navigation__item"><a href="http://liu-bot.github.io" title="dashen">l-bot</a></li>
+                
+                  <li class="navigation__item"><a href="/book" title="dashen">lizp</a></li>
+                
+                  <li class="navigation__item"><a href="/about" title="dashen">Auk</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-clear"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">ES6元素更新</h1>
+    <div class="post-meta">
+      <img src="/images/calendar.png" width="20px"/> 
+      <time datetime="2019-09-15 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2019-09-15</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
+    </p>
+    </div>
+  </header>
+
+  <section class="post">
+    <h3 id="声明变量的方法">声明变量的方法</h3>
+
+<h5 id="var命令">var命令</h5>
+
+<p>全局变量和局部变量，变量提升。</p>
+
+<h5 id="function命令">function命令</h5>
+
+<p>声明函数</p>
+
+<h5 id="let命令">let命令</h5>
+
+<ul>
+  <li>声明变量，不存在变量提升，变量在声明之前不可用，同一作用域不能重复声明变量。</li>
+  <li>块级作用域，用大括号包起来，可以声明函数，函数声明类似于var。</li>
+</ul>
+
+<h5 id="const命令">const命令</h5>
+
+<ul>
+  <li>声明常量，声明后立即初始化，块级作用域，不存在常量提升，常量在声明之前不可用，同一作用域不能重复声明。</li>
+  <li>const命令表示指向的那个内存地址所保存的数据不得改动，并不是变量的值不得改动。</li>
+  <li>简单类型数据：常量；引用类型：指针固定，地址不变。</li>
+</ul>
+
+<h3 id="变量的解构">变量的解构</h3>
+
+<ul>
+  <li>按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。</li>
+  <li>“模式匹配”，只要等号两边的模式相同，左边的变量就会被赋予对应的值。</li>
+  <li>如果解构失败，变量的值就等于undefined。</li>
+</ul>
+
+<h5 id="数组">数组</h5>
+
+<ul>
+  <li>从数组中提取值，按照对应位置，对变量赋值。</li>
+  <li>按次序排列的，变量的取值由它的位置决定。</li>
+  <li>可以设置默认值，但是只有当一个数组成员严格等于undefined，默认值才会生效。</li>
+</ul>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="n">a</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+<span class="k">let</span> <span class="n">b</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+<span class="k">let</span> <span class="n">c</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
+<span class="c1">//等同于</span>
+<span class="k">let</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span> <span class="p">=</span> <span class="p">[</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">];</span>
+
+<span class="c1">//不完全解构</span>
+<span class="k">let</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span> <span class="p">=</span> <span class="p">[</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">];</span>
+<span class="n">x</span> <span class="c1">// 1</span>
+<span class="n">y</span> <span class="c1">// 2</span>
+</code></pre></div></div>
+
+<h5 id="对象">对象</h5>
+
+<ul>
+  <li>对象的属性没有次序，变量必须与属性同名，才能取到正确的值。</li>
+  <li>对象的解构赋值，先找到同名属性，然后再赋给对应的变量。真正被赋值的是后者，而不是前者。</li>
+  <li>解构赋值可以取到继承的属性。</li>
+  <li>可以指定默认值。属性严格等于undefined，默认值生效。</li>
+</ul>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="p">{</span> <span class="nx">foo</span><span class="p">,</span> <span class="nx">bar</span> <span class="p">}</span> <span class="o">=</span> <span class="p">{</span> <span class="na">foo</span><span class="p">:</span> <span class="dl">'</span><span class="s1">aaa</span><span class="dl">'</span><span class="p">,</span> <span class="na">bar</span><span class="p">:</span> <span class="dl">'</span><span class="s1">bbb</span><span class="dl">'</span> <span class="p">};</span>
+<span class="c1">//等同于</span>
+<span class="c1">// let{ 同名属性: 变量 } = { 同名属性: 值 }</span>
+<span class="kd">let</span> <span class="p">{</span> <span class="na">foo</span><span class="p">:</span> <span class="nx">foo</span><span class="p">,</span> <span class="na">bar</span><span class="p">:</span> <span class="nx">bar</span> <span class="p">}</span> <span class="o">=</span> <span class="p">{</span> <span class="na">foo</span><span class="p">:</span> <span class="dl">'</span><span class="s1">aaa</span><span class="dl">'</span><span class="p">,</span> <span class="na">bar</span><span class="p">:</span> <span class="dl">'</span><span class="s1">bbb</span><span class="dl">'</span> <span class="p">};</span>
+
+<span class="c1">//对象解构还可以写成：</span>
+<span class="c1">//let { 对象属性, 对象属性} = 对象名</span>
+<span class="kd">let</span> <span class="p">{</span> <span class="nx">log</span><span class="p">,</span> <span class="nx">sin</span><span class="p">,</span> <span class="nx">cos</span> <span class="p">}</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">;</span>
+<span class="c1">// 可以直接使用log, sin, cos </span>
+</code></pre></div></div>
+
+<h4 id="字符串">字符串</h4>
+
+<p>字符串也可以解构赋值。因为此时，字符串被转换成了一个类似数组的对象。还可以对length属性解构赋值。</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">e</span><span class="p">]</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span><span class="p">;</span>
+<span class="nx">a</span> <span class="c1">// "h"</span>
+<span class="nx">b</span> <span class="c1">// "e"</span>
+
+<span class="kd">let</span> <span class="p">{</span><span class="na">length</span> <span class="p">:</span> <span class="nx">len</span><span class="p">}</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span><span class="p">;</span>
+<span class="nx">len</span> <span class="c1">// 5</span>
+</code></pre></div></div>
+
+<h4 id="数值和布尔值">数值和布尔值</h4>
+
+<ul>
+  <li>如果等号右边是数值和布尔值，则会先转为对象。</li>
+  <li>解构赋值的规则是，只要等号右边的值不是对象或数组，就先将其转为对象。</li>
+  <li>由于undefined和null无法转为对象，所以对它们进行解构赋值，都会报错。</li>
+</ul>
+
+<h5 id="函数参数">函数参数</h5>
+
+<ul>
+  <li>可以设置默认值。如果解构失败，x和y等于默认值。</li>
+</ul>
+
+<h5 id="圆括号">圆括号</h5>
+
+<ul>
+  <li>以下三种解构赋值不得使用圆括号：
+ （1）变量声明语句
+ （2）函数参数
+ （3）赋值语句的模式</li>
+  <li>可以使用圆括号的情况只有一种：赋值语句的非模式部分，可以使用圆括号。</li>
+</ul>
+
+<h5 id="用途">用途</h5>
+
+<p>（1）交换变量的值
+ （2）从函数返回多个值
+ （3）函数参数的定义
+ （4）提取 JSON 数据
+ （5）函数参数的默认值
+ （6）遍历 Map 结构
+ （7）输入模块的指定方法</p>
+
+<h4 id="字符串-1">字符串</h4>
+
+<h5 id="字符">字符</h5>
+
+<p>将码点放入大括号，就能正确解读被放入的字符。</p>
+
+<h5 id="遍历器">遍历器</h5>
+
+<p>for…of循环遍历</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">arr</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">};</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="k">of</span> <span class="nx">arr</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h5 id="模板字符串">模板字符串</h5>
+
+<ul>
+  <li>模板字符串（template string）是增强版的字符串，用反引号（`）标识。</li>
+  <li>它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。</li>
+  <li>如果在模板字符串中需要使用反引号，则前面要用反斜杠转义。</li>
+  <li>如果使用模板字符串表示多行字符串，所有的空格、换行和缩进都会被保留在输出之中，可以使用trim方法消除。</li>
+  <li>模板字符串中嵌入变量，需要将变量名写在${}之中。大括号内部可以放入任意的 JavaScript 表达式，可以进行运算，以及引用对象属性。</li>
+  <li>还能调用函数。如果模板字符串中的变量没有声明，将报错。</li>
+</ul>
+
+<h5 id="标签模板">标签模板</h5>
+
+<ul>
+  <li>模板字符串的功能，不仅仅是上面这些。它可以紧跟在一个函数名后面，该函数将被调用来处理这个模板字符串。这被称为“标签模板”功能（tagged template）。</li>
+  <li>标签模板其实不是模板，而是函数调用的一种特殊形式。“标签”指的就是函数，紧跟在后面的模板字符串就是它的参数。</li>
+  <li>如果模板字符里面有变量，就不是简单的调用了，而是会将模板字符串先处理成多个参数，再调用函数。</li>
+</ul>
+
+<h4 id="新增方法">新增方法</h4>
+
+<h5 id="string对象上的方法">String对象上的方法</h5>
+
+<ul>
+  <li>String.fromCodePoint()方法，可以识别大于0xFFFF的字符。</li>
+  <li>String.raw()方法，可以作为处理模板字符串的基本方法，它会将所有变量替换，而且对斜杠进行转义，方便下一步作为字符串来使用。也可以作为正常的函数使用，它的第一个参数，应该是一个具有raw属性的对象，且raw属性的值应该是一个数组。</li>
+</ul>
+
+<h5 id="字符串实例方法">字符串实例方法</h5>
+
+<ul>
+  <li>codePointAt()方法，能够正确处理 4 个字节储存的字符，返回一个字符的码点。于那些两个字节储存的常规字符，它的返回结果与charCodeAt()方法相同。</li>
+  <li>normalize()方法，确定一个字符串是否包含在另一个字符串中。可以接受一个参数来指定normalize的方式，参数的四个可选值如下：
+    <ul>
+      <li>NFC，默认参数，表示“标准等价合成”（Normalization Form Canonical Composition），返回多个简单字符的合成字符。所谓“标准等价”指的是视觉和语义上的等价。</li>
+      <li>NFD，表示“标准等价分解”（Normalization Form Canonical Decomposition），即在标准等价的前提下，返回合成字符分解的多个简单字符。</li>
+      <li>NFKC，表示“兼容等价合成”（Normalization Form Compatibility  Composition），返回合成字符。所谓“兼容等价”指的是语义上存在等价，但视觉上不等价，比如“囍”和“喜喜”。（这只是用来举例，normalize方法不能识别中文。）</li>
+      <li>NFKD，表示“兼容等价分解”（Normalization Form Compatibility Decomposition），即在兼容等价的前提下，返回合成字符分解的多个简单字符。</li>
+    </ul>
+  </li>
+  <li>includes()：返回布尔值，表示是否找到了参数字符串。</li>
+  <li>startsWith()：返回布尔值，表示参数字符串是否在原字符串的头部。</li>
+  <li>endsWith()：返回布尔值，表示参数字符串是否在原字符串的尾部。
+    <ul>
+      <li>以上三个方法都可以传入第二个参数，表示开始搜索的位置。使用第二个参数n时，endsWith的行为与其他两个方法有所不同。它针对前n个字符，而其他两个方法针对从第n个位置直到字符串结束。</li>
+    </ul>
+  </li>
+  <li>repeat方法返回一个新字符串，表示将原字符串重复n次。
+    <ul>
+      <li>参数如果是小数，会被取整，如果是负数或者Infinity，会报错。参数NaN等同于 0。如果repeat的参数是字符串，则会先转换成数字。</li>
+    </ul>
+  </li>
+  <li>padStart()，padEnd() 方法，如果某个字符串不够指定长度，会在头部或尾部补全。
+    <ul>
+      <li>padStart()用于头部补全，padEnd()用于尾部补全。</li>
+      <li>padStart()和padEnd()一共接受两个参数，第一个参数是字符串补全生效的最大长度，第二个参数是用来补全的字符串。如果省略第二个参数，默认使用空格补全长度。</li>
+    </ul>
+  </li>
+  <li>trimStart()和trimEnd()方法，它们的行为与trim()一致。
+    <ul>
+      <li>trimStart()消除字符串头部的空格，trimEnd()消除尾部的空格，trim()消除全部的空格。它们返回的都是新字符串，不会修改原始字符串。</li>
+    </ul>
+  </li>
+  <li>matchAll()方法返回一个正则表达式在当前字符串的所有匹配。</li>
+</ul>
+
+<h4 id="正则">正则</h4>
+
+<h4 id="generator-函数">Generator 函数</h4>
+
+<ul>
+  <li>Generator 函数就是一个封装的异步任务，或者说是异步任务的容器。异步操作需要暂停的地方，都用yield语句注明。</li>
+  <li>next方法的作用是分阶段执行Generator函数。每次调用next方法，会返回一个对象，表示当前阶段的信息（value属性和done属性）。</li>
+  <li>value属性是yield语句后面表达式的值，表示当前阶段的值；done属性是一个布尔值，表示 Generator 函数是否执行完毕，即是否还有下一个阶段。</li>
+</ul>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//Generator 函数</span>
+<span class="kd">function</span><span class="o">*</span> <span class="nx">gen</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h6 id="yield">yield*</h6>
+
+<ul>
+  <li>yield*表示在 Generator 函数内部，调用另一个 Generator 函数。</li>
+  <li>Generator 函数内部还可以部署错误处理代码，捕获函数体外抛出的错误。</li>
+  <li>yield*语句也可以跟一个异步遍历器。</li>
+</ul>
+
+<h6 id="thunk-函数">Thunk 函数</h6>
+
+<ul>
+  <li>编译器的“传名调用”实现，往往是将参数放到一个临时函数之中，再将这个临时函数传入函数体。这个临时函数就叫做 Thunk 函数。它是“传名调用”的一种实现策略，用来替换某个表达式。</li>
+  <li>在 JavaScript 语言中，Thunk 函数替换的不是表达式，而是多参数函数，将其替换成一个只接受回调函数作为参数的单参数函数。</li>
+  <li>任何函数，只要参数有回调函数，就能写成 Thunk 函数的形式。</li>
+  <li>Thunk 函数是自动执行 Generator 函数的一种方法。Thunk 函数现在可以用于 Generator 函数的自动流程管理。</li>
+</ul>
+
+<h4 id="async函数">async函数</h4>
+
+<ul>
+  <li>async函数就是 Generator 函数的语法糖，将 Generator 函数的星号（*）替换成async，将yield替换成await。</li>
+  <li>async函数返回一个 Promise 对象，可以使用then方法添加回调函数。当函数执行的时候，一旦遇到await就会先返回，等到异步操作完成，再接着执行函数体内后面的语句。</li>
+  <li>async函数内部return语句返回的值，会成为then方法回调函数的参数。只有async函数内部的异步操作执行完，才会执行then方法指定的回调函数。</li>
+  <li>async函数内部抛出错误，会导致返回的 Promise 对象变为reject状态。抛出的错误对象会被catch方法回调函数接收到。</li>
+  <li>正常情况下，await命令后面是一个 Promise 对象，返回该对象的结果。如果不是 Promise 对象，就直接返回对应的值。</li>
+  <li>另一种情况是，await命令后面是一个thenable对象（即定义then方法的对象），那么await会将其等同于 Promise 对象。</li>
+  <li>await命令后面的 Promise 对象如果变为reject状态，则reject的参数会被catch方法的回调函数接收到。
+ <strong>async函数对 Generator 函数的改进，体现在以下四点：</strong>
+ （1）内置执行器。调用函数，它就会自动执行，输出最后结果。
+ （2）更好的语义。async表示函数里有异步操作，await表示紧跟在后面的表达式需要等待结果。
+ （3）更广的适用性。async函数的await命令后面，可以是 Promise 对象和原始类型的值（数值、字符串和布尔值，但这时会自动转成立即 resolved 的 Promise 对象）。
+ （4）返回值是 Promise。async函数的返回值是 Promise 对象，可以用then方法指定下一步的操作。
+ <strong>使用注意点：</strong></li>
+  <li>await命令后面的Promise对象，运行结果可能是rejected，所以最好把await命令放在try…catch代码块中。</li>
+  <li>多个await命令后面的异步操作，如果不存在继发关系，最好让它们同时触发。</li>
+  <li>await命令只能用在async函数之中，如果用在普通函数，就会报错。</li>
+  <li>async 函数可以保留运行堆栈。</li>
+</ul>
+
+<h5 id="遍历">遍历</h5>
+
+<ul>
+  <li>异步遍历器的最大的语法特点，就是调用遍历器的next方法，返回的是一个 Promise 对象。</li>
+  <li>for…of循环用于遍历同步的 Iterator 接口。新引入的for await…of循环，则是用于遍历异步的 Iterator 接口。</li>
+</ul>
+
+<h5 id="函数">函数</h5>
+
+<ul>
+  <li>异步 Generator 函数出现以后，JavaScript 就有了<strong>四种函数形式</strong>：普通函数、async 函数、Generator 函数和异步 Generator 函数。注意区分每种函数的不同之处。</li>
+  <li>基本上，如果是一系列按照顺序执行的异步操作（比如读取文件，然后写入新内容，再存入硬盘），可以使用 async 函数；如果是一系列产生相同数据结构的异步操作（比如一行一行读取文件），可以使用异步 Generator 函数。</li>
+</ul>
+
+
+  </section>
+</article>
+
+<section>
+
+            <div class="content-play">
+              <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">打赏一个呗</a></p>
+              <div class="hide_box-play"></div>
+              <div class="shang_box-play">
+                <a class="shang_close-play" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img src="/images/payimg/close.jpg" alt="取消" /></a>
+                <div class="shang_tit-play">
+                  <p>感谢您的支持，我会继续努力的!</p>
+                </div>
+                <div class="shang_payimg">
+                    <img src="/images/payimg/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+                </div>
+              <div class="shang_payimg">    
+                    <img src="/images/payimg/weipayimg.jpg" alt="扫码支持" title="扫一扫" />
+                </div>
+                <div class="pay_explain">扫码打赏，你说多少就多少</div>
+                <div class="shang_payselect">
+                  <div class="pay_item checked" data-id="alipay">
+                    <span class="pay_logo"><img src="/images/payimg/alipay.jpg" alt="支付宝" /></span>
+                  </div>
+                  <div class="pay_item" data-id="weipay">
+                    <span class="pay_logo"><img src="/images/payimg/wechat.jpg" alt="微信" /></span>
+                  </div>
+                </div>
+                <div class="shang_info-play">
+                  <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+                </div>
+              </div>
+            </div>
+            <script type="text/javascript">
+            function dashangToggle(){
+              $(".hide_box-play").fadeToggle();
+              $(".shang_box-play").fadeToggle();
+            }
+            </script>
+
+            <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';"></div>
+
+            <style type="text/css">
+              .content-play{width:80%;margin-top: 20px;margin-bottom: 10px;height:40px;}
+              .hide_box-play{z-index:999;filter:alpha(opacity=50);background:#666;opacity: 0.5;-moz-opacity: 0.5;left:0;top:0;height:99%;width:100%;position:fixed;display:none;}
+              .shang_box-play{width:540px;height:540px;padding:10px;background-color:#fff;border-radius:10px;position:fixed;z-index:1000;left:50%;top:50%;margin-left:-280px;margin-top:-280px;border:1px dotted #dedede;display:none;}
+              .shang_box-play img{border:none;border-width:0;}
+              .dashang{display:block;width:100px;margin:5px auto;height:25px;line-height:25px;padding:10px;background-color:#E74851;color:#fff;text-align:center;text-decoration:none;border-radius:10px;font-weight:bold;font-size:16px;transition: all 0.3s;}
+              .dashang:hover{opacity:0.8;padding:15px;font-size:18px;}
+              .shang_close-play{float:right;display:inline-block;
+                margin-right: 10px;margin-top: 20px;
+              }
+              .shang_logo{display:block;text-align:center;margin:20px auto;}
+              .shang_tit-play{width: 100%;height: 75px;text-align: center;line-height: 66px;color: #a3a3a3;font-size: 16px;background: url('/images/payimg/cy-reward-title-bg.jpg');font-family: 'Microsoft YaHei';margin-top: 7px;margin-right:2px;}
+              .shang_tit-play p{color:#a3a3a3;text-align:center;font-size:16px;}
+              .shang_payimg{width:140px;padding:10px;padding-left: 80px; /*border:6px solid #EA5F00;**/margin:0 auto;border-radius:3px;height:140px;display:inline-block;}
+              .shang_payimg img{display:inline-block;margin-right:10px;float:left;text-align:center;width:140px;height:140px; }
+              .pay_explain{text-align:center;margin:10px auto;font-size:12px;color:#545454;}
+              .shang_payselect{text-align:center;margin:0 auto;margin-top:40px;cursor:pointer;height:60px;width:500px;margin-left:110px;}
+              .shang_payselect .pay_item{display:inline-block;margin-right:140px;float:left;}
+              .shang_info-play{clear:both;}
+              .shang_info-play p,.shang_info-play a{color:#C3C3C3;text-align:center;font-size:12px;text-decoration:none;line-height:2em;}
+            </style>
+
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2019/09/PHP%E8%B5%84%E6%96%99/" data-toggle="tooltip" data-placement="top" title="《PHP基础》">上一篇：  <span>《PHP基础》</span>
+            </a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/2019/09/React%E6%A1%86%E6%9E%B6%E7%9F%A5%E8%AF%86%E7%82%B9/" data-toggle="tooltip" data-placement="top" title="React知识点总结">下一篇：  <span>React知识点总结</span>
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+<section class="post-comments">
+
+  
+    <div id="uyan_frame"></div>
+
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=123456"></script>
+
+  
+
+</section>
+
+
+            <section class="footer">
+    <footer>
+        <div class = "footer_div">  
+        <nav class="cover-navigation navigation--social">
+          <ul class="navigation">
+
+          
+          <!-- Weibo -->
+          <li class="navigation__item_social">
+            <a href="http://weibo.com/15518103321" title="@15518103321 的微博" target="_blank">
+              <i class='social fa fa-weibo fa-2x'></i>
+              <span class="label">Weibo</span>
+            </a>
+          </li>
+          
+
+          
+          <!-- Github -->
+          <li class="navigation__item_social">
+            <a href="https://github.com/kssdesummer" title="@kssdesummer 的 Github" target="_blank">
+              <i class='social fa fa-github fa-2x'></i>
+              <span class="label">Github</span>
+            </a>
+          </li>
+          
+          
+          
+
+          
+
+          <!-- RSS -->
+          <li class="navigation__item_social">
+            <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+              <i class='social fa fa-rss fa-2x'></i>
+              <span class="label">RSS</span>
+            </a>
+          </li>
+
+          
+          <!-- Email -->
+          <li class="navigation__item_social">
+            <a href="https://mail.qq.com/cgi-bin/loginpage" title="Contact me">
+              <i class='social fa fa-envelope fa-2x'></i>
+              <span class="label">Email</span>
+            </a>
+          </li>
+          
+
+          </ul>
+        </nav>
+
+        </div>
+
+        <div class = "footer_div">  
+           <p class="copyright text-muted">
+            Copyright &copy; 兄弟会-康竞豪 2019 Theme by <a href="https://kssdesummer.github.io/">Kss</a> |
+            <iframe
+                style="margin-left: 2px; margin-bottom:-5px;"
+                frameborder="0" scrolling="0" width="91px" height="20px"
+                src="https://ghbtns.com/github-btn.html?user=hdd2803&repo=hdd2803.github.io&type=star&count=true" >
+            </iframe>
+            </p>
+        	<div align="right">
+    			<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+          <!-- 访问统计 -->
+          <span id="busuanzi_container_site_pv">
+            本站总访问量
+            <span id="busuanzi_value_site_pv"></span>次
+          </span>
+
+        </div>
+        <div>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+  </body>
+
+</html>
