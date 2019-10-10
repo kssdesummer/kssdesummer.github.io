@@ -1,13 +1,10 @@
 # Kssdesummer
 
-### Web学习笔记
-[Sublime Text3的Markdown配置](https://hdd2803.github.io/2017/11/WebNote_Sublime_Text/)
+### Python学习笔记
 
-[Jekyll搭建个人博客](https://hdd2803.github.io/2017/11/WebNote_Jekyll/)
+### Php学习笔记
 
-[Spring注解汇总](http://hdd2803.github.io/2017/11/JavaNote_Spring注解汇总/)
-
-
+### HTML学习笔记
 
 #### 感谢   
 
