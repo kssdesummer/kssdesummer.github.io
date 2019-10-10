@@ -1,0 +1,400 @@
+I"�?<h1 id="html标签"><code class="highlighter-rouge">html</code>标签</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>标签</th>
+      <th>效果</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;marquee&gt;...&lt;/marquee&gt;</code></td>
+      <td>普通卷动</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;marquee behavior=slide&gt;...&lt;/marquee&gt;</code></td>
+      <td>滑动</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;marquee behavior=scroll&gt;...&lt;/marquee&gt;</code></td>
+      <td>预设卷动</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;marquee behavior=alternate&gt;...&lt;/marquee&gt;</code></td>
+      <td>来回卷动</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;marquee direction=down&gt;...&lt;/marquee&gt;</code></td>
+      <td>向下卷动</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;marquee direction=up&gt;...&lt;/marquee&gt;</code></td>
+      <td>向上卷动</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;marquee direction=right&gt;&lt;/marquee&gt;</code></td>
+      <td>向右卷动</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;marquee direction=’left’&gt;&lt;/marquee&gt;</code></td>
+      <td>向左卷动</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;marquee loop=2&gt;...&lt;/marquee&gt;</code></td>
+      <td>卷动次数</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;marquee width=180&gt;...&lt;/marquee&gt;</code></td>
+      <td>设定宽度</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;marquee height=30&gt;...&lt;/marquee&gt;</code></td>
+      <td>设定高度</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;marquee bgcolor=FF0000&gt;...&lt;/marquee&gt;</code></td>
+      <td>设定背景颜色</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;marquee scrollamount=30&gt;...&lt;/marquee&gt;</code></td>
+      <td>设定滚动速度</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;marquee scrolldelay=300&gt;...&lt;/marquee&gt;</code></td>
+      <td>设定卷动时间</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;marquee οnmοuseοver="this.stop()"&gt;...&lt;/marquee&gt;</code></td>
+      <td>鼠标经过上面时停止滚动</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;marquee οnmοuseοver="this.start()"&gt;...&lt;/marquee&gt;</code></td>
+      <td>鼠标离开时开始滚动</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;h1&gt;</code>…<code class="highlighter-rouge">&lt;/h1&gt;</code></td>
+      <td>标题字(最大)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;h6&gt;</code>…<code class="highlighter-rouge">&lt;/h6&gt;</code></td>
+      <td>标题字(最小)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;b&gt;</code>…<code class="highlighter-rouge">&lt;/b&gt;</code></td>
+      <td>粗体字</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;strong&gt;</code>…<code class="highlighter-rouge">&lt;/strong&gt;</code></td>
+      <td>粗体字(强调) （同上效果略同）</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;i&gt;</code>…<code class="highlighter-rouge">&lt;/i&gt;</code></td>
+      <td>斜体字</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;em&gt;</code>…<code class="highlighter-rouge">&lt;/em&gt;</code></td>
+      <td>斜体字(强调)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;dfn&gt;</code>…<code class="highlighter-rouge">&lt;/dfn&gt;</code></td>
+      <td>斜体字(表示定义)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;u&gt;</code>…<code class="highlighter-rouge">&lt;/u&gt;</code></td>
+      <td>底线</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;ins&gt;</code>…<code class="highlighter-rouge">&lt;/ins&gt;</code></td>
+      <td>底线(表示插入文字)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;strike&gt;</code>…<code class="highlighter-rouge">&lt;/strike&gt;</code></td>
+      <td>横线</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;s&gt;</code>…<code class="highlighter-rouge">&lt;/s&gt;</code></td>
+      <td>删除线</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;del&gt;</code>…<code class="highlighter-rouge">&lt;/del&gt;</code></td>
+      <td>删除线(表示删除)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;kbd&gt;</code>…<code class="highlighter-rouge">&lt;/kbd&gt;</code></td>
+      <td>键盘文字</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;tt&gt;</code>…<code class="highlighter-rouge">&lt;/tt&gt;</code></td>
+      <td>打字体</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;xmp&gt;</code>…<code class="highlighter-rouge">&lt;/xmp&gt;</code></td>
+      <td>固定宽度字体(在文件中空白、换行、定位功能有效)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;plaintext&gt;</code>…<code class="highlighter-rouge">&lt;/plaintext&gt;</code></td>
+      <td>固定宽度字体(不执行标记符号)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;listing&gt;</code>…<code class="highlighter-rouge">&lt;/listing&gt;</code></td>
+      <td>固定宽度小字体</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;hr size=’9’&gt;</code></td>
+      <td>水平线(设定大小)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;hr width=’80%’&gt;</code></td>
+      <td>水平线(设定宽度)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;hr color=’ff0000’&gt;</code></td>
+      <td>水平线(设定颜色)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;br&gt;</code></td>
+      <td>(换行)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;nobr&gt;</code>…<code class="highlighter-rouge">&lt;/nobr&gt;</code></td>
+      <td>水域(不换行)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;p&gt;</code>…<code class="highlighter-rouge">&lt;/p&gt;</code></td>
+      <td>水域(段落)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;center&gt;</code>…<code class="highlighter-rouge">&lt;/center&gt;</code></td>
+      <td>置中</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;base href=位址&gt;</code></td>
+      <td>(预设好连结路径)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;a href=位址&gt;</code><code class="highlighter-rouge">&lt;/a&gt;</code></td>
+      <td>外部连结</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;a href=位址 target=’_blank’&gt;</code><code class="highlighter-rouge">&lt;/a&gt;</code></td>
+      <td>外部连结(另开新视窗)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;a href=位址 target=’_top’&gt;</code><code class="highlighter-rouge">&lt;/a&gt;</code></td>
+      <td>外部连结(全视窗连结)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;a href=位址 target=’页框名’&gt;</code><code class="highlighter-rouge">&lt;/a&gt;</code></td>
+      <td>外部连结(在指定页框连结)</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;img src=图片位址&gt;</code></td>
+      <td>贴图</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;img src=图片位址 width=’180’&gt;</code></td>
+      <td>设定图片宽度</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;img src=图片位址 height=’30’&gt;</code></td>
+      <td>设定图片高度</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;img src=图片位址 alt=’提示文字’&gt;</code></td>
+      <td>设定图片提示文字</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;img src=图片位址’ border=’1’&gt;</code></td>
+      <td>设定图片边框</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;bgsound src=MID音乐档位址&gt;</code></td>
+      <td>背景音乐设定</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;table aling=left&gt;</code>…<code class="highlighter-rouge">&lt;/table&gt;</code></td>
+      <td>表格位置,置左</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;table aling=center&gt;</code>…<code class="highlighter-rouge">&lt;/table&gt;</code></td>
+      <td>表格位置,置中</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;table background=图片路径&gt;</code>…<code class="highlighter-rouge">&lt;/table&gt;</code></td>
+      <td>背景图片的URL=就是路径网址</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;table border=边框大小&gt;</code>…<code class="highlighter-rouge">&lt;/table&gt;</code></td>
+      <td>设定表格边框大小(使用数字)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;table bgcolor=颜色码&gt;</code>…<code class="highlighter-rouge">&lt;/table&gt;</code></td>
+      <td>设定表格的背景颜色</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;table borderclor=颜色码&gt;</code>…<code class="highlighter-rouge">&lt;/table&gt;</code></td>
+      <td>设定表格边框的颜色</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;table borderclordark=颜色码&gt;</code>…<code class="highlighter-rouge">&lt;/table&gt;</code></td>
+      <td>设定表格暗边框的颜色</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;table borderclorlight=颜色码&gt;</code>…<code class="highlighter-rouge">&lt;/table&gt;</code></td>
+      <td>设定表格亮边框的颜色</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;table cellpadding=参数&gt;</code>…<code class="highlighter-rouge">&lt;/table&gt;</code></td>
+      <td>指定内容与格线之间的间距(使用数字)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;table cellspacing=参数&gt;</code>…<code class="highlighter-rouge">&lt;/table&gt;</code></td>
+      <td>指定格线与格线之间的距离(使用数字)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;table cols=参数&gt;</code>…<code class="highlighter-rouge">&lt;/table&gt;</code></td>
+      <td>指定表格的栏数</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;table frame=参数&gt;</code>…<code class="highlighter-rouge">&lt;/table&gt;</code></td>
+      <td>设定表格外框线的显示方式</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;table width=宽度&gt;</code>…<code class="highlighter-rouge">&lt;/table&gt;</code></td>
+      <td>指定表格的宽度大小(使用数字)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;table height=高度&gt;</code>…<code class="highlighter-rouge">&lt;/table&gt;</code></td>
+      <td>指定表格的高度大小(使用数字)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;td colspan=参数&gt;</code>…<code class="highlighter-rouge">&lt;/td&gt;</code></td>
+      <td>指定储存格合并栏的栏数(使用数字)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;td rowspan=参数&gt;</code>…<code class="highlighter-rouge">&lt;/td&gt;</code></td>
+      <td>指定储存格合并列的列数(使用数字)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>分割视窗
+标签|效果</p>
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><code class="highlighter-rouge">&lt;frameset cols="20%,\*"&gt;</code></td>
+          <td>左右分割,将左边框架分割大小为20%右边框架的大小浏览器会自动调整</td>
+        </tr>
+        <tr>
+          <td><code class="highlighter-rouge">&lt;frameset rows="20%,\*"&gt;</code></td>
+          <td>上下分割,将上面框架分割大小为20%下面框架的大小浏览器会自动调整</td>
+        </tr>
+        <tr>
+          <td><code class="highlighter-rouge">&lt;frameset cols="20%,\*"&gt;</code></td>
+          <td>分割左右两个框架</td>
+        </tr>
+        <tr>
+          <td><code class="highlighter-rouge">&lt;frameset cols="20%,\*,20%"&gt;</code></td>
+          <td>分割左中右三个框架</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<p>分割上下两个框架
+标签|效果</p>
+<ul>
+  <li>|-
+<code class="highlighter-rouge">&lt;frameset rows="20%,\*,20%"&gt;</code>|分割上中下三个框架,属性：cols 垂直切割窗口（如左右分割两个窗口）接受整数值，百分数，*（*代表占用余下空间）数值的个数代表分成的部分数目，要以逗号分隔。
+<code class="highlighter-rouge">frameborder</code> |设置框架的边框，其值有0不要边框，1要边框。
+<code class="highlighter-rouge">border</code> |设置框架边框厚度
+<code class="highlighter-rouge">framespacing</code> |表示框架与框架间保留空白的距离
+<code class="highlighter-rouge">frame</code> |元素（单标签）
+语法格式：
+<code class="highlighter-rouge">&lt;frame name="" src="url" scrolling="yes/no" noresize&gt;</code>
+属性：</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>名称</th>
+      <th>功能</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">name</code></td>
+      <td>框架名称，指定框架来做连接的目标窗口。</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">src</code></td>
+      <td>框架中要显示的网页文当url地址，每个个框架要对应一个html文挡。</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">scrolling</code></td>
+      <td>是否显示滚动条，yes/no,auto是自动。</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">noresize</code></td>
+      <td>设置不让使用者改变这个框架的大小，</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">noframe</code></td>
+      <td>元素,指定当使用了框架的页面在不支持框架的浏览器中打开时显示的信息,语法格式：  <code class="highlighter-rouge">&lt;noframe&gt;  ......&lt;/noframe&gt;</code></td>
+    </tr>
+    <tr>
+      <td>表单</td>
+      <td><code class="highlighter-rouge">&lt;form&gt;&lt;/form&gt;</code>,语法格式：<code class="highlighter-rouge">&lt;form action="url" method="get/post"&gt; ...&lt;input type=submit&gt;&lt;input type=reset&gt;&lt;/form&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">method</code></td>
+      <td>有两种提交方式get,post</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">action</code></td>
+      <td>是指明处理该表单的程序位置，这样表单所填的资料才能传给cgi做处里，可设定此参数为action=”mailto:lwr8494@163.com” 这样此表单所填的资料将会发送到这个邮箱地址。</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">method</code></td>
+      <td>是指传送信息给cgi等网络程序的方式。可选post方法，get方法，post方法容许传送大量信息。get方法只接受低于1k的信息。申请表单用的是post搜索引擎用的是get</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>注解
+标签|效果</p>
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><code class="highlighter-rouge">&lt;A HREF TARGET&gt;</code></td>
+          <td>指定超连结的分割视窗</td>
+        </tr>
+        <tr>
+          <td><code class="highlighter-rouge">&lt;A HREF=#锚的名称&gt;</code></td>
+          <td>指定锚名称的超连结</td>
+        </tr>
+        <tr>
+          <td><code class="highlighter-rouge">&lt;A HREF&gt;</code></td>
+          <td>指定超连结</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+:ET

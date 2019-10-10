@@ -1,0 +1,100 @@
+I"�<h4 id="常用软件的安装使用">常用软件的安装使用</h4>
+
+<p>​		Ubuntu系统的安装</p>
+
+<p>​		vim安装及使用</p>
+
+<p>​		markdown编辑软件安装及使用</p>
+
+<p>​		Teambition教程及使用。</p>
+
+<p>​		ProcessOn 软件教程及练习。</p>
+
+<p>​		幕布的文档及练习，完成幕布、流程图、简历的制作。</p>
+
+<h4 id="linux-c语言">Linux C语言</h4>
+
+<p>​	要求：</p>
+
+<p>​			通过视频熟悉并使用Linux环境下的C语言</p>
+
+<p>​			写简单函数实现排序、两数相加</p>
+
+<h4 id="github">Github</h4>
+
+<p>​	要求：</p>
+
+<p>​			熟悉使用git相关操作</p>
+
+<h4 id="javascript">JavaScript</h4>
+
+<p>​	要求：</p>
+
+<p>​			熟悉js语法</p>
+
+<p>​			用纯js语言写自定义函数、打印图形、邮箱验证/手机号、获取本地时间、轮播图</p>
+
+<h4 id="nodejs">NodeJs</h4>
+
+<p>​	要求：</p>
+
+<p>​			熟悉使用nodejs语法，以及模块</p>
+
+<p>​			搭建文件服务器</p>
+
+<p>​			搭建多人聊天室</p>
+
+<h4 id="html元素标签css样式标签">HTML元素标签/CSS样式标签</h4>
+
+<p>​	要求：</p>
+
+<p>​			熟悉html元素标签与css样式标签</p>
+
+<p>​			用三种样式设计同一网页样式</p>
+
+<h4 id="flex弹性盒子没要求">Flex弹性盒子（没要求）</h4>
+
+<p>​	要求：熟悉弹性盒子与响应式布局</p>
+
+<h4 id="sass">sass</h4>
+
+<p>​	要求：</p>
+
+<p>​			熟悉sass的语法并使用</p>
+
+<p>​			写栅格系统/春夏秋冬主题变换</p>
+
+<h4 id="bootstrop4">Bootstrop4</h4>
+
+<p>​	要求：</p>
+
+<p>​			熟悉并使用bootstrop4的语法</p>
+
+<p>​			用bootstrop4仿写一个网站</p>
+
+<h4 id="jquery设计原则">jQuery、设计原则</h4>
+
+<p>​	要求：</p>
+
+<p>​			熟悉并掌握jquery语法事件与设计原则</p>
+
+<p>​			登陆注册，并返回登录数据</p>
+
+<p>​			仿写第一个慕课网</p>
+
+<h4 id="reactes6">React、ES6</h4>
+
+<p>​	要求：</p>
+
+<p>​			熟悉使用react组件化开发思想与ES6语法特性</p>
+
+<p>​			用React仿写慕课网</p>
+
+<h4 id="github-pages">Github Pages</h4>
+
+<p>​	要求：</p>
+
+<p>​			熟悉github pages、jekyll文档</p>
+
+<p>​			搭建自己的博客</p>
+:ET

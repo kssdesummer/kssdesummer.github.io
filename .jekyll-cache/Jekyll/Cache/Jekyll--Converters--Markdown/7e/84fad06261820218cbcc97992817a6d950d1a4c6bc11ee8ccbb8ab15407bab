@@ -1,0 +1,336 @@
+I"�9<h1 id="html">HTML</h1>
+
+<h3 id="标签">标签</h3>
+
+<h3 id="a-链接-">a 链接 :</h3>
+
+<p>​	定义:锚元素,标签定义超链接，用于从一张页面链接到另一张页面。</p>
+
+<p>​	<a>标签最重要的属性是 <code class="highlighter-rouge">href </code>属性，它指示链接的目标。</a></p>
+
+<p>​	支持HTML中的全局属性和事件属性</p>
+
+<p>​	使用 <code class="highlighter-rouge">href </code>属性：<code class="highlighter-rouge">download, hreflang, media, rel, target , type</code> 属性才可以使用。</p>
+
+<ul>
+  <li>未被访问的链接带有下划线而且是蓝色的</li>
+  <li>已被访问的链接带有下划线而且是紫色的</li>
+  <li>活动链接带有下划线而且是红色的</li>
+</ul>
+
+<p>提示：被链接页面通常显示在当前浏览器窗口中，除非您规定了另一个目标（target 属性）。</p>
+
+<p>提示：请使用 <code class="highlighter-rouge">CSS</code> 来设置链接的样式。</p>
+
+<p><a>标签里能够设置的属性:</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>属性</th>
+      <th>值</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.w3school.com.cn/tags/att_a_charset.asp">charset</a></td>
+      <td><em>char_encoding</em></td>
+      <td>HTML5 中不支持。规定被链接文档的字符集。</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3school.com.cn/tags/att_a_hreflang.asp">hreflang</a></td>
+      <td><em>language_code</em></td>
+      <td>规定被链接文档的语言。</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3school.com.cn/tags/att_a_coords.asp">coords</a></td>
+      <td><em>coordinates</em></td>
+      <td>HTML5 中不支持。规定链接的坐标。</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3school.com.cn/tags/att_a_download.asp">download</a></td>
+      <td><em>filename</em></td>
+      <td>规定被下载的超链接目标。</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3school.com.cn/tags/att_a_href.asp">href</a></td>
+      <td><em>URL</em></td>
+      <td>规定链接指向的页面的 URL。</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3school.com.cn/tags/att_a_media.asp">media</a></td>
+      <td>media_query</td>
+      <td>规定被链接文档是为何种媒介/设备优化的。</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3school.com.cn/tags/att_a_name.asp">name</a></td>
+      <td><em>section_name</em></td>
+      <td>HTML5 中不支持。规定锚的名称。</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3school.com.cn/tags/att_a_rel.asp">rel</a></td>
+      <td><em>text</em></td>
+      <td>规定当前文档与被链接文档之间的关系。</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3school.com.cn/tags/att_a_rev.asp">rev</a></td>
+      <td><em>text</em></td>
+      <td>HTML5 中不支持。规定被链接文档与当前文档之间的关系。</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3school.com.cn/tags/att_a_shape.asp">shape</a></td>
+      <td>default rect circle poly</td>
+      <td>HTML5 中不支持。规定链接的形状。</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3school.com.cn/tags/att_a_target.asp">target</a></td>
+      <td>_blank _parent _self _top framename</td>
+      <td>规定在何处打开链接文档。</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3school.com.cn/tags/att_a_type.asp">type</a></td>
+      <td><em>MIME type</em></td>
+      <td>规定被链接文档的的 MIME 类型。</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="abbr-缩写元素">abbr 缩写元素:</h3>
+
+<p>​	定义:缩写元素,用于展示缩写，并且可以通过可选的 <code class="highlighter-rouge">title</code> 属性提供完整的描述。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">"People's Republic of China"</span><span class="nt">&gt;</span>PRC<span class="nt">&lt;/abbr&gt;</span> was founded in 1949.
+</code></pre></div></div>
+
+<h3 id="acronym-首字母缩写">acronym 首字母缩写:</h3>
+
+<p>​	定义: 标记一个首字母缩写,与title属性结合使用</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;acronym</span> <span class="na">title=</span><span class="s">"World Wide Web"</span><span class="nt">&gt;</span>WWW<span class="nt">&lt;/acronym&gt;</span>
+</code></pre></div></div>
+
+<h3 id="address-文档文章信息">address 文档/文章信息:</h3>
+
+<p>​	定义:&lt;address&gt; 标签定义文档或文章的作者/拥有者的联系信息。</p>
+
+<p>​	位于 &lt;body&gt; 元素内，则它表示文档联系信息,位于 &lt;article&gt; 元素内，则它表示文章的联系信息。</p>
+
+<p>​	元素中的文本通常呈现为斜体。大多数浏览器会在 address 元素前后添加折行</p>
+
+<p>提示：&lt;address&gt; 标签不应该用于描述通讯地址，除非它是联系信息的一部分。</p>
+
+<p>提示：&lt;address&gt; 元素通常连同其他信息被包含在 &lt;footer&gt; 元素中。</p>
+
+<h3 id="applet-">applet :</h3>
+
+ 	标签定义嵌入的对象 applet,过时标签,现都是用object。
+
+<h3 id="caption-表格标题">caption 表格标题:</h3>
+
+<p>​	定义表格标题,后面必须跟在table之后,标题在表格之上居中对齐</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;table</span> <span class="na">border=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--    可用align调整对齐方式,但一般都在css设置--&gt;</span>
+    <span class="nt">&lt;caption</span> <span class="na">align=</span><span class="s">" "</span><span class="nt">&gt;</span>this is a table<span class="nt">&lt;/caption&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Month<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Savings<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>January<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>$100<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</code></pre></div></div>
+
+<h3 id="短元素标签">短元素标签:</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>标签</th>
+      <th>定义</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[<em>](http://www.w3school.com.cn/tags/tag_em.asp)</em></td>
+      <td>把文本定义为强调的内容。</td>
+    </tr>
+    <tr>
+      <td>[<strong>](http://www.w3school.com.cn/tags/tag_strong.asp)</strong></td>
+      <td>把文本定义为语气<em>更强</em>的强调的内容。</td>
+    </tr>
+    <tr>
+      <td>[<dfn>](http://www.w3school.com.cn/tags/tag_dfn.asp)</dfn></td>
+      <td>定义一个定义项目。</td>
+    </tr>
+    <tr>
+      <td>[<code>](http://www.w3school.com.cn/tags/tag_code.asp)</code></td>
+      <td>定义计算机代码文本。</td>
+    </tr>
+    <tr>
+      <td>[<samp>](http://www.w3school.com.cn/tags/tag_samp.asp)</samp></td>
+      <td>定义样本文本。</td>
+    </tr>
+    <tr>
+      <td>[<kbd>](http://www.w3school.com.cn/tags/tag_kbd.asp)</kbd></td>
+      <td>定义键盘文本。它表示文本是从键盘上键入的。它经常用在与计算机相关的文档或手册中。</td>
+    </tr>
+    <tr>
+      <td>[<var>](http://www.w3school.com.cn/tags/tag_var.asp)</var></td>
+      <td>定义变量。您可以将此标签与 &lt;pre&gt; 及 <code> 标签配合使用。</code></td>
+    </tr>
+    <tr>
+      <td>[<cite>](http://www.w3school.com.cn/tags/tag_cite.asp)</cite></td>
+      <td>定义引用。可使用该标签对参考文献的引用进行定义，比如书籍或杂志的标题。</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="datalist-下拉选项">datalist 下拉选项:</h3>
+
+<p>​	与input结合使用,实现下拉框</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"myCar"</span> <span class="na">list=</span><span class="s">"cars"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;datalist</span> <span class="na">id=</span><span class="s">"cars"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"BMW"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Ford"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Volvo"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/datalist&gt;</span>
+</code></pre></div></div>
+
+<h3 id="列表项dldddt">列表项(dl.dd.dt)</h3>
+
+<p>​	结合使用<a href="http://www.w3school.com.cn/tags/tag_dl.asp">&lt;dl&gt;</a>定义列表<a href="http://www.w3school.com.cn/tags/tag_dt.asp">&lt;dt&gt;</a>定义列表中的项目和<a href="http://www.w3school.com.cn/tags/tag_dd.asp">&lt;dd&gt;</a>(描述列表中的项目)</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dl&gt;</span>
+   <span class="nt">&lt;dt&gt;</span>计算机<span class="nt">&lt;/dt&gt;</span>
+   <span class="nt">&lt;dd&gt;</span>用来计算的仪器 ... ...<span class="nt">&lt;/dd&gt;</span>
+   <span class="nt">&lt;dt&gt;</span>显示器<span class="nt">&lt;/dt&gt;</span>
+   <span class="nt">&lt;dd&gt;</span>以视觉方式显示信息的装置 ... ...<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+</code></pre></div></div>
+
+<h3 id="details-详情">details 详情:</h3>
+
+<p>​	点击得到详情,与summary结合使用,summary是总结标签</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;details&gt;</span>
+<span class="nt">&lt;summary&gt;</span>Copyright 2011.<span class="nt">&lt;/summary&gt;</span>
+<span class="nt">&lt;p&gt;</span>All pages and graphics on this web site are the property of W3School.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/details&gt;</span>
+</code></pre></div></div>
+
+<h3 id="dialog-对话框-">dialog 对话框 :</h3>
+
+<p>​	定义对话框或窗口,双标签</p>
+
+<h3 id="dir-目录列表">dir 目录列表:</h3>
+
+<p>​	定义一个目录列表,废弃标签</p>
+
+<h3 id="embed-插入一个区域">embed 插入一个区域:</h3>
+
+<p>在固定位置插入一个区块,可添加属性设置插入源,以及区块的类型宽高</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">属性</th>
+      <th style="text-align: left">值</th>
+      <th style="text-align: left">描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="http://www.w3school.com.cn/tags/att_embed_height.asp">height</a></td>
+      <td style="text-align: left"><em>pixels</em></td>
+      <td style="text-align: left">设置嵌入内容的高度。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="http://www.w3school.com.cn/tags/att_embed_src.asp">src</a></td>
+      <td style="text-align: left"><em>url</em></td>
+      <td style="text-align: left">嵌入内容的 URL。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="http://www.w3school.com.cn/tags/att_embed_type.asp">type</a></td>
+      <td style="text-align: left"><em>type</em></td>
+      <td style="text-align: left">定义嵌入内容的类型。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="http://www.w3school.com.cn/tags/att_embed_width.asp">width</a></td>
+      <td style="text-align: left"><em>pixels</em></td>
+      <td style="text-align: left">设置嵌入内容的宽度。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>### fieldset 表单标题:</p>
+
+<p>fieldset 元素可将表单内的相关元素分组。</p>
+
+<fieldset> 标签将表单内容的一部分打包，生成一组相关表单的字段。
+
+当一组表单元素放到 <fieldset> 标签内时，浏览器会以特殊方式来显示它们，它们可能有特殊的边界、3D 效果，或者甚至可创建一个子表单来处理这些元素。
+
+<fieldset> 标签没有必需的或唯一的属性。
+
+[ 标签](http://www.w3school.com.cn/tags/tag_legend.asp)为 fieldset 元素定义标题。
+
+```html
+<form> 
+	<fieldset>
+		<legend>健康信息</legend> 
+		身高：<input type="text" /><br /> 
+		体重：<input type="text" /><br /> 
+	</fieldset>
+</form>
+```
+
+### figcaption 标题
+
+​	<figcaption> 标签定义 [figure](http://www.w3school.com.cn/tags/tag_figure.asp) 元素的标题（caption）。
+
+​	"figcaption" 元素应该被置于 "figure" 元素的第一个或最后一个子元素的位置。
+
+​	<figure>标签规定独立的流内容(图片/照片/代码等)
+
+​	figure 元素的内容应该与主内容相关，但如果被删除，则不应对文档流产生影响。
+
+```html
+<figure>
+  <figcaption>黄浦江上的的卢浦大桥</figcaption>
+  <img src="shanghai_lupu_bridge.jpg" width="350" height="234" />
+</figure>
+```
+
+### font 字体
+
+<font> 规定文本的字体、字体尺寸、字体颜色
+
+```html
+<font size="3" color="red">This is some text!</font>
+<font size="2" color="blue">This is some text!</font>
+<font face="verdana" color="green">This is some text!</font>
+```
+
+| 属性                                                        | 值                               | 描述                                           |
+| :---------------------------------------------------------- | :------------------------------- | :--------------------------------------------- |
+| [color](http://www.w3school.com.cn/tags/att_font_color.asp) | *rgb(x,x,x)**#xxxxxx**colorname* | 不赞成使用。请使用样式取代它。规定文本的颜色。 |
+| [face](http://www.w3school.com.cn/tags/att_font_face.asp)   | *font_family*                    | 不赞成使用。请使用样式取代它。规定文本的字体。 |
+| [size](http://www.w3school.com.cn/tags/att_font_size.asp)   | *number*                         | 不赞成使用。请使用样式取代它。规定文本的大小   |
+
+### footer 页脚
+
+<footer> 标签定义文档或节的页脚。
+
+<footer> 元素应当含有其包含元素的信息。
+
+页脚通常包含文档的作者、版权信息、使用条款链接、联系信息等等。
+
+您可以在一个文档中使用多个 <footer> 元素。
+
+</footer></footer></footer></font></figure></figcaption></fieldset></fieldset></fieldset>
+:ET

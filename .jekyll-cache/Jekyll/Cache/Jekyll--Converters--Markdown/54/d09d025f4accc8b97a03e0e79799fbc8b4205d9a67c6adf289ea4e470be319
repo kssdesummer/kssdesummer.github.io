@@ -1,0 +1,895 @@
+I"�9<h1 id="前端三大框架">前端三大框架</h1>
+
+<ul>
+  <li>Angular.js(最早的)</li>
+  <li>Vue.js（最火的，关注人多）</li>
+  <li>React.js（最流行，用的人较多）</li>
+</ul>
+
+<h2 id="组件化">组件化：</h2>
+
+<p>什么是模块化：是从代码的角度分析，把一些可复用代码，抽离成单个模块，便于羡慕维护和开发</p>
+
+<p>什么是组件化：是从UI界面的角度分析</p>
+
+<p>组件化的好处：随着项目规模增大，组件越来越多，使用方便，拼接完整的网页</p>
+
+<p>React实现：以js来组成，需要熟悉ES6</p>
+
+<h2 id="虚拟domvirtual-document-object-model">虚拟DOM（Virtual Document Object Model）</h2>
+
+<ul>
+  <li>
+    <p>DOM：浏览器中的概念，用js对象来表示页面上的元素，并提供操作DOM对象的API</p>
+  </li>
+  <li>
+    <p>React中的虚拟DOM：是框架中的概念，是程序员 用JS对象来模拟页面上的DOM和DOM嵌套</p>
+  </li>
+  <li>
+    <p>为什么要使用虚拟DOM：为了实现页面中，DOM元素的高效更新</p>
+
+    <ul>
+      <li>
+        <p>获取DOM树</p>
+
+        <ul>
+          <li>
+            <div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//模拟div元素</span>
+<span class="c1">//html</span>
+<span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="dl">'</span><span class="s1">mydiv</span><span class="dl">'</span> <span class="nx">title</span><span class="o">=</span><span class="dl">'</span><span class="s1">test</span><span class="dl">'</span> <span class="nx">data</span><span class="o">-</span><span class="nx">index</span><span class="o">=</span><span class="dl">'</span><span class="s1">0</span><span class="dl">'</span><span class="o">&gt;</span><span class="err">测试</span>
+	<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">react</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>                  
+<span class="c1">//react</span>
+<span class="kd">const</span> <span class="nx">div</span> <span class="o">=</span><span class="p">{</span>
+    <span class="na">tagName</span><span class="p">:</span><span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">,</span> <span class="c1">//标签</span>
+    <span class="na">attrs</span><span class="p">:{</span>					<span class="c1">//	属性</span>
+        <span class="na">id</span><span class="p">:</span><span class="dl">'</span><span class="s1">mydiv</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">title</span><span class="p">:</span><span class="dl">'</span><span class="s1">test</span><span class="dl">'</span><span class="p">,</span>
+        <span class="dl">'</span><span class="s1">data-index</span><span class="dl">'</span><span class="p">:</span><span class="dl">'</span><span class="s1">0</span><span class="dl">'</span>
+    <span class="p">},</span><span class="na">childrens</span><span class="p">:[</span>		<span class="c1">//子节点内容</span>
+        <span class="dl">'</span><span class="s1">测试</span><span class="dl">'</span><span class="p">,{</span>
+            <span class="na">tagName</span><span class="p">:</span><span class="dl">'</span><span class="s1">p</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">attrs</span><span class="p">:{},</span>
+            <span class="na">childrens</span><span class="p">:[</span>
+                <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+                  
+<span class="c1">//假如只改了测试111，那只需要更改childrens里面的值就行了</span>
+</code></pre></div>            </div>
+          </li>
+        </ul>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* 通过新旧DOM树的对比，看那些更改
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="diff算法">Diff算法</h2>
+
+<ul>
+  <li>tree diff ：新旧两颗DOM树，==逐层对比==的过程，对比完成找到需要更新的元素</li>
+  <li>component diff ：在进行tree diff时，==组件间对比==，相同的暂时不需要更新，不同的移除旧组件，更新新组件</li>
+  <li>element diff ： 在组件对比的时候，两个组件类型相同，需要元素==对比==</li>
+</ul>
+
+<h1 id="react简介">React简介</h1>
+
+<ul>
+  <li>
+    <p>React</p>
+
+    <p>– 使用 create-react-app 创建一个 React 应用
+– JSX 混合使用了 HTML 和 JavaScript 在 React 组件的方法中定义它的输出
+– React 中,组件、示例和元素是不同的概念
+– ReactDOM.render() 是 React 应用连接 DOM 的入口方法
+– JavaScript 内建函数可以在 JSX 中使用</p>
+
+    <p>​		map遍历， 可以被用来把列表成员渲染成 HTML 的元素</p>
+  </li>
+  <li>
+    <p>ES6</p>
+
+    <ul>
+      <li>根据不同的使用场景,选择用 const 和 let 来声明变量
+  	– 在 React 应用中尽量使用 const 来声明变量</li>
+      <li>箭头函数可以用来是你的函数变得更简洁</li>
+      <li>在 React 中,通过继承类的方式来声明组件</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="node-和-npm">node 和 npm</h2>
+
+<p>使用react需要提前安装node 8.0以上和npm5.0以上</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>查看当前版本
+node -v
+npm -v
+没有则安装：
+sudo apt-get install -g nodejs
+版本更新：
+sudo npm update npm -g
+</code></pre></div></div>
+
+<h2 id="零配置搭建react应用">零配置搭建React应用</h2>
+
+<p>确保node和npm没有问题的情况下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g create-react-app
+create-react-app --version
+create-react-app myapp
+cd myapp/
+npm start
+</code></pre></div></div>
+
+<p>项目内容：</p>
+
+<ul>
+  <li>README.md: 包含了这个项目的一些基本的指令和介绍。</li>
+  <li>node_modules/: 这个文件夹包含了所有通过 npm 安装的 node 包。在你使用了 create-
+react-app 之后,就有一堆 node 包已经被安装了。只需要在命令行用 npm 安装或者卸载 node 包就可以。</li>
+  <li>package.json: 这个文件包含了 node 包依赖列表和一些其他的项目配置。</li>
+  <li>.gitignore: 这个文件包含了所有不应该添加到 git 仓库(repository)中的文件和文件
+夹。他们应该只能存活在你本地项目文件夹中。一个典型的例子是 node_modules/ ,
+把 package.json 共享给你的伙伴们就足够他们获取和安装所有的依赖了,没必要把整
+个依赖打包共享给他们。</li>
+  <li>public/: 这个文件夹包含了所有你的项目构建出的产品文件。最终所有你写在 src/ 文
+件夹里面的代码都会在项目构建的时候被打包放在 public 文件夹下。</li>
+  <li>manifest.json 和 registerServiceWork.js: 在这个阶段不用担心这些文件用来干什么,
+  我们不会在这个项目中用到他们。</li>
+</ul>
+
+<p>所有用到的文件都在 src/ 文件夹中。
+首要关注的是实现 React 组件的 src/App.js 文件。它主要用于实现你的应用,不过之后你可
+能会把你的组件分离到多个文件中,其中每个文件来维护一个或者多个特定的组件。
+除 此 之 外, 你 会 发 现 还 有 一 个 用 于 测试 的 src/App.test.js 和 作 为 React 世 界 的 入 口 的
+src/index.js。另外,还有控制你项目整体样式和组件样式的 src/index.css 文件和 src/App.css 文件,他们都被设置成了默认的样式。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 在 http://localhost:3000 启动应用
+npm start
+// 运行所有测试
+npm test
+// 构建项目的产品文件
+npm run build
+</code></pre></div></div>
+
+<h2 id="jsx-简介">JSX 简介</h2>
+
+<p>React特有的语法：分析src/App.js</p>
+
+<div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">logo</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./logo.svg</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./App.css</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+<span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+<span class="k">return</span> <span class="p">(</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">className=</span><span class="s2">"App"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">header</span> <span class="na">className=</span><span class="s2">"App-header"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src=</span><span class="si">{</span><span class="nx">logo</span><span class="si">}</span> <span class="na">className=</span><span class="s2">"App-logo"</span> <span class="na">alt=</span><span class="s2">"logo"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">className=</span><span class="s2">"App-title"</span><span class="p">&gt;</span>Welcome to React<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">className=</span><span class="s2">"App-intro"</span><span class="p">&gt;</span>
+To get started, edit <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>src/App.js<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> and save to reload.
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">);</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+
+</code></pre></div></div>
+
+<p>render() 方法包含了它所返回的元素(element)。元素是组件的构成部分。理解清楚组件、实例和元素之间的区别是很有帮助的。</p>
+
+<h2 id="es6-const-和-let">ES6 const 和 let</h2>
+
+<p>let 声明的变量是可变的</p>
+
+<p>const声明的变量不可变，但是数据或对象里面持有的内容可以被更新</p>
+
+<h2 id="reactdom">ReactDOM</h2>
+
+<p>在入口文件src/index.js中使用：</p>
+
+<div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">ReactDOM</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-dom</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./App</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./index.css</span><span class="dl">'</span><span class="p">;</span>
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+	<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>可以放多个节点<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;,</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">);</span>
+<span class="c1">// 将h1渲染到 id 为 root 的节点中</span>
+</code></pre></div></div>
+
+<p>ReactDOM.render() 会使用你的 JSX 来替换你的 HTML 中的一个 DOM 节点。这
+样你就可以很容易地把 React 集成到每一个其他的应用中。 ReactDOM.render() 可以在你的
+应用中被多次使用。</p>
+
+<p>ReactDOM.render() 有两个传入参数。第一个是准备渲染的 JSX。第二个参数指定了 React
+应用在你的 HTML 中的放置的位置。这个位置是一个 id=’root’ 的元素。</p>
+
+<h2 id="模块热替换">模块热替换</h2>
+
+<p>帮助浏览器喘息加载的应用工具，添加在src/index.js最后</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (module.hot) {
+module.hot.accept();
+}
+</code></pre></div></div>
+
+<h2 id="jsx中的复杂javascript">JSX中的复杂Javascript</h2>
+
+<p>渲染列表</p>
+
+<p>src/App.js</p>
+
+<hr />
+
+<div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./App.css</span><span class="dl">'</span><span class="p">;</span>
+<span class="c1">//声明一个列表</span>
+<span class="kd">const</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">React</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://facebook.github.io/react/</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">author</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Jordan Walke</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">num_comments</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="na">points</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="na">objectID</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Redux</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://github.com/reactjs/redux</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">author</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Dan Abramov, Andrew Clark</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">num_comments</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="na">points</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="na">objectID</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">];</span>
+<span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">helloWorld</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Helloworld</span><span class="dl">'</span><span class="p">;</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className=</span><span class="s2">"App"</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">helloWorld</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+               <span class="si">{</span><span class="cm">/*map函数遍历list，并拿到list里面的各种数据*/</span><span class="si">}</span>
+                <span class="si">{</span><span class="nx">list</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">return</span> <span class="p">(</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">key=</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">objectID</span><span class="si">}</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href=</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">url</span><span class="si">}</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">title</span><span class="si">}</span>  <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">author</span><span class="si">}</span>  <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">num_comments</span><span class="si">}</span>  <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">points</span><span class="si">}</span>  <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">);</span>
+                <span class="p">})</span><span class="si">}</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="es6-箭头函数">ES6 箭头函数</h2>
+
+<p>声明方式
+item =&gt; { … }   function(item){…}
+(item) =&gt; { … }
+(item, key) =&gt; { … }</p>
+
+<p>src/App.jx</p>
+
+<div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nx">list</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span> <span class="p">{...})}</span> <span class="c1">//简洁不需要return</span>
+<span class="p">{</span><span class="nx">list</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(...)</span>
+        <span class="p">})}</span>
+</code></pre></div></div>
+
+<h2 id="es6-类">ES6 类</h2>
+
+<div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Developer</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">firstname</span><span class="p">,</span> <span class="nx">lastname</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">firstname</span> <span class="o">=</span> <span class="nx">firstname</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">lastname</span> <span class="o">=</span> <span class="nx">lastname</span><span class="p">;</span>
+	<span class="p">}</span>
+    <span class="nx">getName</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstname</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> </span><span class="dl">'</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">lastname</span><span class="p">;</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">//实例化一个对象：</span>
+<span class="kd">const</span> <span class="nx">robin</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Developer</span><span class="p">(</span><span class="dl">'</span><span class="s1">Robin</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Wieruch</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">robin</span><span class="p">.</span><span class="nx">getName</span><span class="p">());</span>
+</code></pre></div></div>
+
+<div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+	<span class="p">...</span>
+<span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+	<span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+		<span class="p">...</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>这个 App 类继承自 Component 。简单来说,你可以声明你的 App 组件,但是这个组件需要
+继承自另一个组件。它可以把功能从一个类传递到另一个类。
+这个 App 类就从 Component 类中继承了它的功能。这个 Component 类是从一个基本 ES6
+类中继承来的 ES6 组件类。它有一个 React 组件所需要的所有功能。渲染(render)方法就
+是其中你可以使用的一个功能。之后你可以学到更多其他组件类的方法。
+这个 Component 类封装了所有 React 类需要的实现细节。它使得开发者们可以在 React 中使
+用类来创建组件。
+React Component 类暴露出来的方法都是公共的接口。这些方法中有一个方法必须被重写,
+其他的则不一定要被重写。这个 render()方法是必须被重写的方法,因为它定义了一个 React 组件的输出。它必须被定义。</p>
+
+<h1 id="react-基础">React 基础</h1>
+
+<ul>
+  <li>React
+– 使用 this.state 和 setState() 来管理你的内部组件状态
+– 将函数或者类方法传递到你的元素处理器
+– 在 React 中使用表单或者事件来添加交互
+– 在 React 中单向数据流是一个非常重要的概念
+– 拥抱 controlled components
+– 通过 children 和可复用组件来组合组件
+– ES6 类组件和函数式无状态组件的使用方法和实现
+– 给你的组件声明样式的方法</li>
+  <li>ES6
+    – 绑定到一个类的函数叫作类方法
+    – 解构对象和数组
+    – 默认参数</li>
+  <li>General
+    – 高阶函数</li>
+</ul>
+
+<h2 id="react-组件内部状态">React 组件内部状态</h2>
+
+<p>局部状态,允许你保存、修改和删除存储在组件内部的属性。使
+用 ES6 类组件可以在构造函数中初始化组件的状态。构造函数只会在组件初始化时调用一
+次。</p>
+
+<p>引入类构造函数</p>
+
+<div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    	<span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>当你使用 ES6 编写的组件有一个构造函数时,它需要强制地调用 super(); 方法,因为这个
+App 组件是 Component 的子类。因此在你的 APP 组件要声明 extends Component 。</p>
+
+<p>你也可以调用 super(props); ,它会在你的构造函数中设置 this.props 以供在构造函数中
+访问它们。否则当在构造函数中访问 this.props ,会得到 undefined 。</p>
+
+<h2 id="初始化对象">初始化对象</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// ES5
+var userService = {
+getUserName: function (user) {
+return user.firstname + ' ' + user.lastname;
+},
+};
+// ES6
+const userService = {
+getUserName(user) {
+return user.firstname + ' ' + user.lastname;
+},
+};
+//计算属性名
+const key = 'name';
+const user = {
+	[key]: 'Robin',
+};
+</code></pre></div></div>
+
+<h2 id="单项数据流">单项数据流</h2>
+
+<p>单向数据量组件props是父级往下传递，你不能向上去修改父组件的数据，并且也不能在自身组件中修改props的值。</p>
+
+<h2 id="绑定">绑定</h2>
+
+<div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="c1">// list: list,</span>
+            <span class="nx">list</span><span class="p">,</span>
+        <span class="p">};</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">onDismiss</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">onDismiss</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="nx">onDismiss</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{...}</span>
+       <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="事件处理">事件处理</h2>
+
+<h2 id="表单交互">表单交互</h2>
+
+<div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./App.css</span><span class="dl">'</span><span class="p">;</span>
+<span class="c1">//声明一个列表</span>
+<span class="kd">const</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">React</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://facebook.github.io/react/</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">author</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Jordan Walke</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">num_comments</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="na">points</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="na">objectID</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Redux</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://github.com/reactjs/redux</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">author</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Dan Abramov, Andrew Clark</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">num_comments</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="na">points</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="na">objectID</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">];</span>
+<span class="kd">function</span> <span class="nx">isSearched</span><span class="p">(</span><span class="nx">searchTerm</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">item</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">().</span><span class="nx">includes</span><span class="p">(</span><span class="nx">searchTerm</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">// const isSearched = searchTerm =&gt; item =&gt;</span>
+<span class="c1">//     item.title.toLowerCase().includes(searchTerm.toLowerCase());</span>
+<span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="c1">// list: list,</span>
+            <span class="nx">list</span><span class="p">,</span><span class="na">searchTerm</span><span class="p">:</span><span class="dl">''</span><span class="p">,</span>
+        <span class="p">};</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">onDismiss</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">onDismiss</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">onSearchChange</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">onSearchChange</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="nx">onDismiss</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// function isNotId(item) {</span>
+        <span class="c1">//     return item.objectID !== id;</span>
+        <span class="c1">// }</span>
+        <span class="c1">// const updatedList = this.state.list.filter(isNotId);</span>
+        <span class="c1">// const updatedList = this.state.list.filter(item =&gt; item.objectID !== id);</span>
+        <span class="kd">const</span> <span class="nx">isNotId</span> <span class="o">=</span> <span class="nx">item</span> <span class="o">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">objectID</span> <span class="o">!==</span> <span class="nx">id</span><span class="p">;</span>
+        <span class="kd">const</span> <span class="nx">updatedList</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">list</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">isNotId</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">list</span><span class="p">:</span> <span class="nx">updatedList</span> <span class="p">});</span>
+
+    <span class="p">}</span>
+    <span class="nx">onSearchChange</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">searchTerm</span><span class="p">:</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span> <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">helloWorld</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Hello world</span><span class="dl">'</span><span class="p">;</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className=</span><span class="s2">"App"</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type=</span><span class="s2">"text"</span> <span class="na">onChange=</span><span class="si">{</span><span class="k">this</span><span class="p">.</span><span class="nx">onSearchChange</span><span class="si">}</span><span class="p">/&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">helloWorld</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+                <span class="si">{</span><span class="cm">/*map函数遍历list，并拿到list里面的各种数据*/</span><span class="si">}</span>
+                <span class="si">{</span><span class="cm">/*{list.map(function(item) {*/</span><span class="p">}</span>
+                <span class="p">{</span><span class="cm">/*{this.state.list.map(item =&gt; {*/</span><span class="p">}</span>
+                <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">list</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">isSearched</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">searchTerm</span><span class="p">)).</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span><span class="p">{</span>
+                    <span class="kd">const</span> <span class="nx">onHandleDismiss</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span>
+                        <span class="k">this</span><span class="p">.</span><span class="nx">onDismiss</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">objectID</span><span class="p">);</span>
+                    <span class="k">return</span> <span class="p">(</span>
+
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">key=</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">objectID</span><span class="si">}</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href=</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">url</span><span class="si">}</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">title</span><span class="si">}</span>  <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">author</span><span class="si">}</span>  <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">num_comments</span><span class="si">}</span>  <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">points</span><span class="si">}</span>  <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">button</span>
+                                    <span class="na">onClick=</span><span class="si">{</span><span class="p">()</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">onDismiss</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">objectID</span><span class="p">)</span><span class="si">}</span>
+                                    <span class="na">type=</span><span class="s2">"button"</span>
+                                <span class="p">&gt;</span>
+                                    Dismiss
+                                <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">)}</span>
+                    <span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">&lt;</span><span class="err">/</span><span class="nt">div</span><span class="p">&gt;</span>
+        );
+    }
+}
+export default App;
+</code></pre></div></div>
+
+<h2 id="es6-解构">ES6 解构</h2>
+
+<div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">users</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">Robin</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Andrew</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Dan</span><span class="dl">'</span><span class="p">];</span>
+<span class="kd">const</span> <span class="p">[</span><span class="nx">userOne</span><span class="p">,</span><span class="nx">userTwo</span><span class="p">,</span><span class="nx">userThree</span><span class="p">]</span> <span class="o">=</span> <span class="nx">users</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">userOne</span><span class="p">,</span> <span class="nx">userTwo</span><span class="p">,</span> <span class="nx">userThree</span><span class="p">);</span>
+<span class="c1">// output: Robin Andrew Dan</span>
+<span class="err">先初始化对象，然后结构，就直接能使用对象名作为参数使用了</span>
+</code></pre></div></div>
+
+<h2 id="受控组件">受控组件</h2>
+
+<p>表单元素比如 <input /> , <textarea> 和 <select> 会以原生 HTML 的形式保存他
+们自己的状态。一旦有人从外部做了一些修改,它们就会修改内部的值,在 React 中这被
+称为不受控组件,因为它们自己处理状态。在 React 中,你应该确保这些元素变为受控组
+件。</select></textarea></p>
+
+<p>应该设置输入框的值属性,这个值已经在 searchTerm 状态属性中保存了</p>
+
+<h2 id="拆分组件">拆分组件</h2>
+
+<p>将一个大的组件拆分成若干小组件，可以给组件传递属性并在组件中使用它们。至于 App 组件,它需要传递由本地状态(state) 托管的属性和它自己的类方法。</p>
+
+<div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./App.css</span><span class="dl">'</span><span class="p">;</span>
+<span class="c1">//声明一个列表</span>
+<span class="kd">const</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">React</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://facebook.github.io/react/</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">author</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Jordan Walke</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">num_comments</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="na">points</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="na">objectID</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Redux</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://github.com/reactjs/redux</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">author</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Dan Abramov, Andrew Clark</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">num_comments</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="na">points</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="na">objectID</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">];</span>
+
+<span class="kd">const</span> <span class="nx">isSearched</span> <span class="o">=</span> <span class="nx">searchTerm</span> <span class="o">=&gt;</span> <span class="nx">item</span> <span class="o">=&gt;</span>
+    <span class="nx">item</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">().</span><span class="nx">includes</span><span class="p">(</span><span class="nx">searchTerm</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">());</span>
+<span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="c1">// list: list,</span>
+            <span class="nx">list</span><span class="p">,</span><span class="na">searchTerm</span><span class="p">:</span><span class="dl">''</span><span class="p">,</span>
+        <span class="p">};</span>
+        <span class="c1">// 绑定事件</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">onDismiss</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">onDismiss</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">onSearchChange</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">onSearchChange</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="nx">onDismiss</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">isNotId</span> <span class="o">=</span> <span class="nx">item</span> <span class="o">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">objectID</span> <span class="o">!==</span> <span class="nx">id</span><span class="p">;</span>
+        <span class="kd">const</span> <span class="nx">updatedList</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">list</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">isNotId</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">list</span><span class="p">:</span> <span class="nx">updatedList</span> <span class="p">});</span>
+
+    <span class="p">}</span>
+    <span class="nx">onSearchChange</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">searchTerm</span><span class="p">:</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span> <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="p">{</span><span class="nx">searchTerm</span><span class="p">,</span><span class="nx">list</span><span class="p">}</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">;</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className=</span><span class="s2">"App"</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nc">Search</span>
+                    <span class="na">value=</span><span class="si">{</span><span class="nx">searchTerm</span><span class="si">}</span>
+                    <span class="na">onChange=</span><span class="si">{</span><span class="k">this</span><span class="p">.</span><span class="nx">onSearchChange</span><span class="si">}</span>
+                <span class="p">/&gt;</span>
+                <span class="p">&lt;</span><span class="nc">Table</span>
+                    <span class="na">list=</span><span class="si">{</span><span class="nx">list</span><span class="si">}</span>
+                    <span class="na">pattern=</span><span class="si">{</span><span class="nx">searchTerm</span><span class="si">}</span>
+                    <span class="na">onDismiss=</span><span class="si">{</span><span class="k">this</span><span class="p">.</span><span class="nx">onDismiss</span><span class="si">}</span>
+                <span class="p">/&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nx">Search</span> <span class="kd">extends</span> <span class="nx">Component</span><span class="p">{</span>
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//解构</span>
+        <span class="kd">const</span> <span class="p">{</span><span class="nx">value</span><span class="p">,</span><span class="nx">onChange</span><span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">;</span>
+        <span class="k">return</span><span class="p">(</span>
+            <span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">value=</span><span class="si">{</span><span class="nx">value</span><span class="si">}</span>
+                       <span class="na">type=</span><span class="s1">'text'</span>
+                       <span class="na">onChange=</span><span class="si">{</span><span class="nx">onChange</span><span class="si">}</span>
+                       <span class="p">/&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nx">Table</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="p">{</span> <span class="nx">list</span><span class="p">,</span> <span class="nx">pattern</span><span class="p">,</span> <span class="nx">onDismiss</span> <span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">;</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="si">{</span><span class="nx">list</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">isSearched</span><span class="p">(</span><span class="nx">pattern</span><span class="p">)).</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">key=</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">objectID</span><span class="si">}</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href=</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">url</span><span class="si">}</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">title</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">author</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">num_comments</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">points</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">button</span>
+                                <span class="na">onClick=</span><span class="si">{</span><span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">onDismiss</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">objectID</span><span class="p">)</span><span class="si">}</span>
+                                <span class="na">type=</span><span class="s2">"button"</span>
+                            <span class="p">&gt;</span>
+                                Dismiss
+                            <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">)</span><span class="si">}</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="可组合组件">可组合组件</h2>
+
+<p>在 props 对象中还有一个小小的属性可供使用: children 属性。通过它你可以将元素从上
+层传递到你的组件中,这些元素对你的组件来说是未知的,但是却为组件相互组合提供了
+可能性。</p>
+
+<h2 id="可复用组件">可复用组件</h2>
+
+<p>可复用和可组合组件让你能够思考合理的组件分层,它们是 React 视图层的基础。</p>
+
+<div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//定义一个复用组件 button</span>
+<span class="kd">class</span> <span class="nx">Button</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="p">{</span>
+            <span class="nx">onClick</span><span class="p">,</span>
+            <span class="nx">className</span><span class="o">=</span><span class="dl">""</span><span class="p">,</span>
+            <span class="nx">children</span><span class="p">,</span>
+        <span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">;</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nt">button</span>
+                <span class="na">onClick=</span><span class="si">{</span><span class="nx">onClick</span><span class="si">}</span>
+                <span class="na">className=</span><span class="si">{</span><span class="nx">className</span><span class="si">}</span>
+                <span class="na">type=</span><span class="s2">"button"</span>
+                <span class="p">&gt;</span>
+                <span class="si">{</span><span class="nx">children</span><span class="si">}</span>
+            <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="react-组件类型">React 组件类型</h3>
+
+<ul>
+  <li>==函数式无状态组件==: 这类组件就是函数,它们接收一个输入并返回一个输出。输入是props,输出就是一个普通的 JSX 组件实例。到这里,它和 ES6 类组件非常的相似。然而,函数式无状态组件是函数(函数式的),并且它们没有本地状态(无状态的)。你不能通过 this.state 或者 this.setState() 来访问或者更新状态,因为这里没有 this对象。此外,它也没有生命周期方法。虽然你还没有学过生命周期方法,但是你已经用到了其中两个: constructor() and render() 。constructor 在一个组件的生命周期中只执行一次,而 render() 方法会在最开始执行一次,并且每次组件更新时都会执行。当你阅读到后面关于生命周期方法的章节时,要记得函数式无状态组件是没有生命周期方法的。</li>
+  <li>==ES6 类组件==: 在你的四个组件中,你已经使用过这类组件了。在类的定义中,它们继承自 React 组件。 extend 会注册所有的生命周期方法,只要在 React component API 中,都可以在你的组件中使用。通过这种方式你可以使用 render() 类方法。此外,通过使用 this.state 和 this.setState() ,你可以在 ES6 类组件中储存和操控 state。</li>
+  <li>==React.createClass==: 这类组件声明曾经在老版本的 React 中使用,仍然存在于很多 ES5React 应用中。但是为了支持 JavaScript ES6, Facebook 声明它已经不推荐使用了69。他们还在 React 15.5 中加入了不推荐使用的警告70。你不会在本书使用它。</li>
+</ul>
+
+<p>将Search组件重构成一个函数式无状态组件</p>
+
+<div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Button</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="p">{</span>
+            <span class="nx">onClick</span><span class="p">,</span>
+            <span class="nx">className</span><span class="o">=</span><span class="dl">""</span><span class="p">,</span>
+            <span class="nx">children</span><span class="p">,</span>
+        <span class="p">}</span> <span class="o">=</span> <span class="nx">props</span><span class="p">;</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nt">button</span>
+                <span class="na">onClick=</span><span class="si">{</span><span class="nx">onClick</span><span class="si">}</span>
+                <span class="na">className=</span><span class="si">{</span><span class="nx">className</span><span class="si">}</span>
+                <span class="na">type=</span><span class="s2">"button"</span>
+            <span class="p">&gt;</span>
+                <span class="si">{</span><span class="nx">children</span><span class="si">}</span>
+            <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+        <span class="p">);</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h2 id="给组件声明样式">给组件声明样式</h2>
+
+<p>添加css</p>
+
+<h1 id="使用真实的api">使用真实的API</h1>
+
+<ul>
+  <li>React
+– 针对不同用例的 ES6 类组件生命周期方法
+– componentDidMount() 如何用于 API 交互
+– 条件渲染
+– 表单上的合成事件
+– 错误处理</li>
+  <li>ES6
+    – 用模板字符串去组合字符串
+    – 扩展运算符用于不可变数据结构
+    – 可计算的属性名称</li>
+  <li>General
+– Hacker News API 交互
+– 浏览器原生 fetch API
+– 客户端和服务器端搜索
+– 数据分页
+– 客户端缓存</li>
+</ul>
+
+<h2 id="生命周期方法">生命周期方法</h2>
+
+<p>这些方法是嵌入 React 组件生命周期中的一组挂钩。它们可以在 ES6 类组件中使用,但是不能在无状态组件中使用。</p>
+
+<p>==constructor(构造函数)==只有在组件实例化并插入到 DOM 中的时候才会被调用。组件实例化的过程称作组件的挂载(mount)。
+==render()==方法也会在组件挂载的过程中被调用,同时当组件更新的时候也会被调用。每当组件的状态(state)或者属性(props)改变时,组件的 render() 方法都会被调用。</p>
+
+<p>在组件挂载的过程中还有另外两个生命周期方法:==componentWillMount()== 和 ==componentDid-Mount()== 。</p>
+
+<h3 id="调用顺序">调用顺序</h3>
+
+<p>在挂载过程中有四个生命周期方法,它们的调用顺序是这样的:</p>
+
+<ul>
+  <li>constructor()</li>
+  <li>componentWillMount()</li>
+  <li>render()</li>
+  <li>componentDidMount()</li>
+</ul>
+
+<p>组件更新有五个生命周期方法,调用顺序如下:</p>
+
+<ul>
+  <li>componentWillReceiveProps()</li>
+  <li>shouldComponentUpdate()</li>
+  <li>componentWillUpdate()</li>
+  <li>render()</li>
+  <li>componentDidUpdate()</li>
+</ul>
+
+<p>组件卸载只有一个周期方法：</p>
+
+<ul>
+  <li>componentWillUn-mount()</li>
+</ul>
+
+<h3 id="使用场景">使用场景</h3>
+
+<ul>
+  <li>constructor(props) - 它在==组件初始化时==被调用。在这个方法中,你可以设置初始化状态以及绑定类方法。</li>
+  <li>componentWillMount() - 它在 render() 方法之前被调用。这就是为什么它可以用作去设置组件内部的状态,因为它不会触发组件的再次渲染。但一般来说,还是推荐在 constructor() 中去初始化状态。</li>
+  <li>render() - 这个生命周期方法是必须有的,它返回作为组件输出的元素。这个方法应该是一个纯函数,因此==不应该在这个方法中修改组件的状态==。它把属性和状态作为输入并且返回(需要渲染的)元素</li>
+  <li>componentDidMount() - 它仅在组件挂载后执行一次。这是发起异步请求去 API 获取数据的绝佳时期。获取到的数据将被保存在内部组件的状态中然后在 render() 生命周期方法中展示出来。</li>
+  <li>componentWillReceiveProps(nextProps) - 这个方法在一个更新生命周(update lifecycle)中被调用。新的属性会作为它的输入。因此你可以利用 this.props 来对比之后的属性和之前的属性,基于对比的结果去实现不同的行为。此外,你可以基于新的属性来设置组件的状态。</li>
+  <li>shouldComponentUpdate(nextProps, nextState) - 每次组件因为状态或者属性更改而更新时,它都会被调用。你将在成熟的 React 应用中使用它来进行性能优化。在一个更新生命周期中,组件及其子组件将根据该方法返回的布尔值来决定是否重新渲染。这样你可以阻止组件的渲染生命周期(render lifecycle)方法,避免不必要的渲染。</li>
+  <li>componentWillUpdate(nextProps, nextState) - 这个方法是 render() 执行之前的最后一 个 方 法。 你 已 经 拥 有 下 一 个 属 性 和 状 态, 它 们 可 以 在 这 个 方 法 中 任 由 你 处置。你可以利用这个方法在渲染之前进行最后的准备。注意在这个生命周期方法 中 你 不 能 再 触 发 setState() 。如 果 你 想 基 于 新 的 属 性 计 算 状 态, 你 必 须 利 用componentWillReceiveProps() 。</li>
+  <li>componentDidUpdate(prevProps, prevState) - 这个方法在 render() 之后立即调用。你可以用它当成操作 DOM 或者执行更多异步请求的机会。</li>
+  <li>
+    <p>componentWillUnmount() - 它会在组件销毁之前被调用。你可以利用这个生命周期方法去执行任何清理任务。</p>
+  </li>
+  <li>componentDidCatch(error, info)：它在 React 16 中引入,用来捕获组件的错误。举例来说,在你的应用中展示样本数据本来是没问题的。但是可能会有列表的本地状态被意外设置成 null 的情况发生(例如从外部 API 获取列表失败时,你把本地状态设置为空了)。然后它就不能像之前一样去过滤(filter)和映射(map)这个列表,因为它不是一个空列表( [] )而是 null 。这时组件就会崩溃,然后整个应用就会挂掉。现在你可以用 componentDidCatch() 来捕获错误,将它存在本地的状态中,然后像用户展示一条信息,说明应用发生了错误。</li>
+</ul>
+
+<p>constructor() 和 render() 生命周期方法是常用的生命周期方法。实际上 ==render() 是必须有的==,否则它将不会返回一个组件实例。</p>
+
+<h2 id="获取数据">获取数据</h2>
+
+<p>使用componentDidMount（）生命周期方法获取数据</p>
+
+<h1 id="高级react组件">高级React组件</h1>
+
+<ul>
+  <li>React
+– 通过 ref 属性引用 DOM 节点
+– 高阶组件是构建高级组件的常用方法
+– 高级交互在 React 中的实现
+– 帮助实现条件 classNames 的一个优雅库</li>
+  <li>ES6
+    – rest 解构拆分对象和数组</li>
+</ul>
+
+<h2 id="引入dom元素">引入DOM元素</h2>
+
+<p>ref 属性可以让我们访问元素中的一个节点，遵循它的声明式编程和单向数据流。</p>
+
+<ul>
+  <li>使用 DOM API(focus 事件,媒体播放等)
+调用命令式 DOM 节点动画
+与需要 DOM 节点的第三方库集成</li>
+</ul>
+
+<h2 id="高阶组件hoc">高阶组件（HOC）</h2>
+
+<p>HOC 与高阶函数是等价的。它接受任何输入 - 多数时候是一个组件,也可以是可选参数 - 并返回一个组件作为输出。惯例是用“with”前缀来命名 HOC。</p>
+
+<div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">withFoo</span><span class="p">(</span><span class="nx">Component</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    	<span class="k">return</span> <span class="p">&lt;</span><span class="nc">Component</span> <span class="err">{</span> <span class="p">...</span><span class="nt">props</span> <span class="err">}</span> <span class="p">/&gt;;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="高阶排序">高阶排序</h2>
+
+<p>安装工具：npm install loadsh</p>
+
+<div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">sortBy</span> <span class="p">}</span><span class="k">from</span> <span class="dl">'</span><span class="s1">loadsh</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">SORTS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">NONE</span><span class="p">:</span> <span class="nx">list</span> <span class="o">=&gt;</span> <span class="nx">list</span><span class="p">,</span>
+    <span class="na">TITLE</span><span class="p">:</span> <span class="nx">list</span> <span class="o">=&gt;</span> <span class="nx">sortBy</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="dl">'</span><span class="s1">title</span><span class="dl">'</span><span class="p">),</span>
+    <span class="na">AUTHOR</span><span class="p">:</span> <span class="nx">list</span> <span class="o">=&gt;</span> <span class="nx">sortBy</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="dl">'</span><span class="s1">author</span><span class="dl">'</span><span class="p">),</span>
+    <span class="na">COMMENTS</span><span class="p">:</span> <span class="nx">list</span> <span class="o">=&gt;</span> <span class="nx">sortBy</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="dl">'</span><span class="s1">num_comments</span><span class="dl">'</span><span class="p">).</span><span class="nx">reverse</span><span class="p">(),</span>
+    <span class="na">POINTS</span><span class="p">:</span> <span class="nx">list</span> <span class="o">=&gt;</span> <span class="nx">sortBy</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="dl">'</span><span class="s1">points</span><span class="dl">'</span><span class="p">).</span><span class="nx">reverse</span><span class="p">(),</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h1 id="react-状态管理与进阶">React 状态管理与进阶</h1>
+
+<h2 id="状态提取">状态提取</h2>
+
+<p>将子状态(substate)从一个组件移动到其他组件中的重构过程被称为状态提取。</p>
+
+<p>状态提取的过程也可以反过来:从子组件到父组件,这种情形被称为状态提升。</p>
+
+<h2 id="再探setstate">再探：setState()</h2>
+
+<div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//传入对象</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">foo</span><span class="p">:</span> <span class="nx">bar</span> <span class="p">});</span>
+<span class="c1">// 传入函数</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">((</span><span class="nx">prevState</span><span class="p">,</span> <span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">fooCount</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">prevState</span><span class="p">;</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">barCount</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">props</span><span class="p">;</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="na">count</span><span class="p">:</span> <span class="nx">fooCount</span> <span class="o">+</span> <span class="nx">barCount</span> <span class="p">};</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="s2">`carousel-item </span><span class="p">${</span><span class="nx">item</span><span class="o">===</span><span class="nx">slide_1</span><span class="p">?</span><span class="dl">"</span><span class="s2">active</span><span class="dl">"</span><span class="p">:</span><span class="dl">""</span><span class="p">}</span><span class="s2">`</span><span class="p">}</span><span class="o">&gt;</span>
+<span class="p">&lt;</span><span class="err">/</span><span class="nt">div</span><span class="p">&gt;</span>
+等同于
+className=<span class="si">{</span><span class="nx">item</span><span class="o">===</span><span class="nx">slide_1</span><span class="p">?</span><span class="dl">"</span><span class="s2">carousel-item active</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">carousel-item</span><span class="dl">"</span><span class="si">}</span>
+</code></pre></div></div>
+
+<div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="o">=</span><span class="p">{</span>
+            <span class="na">isHover</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+        <span class="p">};</span>
+    <span class="p">}</span>
+    <span class="nx">onMouseEnter</span> <span class="o">=</span> <span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+         <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
+             <span class="na">isHover</span><span class="p">:</span><span class="nx">num</span><span class="p">,</span>
+         <span class="p">})</span>
+     <span class="p">};</span>
+    <span class="nx">onMouseLeave</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
+            <span class="na">isHover</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+        <span class="p">})</span>
+    <span class="p">};</span>
+<span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">onMouseEnter</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">onMouseEnter</span><span class="p">;</span>
+        <span class="kd">let</span> <span class="nx">onMouseLeave</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">onMouseLeave</span><span class="p">;</span>
+        <span class="kd">let</span> <span class="p">{</span><span class="nx">isHover</span><span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">;</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">{</span><span class="cm">/*获取当前的id值传入onMouseEnter，也就是num，然后拿num值与item.id比较，让它改变*/</span><span class="p">}</span>
+            <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className=</span><span class="s2">"name"</span>  <span class="na">onMouseEnter=</span><span class="si">{</span><span class="p">()</span><span class="o">=&gt;</span><span class="nx">onMouseEnter</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span><span class="si">}</span> <span class="na">onMouseLeave=</span><span class="si">{</span><span class="nx">onMouseLeave</span><span class="si">}</span> <span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">style=</span><span class="si">{</span><span class="nx">display</span><span class="p">:</span><span class="nx">isHover</span><span class="o">===</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">?</span><span class="dl">'</span><span class="s1">block</span><span class="dl">'</span><span class="p">:</span><span class="dl">'</span><span class="s1">none</span><span class="dl">'</span><span class="si">}</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+               <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+:ET

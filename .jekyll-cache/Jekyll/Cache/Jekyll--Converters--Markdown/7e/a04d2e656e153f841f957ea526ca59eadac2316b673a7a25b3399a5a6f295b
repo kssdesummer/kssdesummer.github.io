@@ -1,0 +1,234 @@
+I"[<h2 id="linux编辑器">Linux编辑器：</h2>
+
+<ul>
+  <li>
+    <p>vim</p>
+  </li>
+  <li>
+    <p>emacs</p>
+  </li>
+  <li>
+    <p>c语言编译器：gcc编译器</p>
+  </li>
+</ul>
+
+<h2 id="c语言基本语法">C语言基本语法：</h2>
+
+<ol>
+  <li>
+    <p>导入头文件</p>
+
+    <p>#include &lt;&gt; 导入系统的</p>
+
+    <ol>
+      <li>stdio.h定义输入输出流</li>
+    </ol>
+
+    <p>#include “ “ 导入文件里的</p>
+  </li>
+  <li>
+    <p>将mian函数与调用函数分开：</p>
+
+    <p>​	在vim里打开多个文件：</p>
+
+    <ol>
+      <li>ESC进入命令行：:sp 新文件的名字</li>
+      <li>ESC进入命令行：ctrl + w + 下箭头，回到原来的的窗口</li>
+      <li>把除了main函数的，函数剪切，函数a行，ESC，a+dd 剪切</li>
+      <li>ESC进入命令行：ctrl + w + 上箭头，新窗口</li>
+      <li>ESC，：p 粘贴</li>
+      <li>ESC进入命令行：ctrl + w + 下箭头，回到原来的的窗口，加上#include “新文件名”</li>
+      <li>ESC,:wqa ，保存所有并退出</li>
+      <li><code class="highlighter-rouge">gcc demo.c -o mian.out</code> 文件单个名字就能运行，-o 表示将编译结果重命名</li>
+    </ol>
+
+    <p>分开编译：</p>
+    <ol>
+      <li>
+        <p><code class="highlighter-rouge">gcc -c demo.c -o max.o</code>	//生成一个中间文件max.o</p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">vim max.h</code> //写上max.o的参数，函数的类型，不要忘了加“；”</p>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. int max(int a,int b);
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>在demo加头文件 <code class="highlighter-rouge">#include "max.h"</code></p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>main函数：</p>
+
+    <ul>
+      <li>
+        <p>主函数：程序运行的时候第一个调用和寻找的函数，main(int argv,char* argc[])</p>
+
+        <p>​	argv：是执行了几个参数</p>
+
+        <p>​	argc[]:执行了什么参数</p>
+
+        <p>​	scanf(“%d”,&amp;a)</p>
+
+        <p>​	printf(“%d”,a)</p>
+      </li>
+      <li>
+        <p>标准的输入、输出、错误流：</p>
+
+        <p>stdout：输出</p>
+
+        <p>stdin：输入</p>
+
+        <p>stderr：错误</p>
+
+        <p>//printf(“input”)</p>
+
+        <p>fprintf(stdout，”input”)往文件里写入，默认</p>
+
+        <p>//scanf(“%d”,&amp;a)代码</p>
+
+        <p>fscanf(stdin,”%d”,&amp;a)键盘输入</p>
+
+        <p>fprintf(stderr,”error”)//标准错误流</p>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="编译较大的源代码">编译较大的源代码：</h2>
+
+<ul>
+  <li>make:
+    <ol>
+      <li>可以把大型的分成很多个模块</li>
+      <li>快速整理和编译源码</li>
+      <li>内部也是使用的gcc</li>
+    </ol>
+  </li>
+  <li>编码过程
+    <ol>
+      <li><code class="highlighter-rouge">make -v</code> //查看是否安装make</li>
+      <li><code class="highlighter-rouge">apt-get install make </code> //没有的话就安装</li>
+      <li><code class="highlighter-rouge">vim Makefile</code> //#注释；接着编写Makefile</li>
+      <li><code class="highlighter-rouge">hello.out:max.o min.o hello.c</code> //生存链接</li>
+      <li>tab（8空格）gcc max.o min.o hello.c -o hello.out</li>
+      <li><code class="highlighter-rouge">max.o:max.c</code></li>
+      <li>tab（8空格）gcc -c max.c</li>
+      <li><code class="highlighter-rouge">min.o:min.c</code></li>
+      <li>tab（8空格）gcc -c min.c</li>
+      <li>make //编译了一个Makefile文件，生成了一个hello.out文件</li>
+    </ol>
+  </li>
+  <li>
+    <p>vim里面的命令：</p>
+
+    <p>​	剪切：命令行模式：ndd，从光标乡下n行</p>
+
+    <p>​	复制：nyy</p>
+
+    <p>​	粘贴：p</p>
+  </li>
+  <li>
+    <p>终端命令：
+删除.o文件：`rm *.o
+echo：命令echo $?</p>
+
+    <p>​		运行完一个文件之后，运行这个，然后返回值为0时表示成功</p>
+
+    <p>​		假如程序里面写的是return 101；在执行.c文件之后，echo得到的值是101，这个时候运行.out &amp;&amp; ls，此时的ls是不会运行的，因为它的echo为101表示的是异常，虽然.out的结果年呢个执行，但之后的连接起来的其他命令不会执行</p>
+  </li>
+</ul>
+
+<h2 id="重定向">重定向：</h2>
+
+<ul>
+  <li>
+    <p>输出流重定向：</p>
+
+    <p>命令 1» a.txt 将输出内容重定向到a.txt；其中1可以不写默认，追加模式</p>
+
+    <p>命令 1&gt; a.txt 	覆盖到a.txt</p>
+  </li>
+  <li>
+    <p>输入流重定向：</p>
+
+    <p>命令 1&lt; a.txt 将a.txt内容输出到命令；其中1可以不写默认</p>
+  </li>
+  <li>
+    <p>错误流重定向</p>
+
+    <p>命令 2 » a.txt 将标准的错误流重定向到a.txt</p>
+  </li>
+</ul>
+
+<h2 id="管道的原理及应用">管道的原理及应用：</h2>
+
+<p>​	管道就是相当与一个既输入又输出的通道，跟grep结合使用</p>
+
+<p>​	grep ：相当于搜索</p>
+
+<p>​	<code class="highlighter-rouge">ls /etc/ | grep ad</code>	//查找etc文件夹里所有带有ad的文件</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>​	a.out</td>
+      <td>b.out	//将a.out的输出结果当作b.out的输入流</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="指针">指针：</h2>
+
+<p>​	即不同函数体间的传值，传值方传数值加取地址符号&amp;a，接收方用指针指向接收值所在的位置*a取值</p>
+
+<p>​	声明一个指针变量：int *a = &amp;a</p>
+
+<h2 id="gdb工具的使用">gdb工具的使用：</h2>
+
+<p>​	用 gcc -g 文件名 编译的文件可以用gdb进行调试</p>
+
+<p>​	gdb进入到调试模式</p>
+
+<p>​	start 开始执行项目</p>
+
+<p>​	回车=重复上一次操作</p>
+
+<p>​	l：查看代码</p>
+
+<p>​	n： 执行下一步</p>
+
+<p>​	p 参数 ：查看参数的值</p>
+
+<p>​	q ：退出</p>
+
+<p>​	bt：函数堆栈，当前使用的函数在上面</p>
+
+<p>​	f n：切换到数字n的堆栈</p>
+
+<p>​	s：查看内存地址</p>
+
+<h2 id="计算机中的数据表示方法">计算机中的数据表示方法：</h2>
+
+<p>​	1bytes = 8bit</p>
+
+<h2 id="内存管理">内存管理：</h2>
+
+<p>​	32位操作系统只能呢个使用4G内存，2的32次幂。</p>
+
+<p>​		cpu的地址总线是32位，寻址空间32位</p>
+
+<p>​		32位：给内存的编号只能到32个二进制位</p>
+
+ 	操作系统会给所有的内存进行编号，编号就是唯一的内存字节的地址
+
+<p>​	内存分配：</p>
+
+<p>​		栈和内存之间的是自由分配内存</p>
+
+<p><img src="/home/k/图片/系统内存分配.png" alt="**系统内存分配**" /></p>
+
+<p>栈：先进后出</p>
+
+:ET

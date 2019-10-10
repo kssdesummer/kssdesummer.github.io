@@ -1,0 +1,35 @@
+I"<p>仿写慕课网</p>
+
+<p>学习完jQuery,看完设计原则设计书,仿写了一个慕课网首页</p>
+
+<ol>
+  <li>标签的嵌套</li>
+  <li>确定版心</li>
+  <li>清空自带的CSS样式</li>
+  <li>轮播图的嵌套引用,与原生js写轮播图</li>
+  <li>相同属性的标签样式的复用</li>
+  <li>js的事件使用</li>
+</ol>
+
+<p>小标签</p>
+
+<ol>
+  <li>outline:none; //设置隐藏input自带的输入边框</li>
+  <li>cursor:pointer; //设置鼠标的样式为小手</li>
+  <li>border-radius:12px; //设置边框圆角</li>
+  <li>z-index: 100; //设置优先级</li>
+  <li>box-shadow: 0 2px 8px 0 rgba(7, 17, 27, 0.2); //设置边框阴影</li>
+</ol>
+
+<p>js</p>
+
+<ol>
+  <li>$(‘.pic0’).eq(num); //选择pic0的第num+1个,num索引值</li>
+  <li>$(‘.pic0’).hover(function(){},function(){}); //第一个函数是悬停,第二个是离开</li>
+  <li>$(‘.pic0’).hover(this);获取当前元素的索引值</li>
+  <li>show/hide //显示隐藏</li>
+  <li>fadeIn/fadeOut//淡入浅出</li>
+</ol>
+
+<p>swaper 轮播图组件</p>
+:ET

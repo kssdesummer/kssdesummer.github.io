@@ -1,0 +1,559 @@
+I"��<h1 id="html_attributes">HTML_Attributes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">属性名</th>
+      <th style="text-align: left">描述</th>
+      <th style="text-align: left">支持元素</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">accept</td>
+      <td style="text-align: left">服务器接受内容或文件类型的列表。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form"><code class="highlighter-rouge">form</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">accept-charset</td>
+      <td style="text-align: left">支持的字符集列表。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form"><code class="highlighter-rouge">form</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">accesskey</td>
+      <td style="text-align: left">定义键盘快捷键来激活或者聚焦元素</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/en/HTML/Global_attributes">Global attribute</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">action</td>
+      <td style="text-align: left">表单信息提交的url地址，指向进行处理的程序。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form"><code class="highlighter-rouge">form</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">align</td>
+      <td style="text-align: left">设置元素的水平对齐。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/applet"><code class="highlighter-rouge">applet</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/caption"><code class="highlighter-rouge">caption</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/col"><code class="highlighter-rouge">col</code></a> ,<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/colgroup">‘colgroup’</a>,  <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/hr"><code class="highlighter-rouge">hr</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe"><code class="highlighter-rouge">iframe</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img"><code class="highlighter-rouge">img</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/table"><code class="highlighter-rouge">table</code></a>,<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/tbody"><code class="highlighter-rouge">tbody</code></a> , <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td"><code class="highlighter-rouge">td</code></a>,  <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/tfoot"><code class="highlighter-rouge">tfoot</code></a> , <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/th"><code class="highlighter-rouge">th</code></a>,<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/thead"><code class="highlighter-rouge">thead</code></a> , <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/tr"><code class="highlighter-rouge">tr</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">alt</td>
+      <td style="text-align: left">在图片无法呈现时的替代文本。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/applet"><code class="highlighter-rouge">applet</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/area"><code class="highlighter-rouge">area</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img"><code class="highlighter-rouge">img</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">async</td>
+      <td style="text-align: left">表示该脚本应该异步执行。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/script"><code class="highlighter-rouge">script</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">autocomplete</td>
+      <td style="text-align: left">表示该表单中是否可以由浏览器自动完成填值。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form"><code class="highlighter-rouge">form</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">autofocus</td>
+      <td style="text-align: left">在网页加载后该元素应该自动聚焦。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button"><code class="highlighter-rouge">button</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/keygen"><code class="highlighter-rouge">keygen</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/select"><code class="highlighter-rouge">select</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea"><code class="highlighter-rouge">textarea</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">autoplay</td>
+      <td style="text-align: left">audio或video应该自动播放</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio"><code class="highlighter-rouge">audio</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video"><code class="highlighter-rouge">video</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">bgcolor</td>
+      <td style="text-align: left">元素的背景颜色。NOTE：这是一个遗留属性，请使用css{“background-color”:}代替。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/body"><code class="highlighter-rouge">body</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/col"><code class="highlighter-rouge">col</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/colgroup"><code class="highlighter-rouge">colgroup</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/marquee"><code class="highlighter-rouge">marquee</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/table"><code class="highlighter-rouge">table</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/tbody"><code class="highlighter-rouge">tbody</code></a>,<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/tfoot"><code class="highlighter-rouge">tfoot</code></a> , <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td"><code class="highlighter-rouge">td</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/th"><code class="highlighter-rouge">th</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/tr"><code class="highlighter-rouge">tr</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">border</td>
+      <td style="text-align: left">边框宽度。Note:这是遗留属性，请使用 CSS <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/border"><code class="highlighter-rouge">border</code></a> 属性代替。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img"><code class="highlighter-rouge">img</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/object"><code class="highlighter-rouge">object</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/table"><code class="highlighter-rouge">table</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">buffered</td>
+      <td style="text-align: left">包含已缓存媒体的时间范围。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio"><code class="highlighter-rouge">audio</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video"><code class="highlighter-rouge">video</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">challenge</td>
+      <td style="text-align: left">与公钥一起提交的挑战字符。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/keygen"><code class="highlighter-rouge">audio</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">charset</td>
+      <td style="text-align: left">申明该页面或脚本的字符编码。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta"><code class="highlighter-rouge">meta</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/script"><code class="highlighter-rouge">script</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">checked</td>
+      <td style="text-align: left">指出该元素在页面加载后是否处于选中状态。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/command"><code class="highlighter-rouge">command</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">cite</td>
+      <td style="text-align: left">包含一个URI，用来指明引用或修改的源地址。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote"><code class="highlighter-rouge">blockquote</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/del"><code class="highlighter-rouge">del</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ins"><code class="highlighter-rouge">ins</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q"><code class="highlighter-rouge">q</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">class</td>
+      <td style="text-align: left">经常和CSS一起配合使用来修饰元素。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/en/HTML/Global_attributes">Global attribute</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">code</td>
+      <td style="text-align: left">标明被加载和执行的applet类文件的URL。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/applet"><code class="highlighter-rouge">applet</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">codebase</td>
+      <td style="text-align: left">指出存放applet类文件基本URL地址(绝对或相对)，这些文件由code属性标明。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/applet"><code class="highlighter-rouge">applet</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">color</td>
+      <td style="text-align: left">此属性可用于指定颜色, 颜色值一般有两种表示:1. 以<code class="highlighter-rouge">#</code>号开头的RGB十六进制数,如#112233, 其中11表示的是R(红),22表示的是G绿(),33表示的是B(蓝)2. 颜色的英文单词名,如<code class="highlighter-rouge">red</code>表示红色</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/basefont"><code class="highlighter-rouge">basefont</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/font"><code class="highlighter-rouge">font</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/hr"><code class="highlighter-rouge">hr</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">cols</td>
+      <td style="text-align: left">定义一个text area中包含多少列。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea"><code class="highlighter-rouge">textarea</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">colspan</td>
+      <td style="text-align: left">该属性一般用在td标签中,用于指定一个单元格占用多少列,例如:&lt;td colspan='2'&gt;表示占用一个单元格占2列.</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td"><code class="highlighter-rouge">td</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/th"><code class="highlighter-rouge">th</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">content</td>
+      <td style="text-align: left">此属性包含<code class="highlighter-rouge">http-equiv</code>or <code class="highlighter-rouge">name</code>属性的值，具体取决于使用的值。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta"><code class="highlighter-rouge">meta</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">contenteditable</td>
+      <td style="text-align: left">指出该元素的内容是否可以被编辑。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/en/HTML/Global_attributes">Global attribute</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">contextmenu</td>
+      <td style="text-align: left">定义作用于元素上下文菜单的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/menu"><code class="highlighter-rouge">menu</code></a> 元素的id</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/en/HTML/Global_attributes">Global attribute</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">controls</td>
+      <td style="text-align: left">指出浏览器是否对用户显示播放控制台(前进或回退)</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio"><code class="highlighter-rouge">audio</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video"><code class="highlighter-rouge">video</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">coords</td>
+      <td style="text-align: left">一组指定热点区域坐标的值。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/area"><code class="highlighter-rouge">area</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">data</td>
+      <td style="text-align: left">资源URL地址</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/object"><code class="highlighter-rouge">object</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">data-*</td>
+      <td style="text-align: left">允许你对于一个HTML元素绑定自定义的属性。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/en/HTML/Global_attributes">Global attribute</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">datetime</td>
+      <td style="text-align: left">指示与元素关联的日期和时间。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/del"><code class="highlighter-rouge">del</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ins"><code class="highlighter-rouge">ins</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/time"><code class="highlighter-rouge">time</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">default</td>
+      <td style="text-align: left">指示除非用户的首选项指示不同，否则应启用跟踪。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/track"><code class="highlighter-rouge">track</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">defer</td>
+      <td style="text-align: left">指示应在分析页后执行脚本。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/script"><code class="highlighter-rouge">script</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dir</td>
+      <td style="text-align: left">定义文本方向。允许值为ltr（从左到右）或rtl（从右到左）</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/en/HTML/Global_attributes">Global attribute</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">disabled</td>
+      <td style="text-align: left">指示用户是否可以与元素交互</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button"><code class="highlighter-rouge">button</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/command"><code class="highlighter-rouge">command</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/fieldset"><code class="highlighter-rouge">fieldset</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/keygen"><code class="highlighter-rouge">keygen</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/optgroup"><code class="highlighter-rouge">optgroup</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/option"><code class="highlighter-rouge">option</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/select"><code class="highlighter-rouge">select</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea"><code class="highlighter-rouge">textarea</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">download</td>
+      <td style="text-align: left">表示该超链接用于下载资源。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a"><code class="highlighter-rouge">a</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/area"><code class="highlighter-rouge">area</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">draggable</td>
+      <td style="text-align: left">定义是否可以拖动元素。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/en/HTML/Global_attributes">Global attribute</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dropzone</td>
+      <td style="text-align: left">表示该元素接受删除其中的内容。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/en/HTML/Global_attributes">Global attribute</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">enctype</td>
+      <td style="text-align: left">定义<code class="highlighter-rouge">method</code>POST 时表单日期的内容类型。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form"><code class="highlighter-rouge">form</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">for</td>
+      <td style="text-align: left">描述与当前元素绑定的元素。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/label"><code class="highlighter-rouge">label</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/output"><code class="highlighter-rouge">output</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">form</td>
+      <td style="text-align: left">指示作为元素所有者的表单。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button"><code class="highlighter-rouge">button</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/fieldset"><code class="highlighter-rouge">fieldset</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/keygen"><code class="highlighter-rouge">keygen</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/label"><code class="highlighter-rouge">label</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter"><code class="highlighter-rouge">meter</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/object"><code class="highlighter-rouge">object</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/output"><code class="highlighter-rouge">output</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/progress"><code class="highlighter-rouge">progress</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/select"><code class="highlighter-rouge">select</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea"><code class="highlighter-rouge">textarea</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">headers</td>
+      <td style="text-align: left"><code class="highlighter-rouge">&lt;th&gt;</code> 适用于此元素的元素的ID 。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td"><code class="highlighter-rouge">td</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/th"><code class="highlighter-rouge">th</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">height</td>
+      <td style="text-align: left">注意：在某些情况下，例如&lt;div&gt;，这是一个遗留属性，在这种情况下应该使用CSS height属性。 在其他情况下，例如<canvas>，必须使用此属性指定高度。</canvas></td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/canvas"><code class="highlighter-rouge">canvas</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/embed"><code class="highlighter-rouge">embed</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe"><code class="highlighter-rouge">iframe</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img"><code class="highlighter-rouge">img</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/object"><code class="highlighter-rouge">object</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video"><code class="highlighter-rouge">video</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">hidden</td>
+      <td style="text-align: left">指示元素的相关性是否隐藏。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/en/HTML/Global_attributes">Global attribute</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">high</td>
+      <td style="text-align: left">表示上限范围的下限。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter"><code class="highlighter-rouge">meter</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">href</td>
+      <td style="text-align: left">关联资源的URL。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a"><code class="highlighter-rouge">a</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/area"><code class="highlighter-rouge">area</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/base"><code class="highlighter-rouge">base</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/link"><code class="highlighter-rouge">link</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">hreflang</td>
+      <td style="text-align: left">指定链接资源的语言。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a"><code class="highlighter-rouge">a</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/area"><code class="highlighter-rouge">area</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/link"><code class="highlighter-rouge">link</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">http-equiv</td>
+      <td style="text-align: left">相当于http的文件头作用，它可以向浏览器传回一些有用的信息</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta"><code class="highlighter-rouge">meta</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">icon</td>
+      <td style="text-align: left">指定表示命令的图片。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/command"><code class="highlighter-rouge">command</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">id</td>
+      <td style="text-align: left">通常与CSS一起使用以设置特定元素的样式。此属性的值必须唯一。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/en/HTML/Global_attributes">Global attribute</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ismap</td>
+      <td style="text-align: left">表示该图像是服务器端图像映射的一部分。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img"><code class="highlighter-rouge">img</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">itemprop</td>
+      <td style="text-align: left">被用于向一个物体中添加属性</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/en/HTML/Global_attributes">Global attribute</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">keytype</td>
+      <td style="text-align: left">指定生成的键的类型。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/keygen"><code class="highlighter-rouge">keygen</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">kind</td>
+      <td style="text-align: left">指定文本轨的类型。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/track"><code class="highlighter-rouge">track</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">label</td>
+      <td style="text-align: left">指定文本轨的用户可读标题。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/track"><code class="highlighter-rouge">track</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">lang</td>
+      <td style="text-align: left">定义元素中使用的语言。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/en/HTML/Global_attributes">Global attribute</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">language</td>
+      <td style="text-align: left">定义元素中使用的脚本语言。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/script"><code class="highlighter-rouge">script</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">list</td>
+      <td style="text-align: left">标识要向用户建议的预定义选项列表。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">loop</td>
+      <td style="text-align: left">指示媒体是否应在完成后从开始播放。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio"><code class="highlighter-rouge">audio</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/bgsound"><code class="highlighter-rouge">bgsound</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/marquee"><code class="highlighter-rouge">marquee</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video"><code class="highlighter-rouge">video</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">low</td>
+      <td style="text-align: left">表示较低范围的上限。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter"><code class="highlighter-rouge">meter</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">manifest</td>
+      <td style="text-align: left">指定文档缓存清单的URL。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/html"><code class="highlighter-rouge">html</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">max</td>
+      <td style="text-align: left">表示允许的最大值。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter"><code class="highlighter-rouge">meter</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/progress"><code class="highlighter-rouge">progress</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">maxlength</td>
+      <td style="text-align: left">定义元素中允许的最大字符数。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea"><code class="highlighter-rouge">textarea</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">media</td>
+      <td style="text-align: left">指定为其设计链接资源的媒体的提示。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a"><code class="highlighter-rouge">a</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/area"><code class="highlighter-rouge">area</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/link"><code class="highlighter-rouge">link</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/source"><code class="highlighter-rouge">source</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/style"><code class="highlighter-rouge">style</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">method</td>
+      <td style="text-align: left">定义提交表单时方法要使用的HTTP方法。可以是GET（默认）或POST。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form"><code class="highlighter-rouge">form</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">min</td>
+      <td style="text-align: left">表示允许的最小值。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter"><code class="highlighter-rouge">meter</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">multiple</td>
+      <td style="text-align: left">表示是否多个值可以在类型的输入来输入<code class="highlighter-rouge">email</code>或<code class="highlighter-rouge">file</code>。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/select"><code class="highlighter-rouge">select</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">name</td>
+      <td style="text-align: left">元素的名称。例如，服务器用于标识表单提交中的字段。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button"><code class="highlighter-rouge">button</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form"><code class="highlighter-rouge">form</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/fieldset"><code class="highlighter-rouge">fieldset</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe"><code class="highlighter-rouge">iframe</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/keygen"><code class="highlighter-rouge">keygen</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/object"><code class="highlighter-rouge">object</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/output"><code class="highlighter-rouge">object</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/select"><code class="highlighter-rouge">select</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea"><code class="highlighter-rouge">textarea</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/map"><code class="highlighter-rouge">map</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta"><code class="highlighter-rouge">meta</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/param"><code class="highlighter-rouge">param</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">novalidate</td>
+      <td style="text-align: left">此属性表示在提交时不应验证表单</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form"><code class="highlighter-rouge">form</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">open</td>
+      <td style="text-align: left">指示是否在页面加载时显示详细信息。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/details"><code class="highlighter-rouge">details</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">optimum</td>
+      <td style="text-align: left">表示最佳数值。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter"><code class="highlighter-rouge">meter</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pattern</td>
+      <td style="text-align: left">定义一个正则表达式，该元素的值将被验证。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ping</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a"><code class="highlighter-rouge">a</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/area"><code class="highlighter-rouge">area</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">placeholder</td>
+      <td style="text-align: left">向用户提供可在该字段中输入的内容的提示。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea"><code class="highlighter-rouge">textarea</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">poster</td>
+      <td style="text-align: left">指示在用户播放或搜索之前显示的海报框架的URL。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video"><code class="highlighter-rouge">video</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">preload</td>
+      <td style="text-align: left">指示是否应预先加载整个资源，部分资源或任何内容。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio"><code class="highlighter-rouge">audio</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video"><code class="highlighter-rouge">video</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pubdate</td>
+      <td style="text-align: left">指示此日期和时间是否是最近的<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/article"><code class="highlighter-rouge">article</code></a>祖先元素的日期。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/time"><code class="highlighter-rouge">time</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">radiogroup</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/command"><code class="highlighter-rouge">command</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">readonly</td>
+      <td style="text-align: left">指示是否可以编辑元素。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea"><code class="highlighter-rouge">textarea</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rel</td>
+      <td style="text-align: left">指定目标对象与链接对象的关系。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a"><code class="highlighter-rouge">a</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/area"><code class="highlighter-rouge">area</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/link"><code class="highlighter-rouge">link</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">required</td>
+      <td style="text-align: left">指示是否需要填写此元素。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/select"><code class="highlighter-rouge">select</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea"><code class="highlighter-rouge">textarea</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">reversed</td>
+      <td style="text-align: left">指示列表是否应按降序显示而不是按升序显示。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ol"><code class="highlighter-rouge">ol</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rows</td>
+      <td style="text-align: left">定义textarea中的行数。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea"><code class="highlighter-rouge">textarea</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rowspan</td>
+      <td style="text-align: left">定义表格单元格应跨越的行数。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td"><code class="highlighter-rouge">td</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/th"><code class="highlighter-rouge">th</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">sandbox</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe"><code class="highlighter-rouge">iframe</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">spellcheck</td>
+      <td style="text-align: left">指示是否允许对元素进行拼写检查。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/en/HTML/Global_attributes">Global attribute</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">scope</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/th"><code class="highlighter-rouge">th</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">scoped</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/style"><code class="highlighter-rouge">style</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">seamless</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe"><code class="highlighter-rouge">iframe</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">selected</td>
+      <td style="text-align: left">定义将在页面加载时选择的值。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/option"><code class="highlighter-rouge">option</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">shape</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a"><code class="highlighter-rouge">a</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/area"><code class="highlighter-rouge">area</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">size</td>
+      <td style="text-align: left">定义元素的宽度（以像素为单位）。如果元素的<code class="highlighter-rouge">type</code>属性是<code class="highlighter-rouge">text</code>，<code class="highlighter-rouge">password</code>那么它是字符数。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/select"><code class="highlighter-rouge">select</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">sizes</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/link"><code class="highlighter-rouge">link</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">span</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/col"><code class="highlighter-rouge">col</code></a>,<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/colgroup"><code class="highlighter-rouge">colgroup</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">src</td>
+      <td style="text-align: left">可嵌入内容的URL。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio"><code class="highlighter-rouge">audio</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/embed"><code class="highlighter-rouge">audio</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe"><code class="highlighter-rouge">iframe</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img"><code class="highlighter-rouge">img</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/script"><code class="highlighter-rouge">script</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/source"><code class="highlighter-rouge">source</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/track"><code class="highlighter-rouge">track</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video"><code class="highlighter-rouge">video</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">srcdoc</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe"><code class="highlighter-rouge">iframe</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">srclang</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/track"><code class="highlighter-rouge">track</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">start</td>
+      <td style="text-align: left">如果不是1，则定义第一个数字。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ol"><code class="highlighter-rouge">ol</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">step</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">style</td>
+      <td style="text-align: left">定义CSS样式，这些样式会覆盖之前设置的样式。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/en/HTML/Global_attributes">Global attribute</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">summary</td>
+      <td style="text-align: left">总结,与datil结合使用</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/table"><code class="highlighter-rouge">table</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">tabindex</td>
+      <td style="text-align: left">覆盖浏览器的默认Tab键顺序，并遵循指定的顺序。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/en/HTML/Global_attributes">Global attribute</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">target</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a"><code class="highlighter-rouge">a</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/area"><code class="highlighter-rouge">area</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/base"><code class="highlighter-rouge">base</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form"><code class="highlighter-rouge">form</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">title</td>
+      <td style="text-align: left">当鼠标悬停在元素上面时，提示框显示的文本。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/en/HTML/Global_attributes">Global attribute</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">type</td>
+      <td style="text-align: left">定义元素的类型。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button"><code class="highlighter-rouge">button</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/command"><code class="highlighter-rouge">command</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/embed"><code class="highlighter-rouge">embed</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/object"><code class="highlighter-rouge">object</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/script"><code class="highlighter-rouge">script</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/source"><code class="highlighter-rouge">source</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/style"><code class="highlighter-rouge">style</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/menu"><code class="highlighter-rouge">menu</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">usemap</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img"><code class="highlighter-rouge">img</code></a>,  <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/object"><code class="highlighter-rouge">object</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">value</td>
+      <td style="text-align: left">定义页面加载时，在元素内显示的默认值。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button"><code class="highlighter-rouge">button</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/option"><code class="highlighter-rouge">option</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/li"><code class="highlighter-rouge">li</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter"><code class="highlighter-rouge">meter</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/progress"><code class="highlighter-rouge">progress</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/param"><code class="highlighter-rouge">param</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">width</td>
+      <td style="text-align: left">注意：在某些情况下，例如<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/div"><code class="highlighter-rouge">div</code></a>，这是遗留属性，在这种情况下<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/width"><code class="highlighter-rouge">width</code></a> 应该使用CSS 属性。在其他情况下，例如<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/canvas"><code class="highlighter-rouge">canvas</code></a>，必须使用此属性指定宽度。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/canvas"><code class="highlighter-rouge">canvas</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/embed"><code class="highlighter-rouge">embed</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe"><code class="highlighter-rouge">iframe</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img"><code class="highlighter-rouge">img</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"><code class="highlighter-rouge">input</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/object"><code class="highlighter-rouge">object</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video"><code class="highlighter-rouge">video</code></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">wrap</td>
+      <td style="text-align: left">指示是否应该包装文本。</td>
+      <td style="text-align: left"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea"><code class="highlighter-rouge">textarea</code></a></td>
+    </tr>
+  </tbody>
+</table>
+:ET

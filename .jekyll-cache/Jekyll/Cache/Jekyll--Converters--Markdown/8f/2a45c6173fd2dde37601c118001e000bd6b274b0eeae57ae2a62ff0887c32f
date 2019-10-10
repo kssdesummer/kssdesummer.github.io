@@ -1,0 +1,160 @@
+I"Q*<h3 id="react-阶段总结">React 阶段总结</h3>
+
+<ol>
+  <li>
+    <p>react 的核心思想：</p>
+
+    <ul>
+      <li>
+        <p>组件化思想</p>
+      </li>
+      <li>
+        <p>生命周期</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>安装使用React</p>
+
+    <ul>
+      <li>
+        <p>安装： <code class="highlighter-rouge">npm install -g create-react-app</code>	使用全局命令安装</p>
+      </li>
+      <li>
+        <p>创建项目： <code class="highlighter-rouge">create-react-app myapp</code>      创建名为myapp的项目</p>
+      </li>
+      <li>
+        <p>运行： <code class="highlighter-rouge">npm start </code>   进入myapp文件夹后执行</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>文件结构</p>
+
+    <ul>
+      <li>src ：主要操作目录，所有写的文件都在这里进行</li>
+      <li>public ：当所有操作完成之后，会将渲染的东西加载到这里</li>
+      <li>node_modules ：创建项目的时候自动加载的node包</li>
+    </ul>
+  </li>
+  <li>
+    <p>模块热替换（实时更新）</p>
+
+    <div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//在项目入口处添加到最后，一般为src/index.js</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">module</span><span class="p">.</span><span class="nx">hot</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">module</span><span class="p">.</span><span class="nx">hot</span><span class="p">.</span><span class="nx">accept</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>导入包的两种方式</p>
+
+    <div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">react</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>		<span class="c1">//适用于导入单个的包，简洁</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">Component</span><span class="err">，</span><span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>	<span class="c1">//适用于导入多个包或函数或变量，方便</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>导出包的两种方式</p>
+
+    <div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="nx">defalt</span> <span class="nx">firstLine</span><span class="err">；</span>
+<span class="k">export</span> <span class="p">{</span><span class="nx">firstLine</span><span class="err">，</span><span class="nx">secondLine</span><span class="p">};</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>声明变量的两种方式</p>
+
+    <ul>
+      <li>const ： 不可变，但是数据或对象里持有的内容可以被更新</li>
+      <li>let ： 声明的变量是可变的</li>
+    </ul>
+  </li>
+  <li>
+    <p>实例化一个组件</p>
+
+    <div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Test</span> <span class="kd">extends</span> <span class="nx">Conponent</span><span class="p">{</span>
+	<span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">){</span>
+		<span class="nx">suoer</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="o">=</span><span class="p">{</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+    	
+	<span class="nx">render</span><span class="p">(){</span>
+        <span class="k">return</span><span class="p">(</span>
+			<span class="p">&lt;</span><span class="nt">div</span> <span class="na">className=</span><span class="s2">"name"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">}</span> 
+    
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Test</span><span class="p">;</span>
+</code></pre></div>    </div>
+
+    <ul>
+      <li>render()方法包含所有返回的元素，元素是组件的构成部分，即是渲染到页面上的组件</li>
+      <li>组件 ：将相同的网页的重复的部分写成一个组件，将组件复用渲染到页面上</li>
+      <li>实例 ：
+        <ul>
+          <li>
+            <p>mounting阶段就是component被render解析生成对应的DOM节点，并被插入浏览器的DOM结构的一个过程（组件从无到有的过程）。</p>
+          </li>
+          <li>
+            <p>(注：getDefaultProps()，getDefaultState()是react ES5版本的，在reactES6版本中已经被废弃，不建议使用，是用于初始化定义state，props的默认值)</p>
+          </li>
+        </ul>
+      </li>
+      <li>. componentWillMount
+      该方法在首次渲染（render方法）之前调用，在这一阶段组件还未开始实例化
+      项目应用：用于做一些组件初始化前需要调用的数据处理，也可以在这一阶段触发loading事件。</li>
+      <li>. componentDidMount
+          这个方法在首次渲染（</li>
+      <li>render方法）之后调用，在这一阶段组件已经实例化完成</li>
+    </ul>
+  </li>
+  <li>
+    <p>map 函数遍历</p>
+
+    <p>父组件：</p>
+
+    <div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="si">{</span><span class="nx">data</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span><span class="o">=&gt;</span>
+                    <span class="p">&lt;</span><span class="nc">RePart</span> <span class="na">item=</span><span class="si">{</span><span class="nx">item</span><span class="si">}</span><span class="p">/&gt;</span>	<span class="c1">//将遍历得到的数据参数子组件</span>
+                <span class="p">)</span><span class="si">}</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p>子组件：</p>
+
+    <div class="language-react highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="p">{</span><span class="nx">item</span><span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">;</span>	<span class="c1">// 接收父组件传入的参数</span>
+        <span class="k">return</span> <span class="p">(</span>	<span class="c1">// 渲染到html页面</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className=</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">bf</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">fff</span><span class="dl">'</span><span class="p">?</span><span class="dl">"</span><span class="s2">bgfff</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">bg000</span><span class="dl">"</span><span class="si">}</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className=</span><span class="si">{</span><span class="dl">"</span><span class="s2">container-types</span><span class="dl">"</span><span class="o">+</span><span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nc">Title</span> <span class="na">data=</span><span class="si">{</span><span class="nx">item</span><span class="si">}</span><span class="p">/&gt;</span>	//调用Title组件
+                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className=</span><span class="s2">"types-content clearfix"</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className=</span><span class="s2">"container-fluid"</span><span class="p">&gt;</span>
+                            <span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">cardData</span><span class="p">?&lt;</span><span class="nc">Two</span> <span class="na">data=</span><span class="si">{</span><span class="nx">item</span><span class="si">}</span><span class="p">/&gt;:</span><span class="dl">""</span><span class="si">}</span>    //调用Two组件
+                            <span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">cardData1</span><span class="p">?&lt;</span><span class="nc">FirstLine</span> <span class="na">data=</span><span class="si">{</span><span class="nx">item</span><span class="si">}</span><span class="p">/&gt;:</span><span class="dl">""</span><span class="si">}</span>    //调用FirstLine组件
+                            <span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">cardData2</span><span class="p">?</span> <span class="p">&lt;</span><span class="nc">SecondLine</span> <span class="na">data=</span><span class="si">{</span><span class="nx">item</span><span class="si">}</span><span class="p">/&gt;</span> <span class="p">:</span><span class="dl">""</span><span class="si">}</span>    //调用SecondLine组件
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>filter函数</p>
+  </li>
+  <li>
+    <p>refs</p>
+  </li>
+  <li>
+    <p>state</p>
+  </li>
+</ol>
+
+:ET

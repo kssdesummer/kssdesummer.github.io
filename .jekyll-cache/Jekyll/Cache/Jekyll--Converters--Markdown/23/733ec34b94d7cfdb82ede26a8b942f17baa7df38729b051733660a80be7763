@@ -1,0 +1,339 @@
+I"��<h1 id="nodejs">Nodejs</h1>
+
+<h3 id="nodejs-和-npm-的安装">Node.js 和 npm 的安装</h3>
+
+<ol>
+  <li>node.js下载地址：https://nodejs.org/en/</li>
+  <li>在文件夹直接解压或者用<code class="highlighter-rouge">tar -zxvf 压缩包</code></li>
+  <li>在解压文件里找到node和npm位置：<code class="highlighter-rouge">bin</code>目录下面</li>
+  <li>将node和npm链接到全局符号：
+    <ol>
+      <li><code class="highlighter-rouge">sudo ln -s 全路径/node /usr/bin/node</code></li>
+      <li><code class="highlighter-rouge">sudo ln -s 全路径/npm /usr/bin/npm</code></li>
+    </ol>
+  </li>
+  <li>在任意目录下使用<code class="highlighter-rouge">node -v</code>或者<code class="highlighter-rouge">npm -v</code> 就可以看到相关版本号</li>
+  <li>安装完成</li>
+</ol>
+
+<h3 id="node程序">node程序</h3>
+
+<p>​	1. 在js文档的第一行总是写上<code class="highlighter-rouge">use strict</code>; 表明这是一个js代码</p>
+
+<ol>
+  <li>在js文件中想要查看的结果用<code class="highlighter-rouge">console.log("hello world")</code></li>
+  <li><code class="highlighter-rouge">node --use strict hello.js</code>使用严格模式</li>
+</ol>
+
+<h3 id="搭建node开发环境">搭建Node开发环境</h3>
+
+<p>​	推荐使用 visual studio code</p>
+
+<h3 id="模块">模块</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">hello</span><span class="p">.</span><span class="nx">js</span>
+<span class="kd">function</span> <span class="nx">greet</span><span class="p">(){</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">1</span><span class="dl">"</span><span class="p">);</span><span class="c1">//在终端控制台显示输出</span>
+	<span class="p">}</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">greet</span><span class="p">;</span>	<span class="c1">//将greet函数声明出去，别的模块也可以使用</span>
+
+<span class="nx">main</span><span class="p">.</span><span class="nx">js</span>
+<span class="kd">var</span> <span class="nx">greet</span> <span class="o">=</span><span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./hello</span><span class="dl">'</span><span class="p">);</span>	<span class="c1">//使用时只需要再次声明，并且要加上该模块的路径和名字</span>
+</code></pre></div></div>
+
+<h3 id="commonjs规范">CommonJS规范</h3>
+
+<p>​	定义就是各个模块间的变量互不影响，想要使用别的模块的变量，就需要用moudule.export和require来传输和接受</p>
+
+<h3 id="fs模块">fs模块</h3>
+
+<p>​	fs：是Node.js的模块，负责读写文件(同步或异步)</p>
+
+<ol>
+  <li>
+    <p>读文件</p>
+
+    <ol>
+      <li>
+        <p>异步：</p>
+
+        <p><code class="highlighter-rouge">fs.readFile('111.txt','utf-8',function(err,data){});</code></p>
+      </li>
+      <li>
+        <p>同步：</p>
+
+        <p><code class="highlighter-rouge">var data = fs.readFileSync('sample.txt', 'utf-8');</code></p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>写文件</p>
+  </li>
+  <li>
+    <p>异步：</p>
+
+    <p><code class="highlighter-rouge">fs.writeFile('output.txt',data,function(err){});</code></p>
+  </li>
+  <li>
+    <p>同步：</p>
+
+    <p><code class="highlighter-rouge">fs.writeFileSync('output.txt', data);</code></p>
+  </li>
+  <li>
+    <p>查看文件信息</p>
+
+    <ol>
+      <li><code class="highlighter-rouge">fs.stat('output.txt',function(err,stat){});</code></li>
+    </ol>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="p">;</span>
+   
+<span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">);</span>
+   
+<span class="nx">fs</span><span class="p">.</span><span class="nx">stat</span><span class="p">(</span><span class="dl">'</span><span class="s1">sample.txt</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">stat</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// 是否是文件:</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">isFile: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">stat</span><span class="p">.</span><span class="nx">isFile</span><span class="p">());</span>
+        <span class="c1">// 是否是目录:</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">isDirectory: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">stat</span><span class="p">.</span><span class="nx">isDirectory</span><span class="p">());</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">stat</span><span class="p">.</span><span class="nx">isFile</span><span class="p">())</span> <span class="p">{</span>
+            <span class="c1">// 文件大小:</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">size: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">stat</span><span class="p">.</span><span class="nx">size</span><span class="p">);</span>
+            <span class="c1">// 创建时间, Date对象:</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">birth time: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">stat</span><span class="p">.</span><span class="nx">birthtime</span><span class="p">);</span>
+            <span class="c1">// 修改时间, Date对象:</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">modified time: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">stat</span><span class="p">.</span><span class="nx">mtime</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+<span class="err">运行结果如下：</span>
+   
+<span class="na">isFile</span><span class="p">:</span> <span class="kc">true</span>
+<span class="na">isDirectory</span><span class="p">:</span> <span class="kc">false</span>
+<span class="na">size</span><span class="p">:</span> <span class="mi">181</span>
+<span class="nx">birth</span> <span class="na">time</span><span class="p">:</span> <span class="nx">Fri</span> <span class="nx">Dec</span> <span class="mi">11</span> <span class="mi">2015</span> <span class="mi">09</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">41</span> <span class="nx">GMT</span><span class="o">+</span><span class="mi">0800</span> <span class="p">(</span><span class="nx">CST</span><span class="p">)</span>
+<span class="nx">modified</span> <span class="na">time</span><span class="p">:</span> <span class="nx">Fri</span> <span class="nx">Dec</span> <span class="mi">11</span> <span class="mi">2015</span> <span class="mi">12</span><span class="p">:</span><span class="mi">09</span><span class="p">:</span><span class="mi">00</span> <span class="nx">GMT</span><span class="o">+</span><span class="mi">0800</span> <span class="p">(</span><span class="nx">CST</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="stream-模块">stream 模块</h3>
+
+<p>​	输入输出流</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="c1">// fs.createReadStream读取 打开一个流:打开格式要设置！</span>
+<span class="kd">var</span> <span class="nx">rs</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="dl">'</span><span class="s1">example.txt</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">utf-8</span><span class="dl">'</span><span class="p">);</span>
+<span class="c1">//data事件表示流的数据已经可以读取了</span>
+<span class="nx">rs</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">data</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">DATA:</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">// end事件表示这个流已经到末尾了，没有数据可以读取了</span>
+<span class="nx">rs</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">end</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">END</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">//error事件表示出错了。</span>
+<span class="nx">rs</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">ERROR: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// fs.createWriteStream 写入流</span>
+<span class="kd">var</span> <span class="nx">ws1</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="dl">'</span><span class="s1">output1.txt</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">utf-8</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">ws1</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="dl">'</span><span class="s1">使用Stream写入文本数据...</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">ws1</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="dl">'</span><span class="s1">END.</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">ws1</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+
+<span class="c1">// var ws2 = fs.createWriteStream('output1.txt');</span>
+<span class="c1">// ws2.write(new Buffer('使用Stream写入二进制数据...\n', 'utf-8'));</span>
+<span class="c1">// ws2.write(new Buffer('END.', 'utf-8'));</span>
+<span class="c1">// ws2.end();</span>
+
+<span class="c1">// pipe：管道，可以将写入流与读取流连接</span>
+<span class="kd">var</span> <span class="nx">rs</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="dl">'</span><span class="s1">example.txt</span><span class="dl">'</span><span class="p">);</span><span class="c1">//读取</span>
+<span class="kd">var</span> <span class="nx">ws</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="dl">'</span><span class="s1">copied.txt</span><span class="dl">'</span><span class="p">);</span><span class="c1">//写入</span>
+<span class="nx">rs</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">ws</span><span class="p">);</span><span class="c1">//将读取的内容写入copied.txt</span>
+<span class="c1">// rs.pipe(ws,{end:false}); end事件触发后不关闭</span>
+<span class="cm">/*默认情况下，当Readable流的数据读取完毕，end事件触发后，将自动关闭Writable流。如果我们不希望自动关闭Writable流，需要传入参数：
+readable.pipe(writable, { end: false });
+ */</span>
+</code></pre></div></div>
+
+<h3 id="http模块">http模块</h3>
+
+<p>​	利用Node.js模块可以直接使用tcp连接以及解析HTTP，而我们只需要去操作http模块提供的request和response对象。</p>
+
+<p>​	request对象：封装了http请求，调用resquest属性和方法可以拿到http请求的所有信息</p>
+
+<p>​	response对象：封装了http响应，调用response对象的方法，就能把http的响应返回给浏览器</p>
+
+<ul>
+  <li>搭建一个简单的服务器：</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="c1">// 导入http模块:</span>
+<span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">http</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="c1">// 创建http server，并传入回调函数:</span>
+<span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 回调函数接收request和response对象,</span>
+    <span class="c1">// 获得HTTP请求的method和url:</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">method</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>
+    <span class="c1">// 将HTTP响应200写入response, 同时设置html类型和utf8编码格式 Content-Type: text/html;charset=utf8，:'use strict';</span>
+
+<span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">fs</span><span class="p">.</span><span class="nx">stat</span><span class="p">(</span><span class="dl">'</span><span class="s1">sample.txt</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">stat</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// 是否是文件:</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">isFile: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">stat</span><span class="p">.</span><span class="nx">isFile</span><span class="p">());</span>
+        <span class="c1">// 是否是目录:</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">isDirectory: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">stat</span><span class="p">.</span><span class="nx">isDirectory</span><span class="p">());</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">stat</span><span class="p">.</span><span class="nx">isFile</span><span class="p">())</span> <span class="p">{</span>
+            <span class="c1">// 文件大小:</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">size: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">stat</span><span class="p">.</span><span class="nx">size</span><span class="p">);</span>
+            <span class="c1">// 创建时间, Date对象:</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">birth time: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">stat</span><span class="p">.</span><span class="nx">birthtime</span><span class="p">);</span>
+            <span class="c1">// 修改时间, Date对象:</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">modified time: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">stat</span><span class="p">.</span><span class="nx">mtime</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+<span class="err">运行结果如下：</span>
+
+<span class="na">isFile</span><span class="p">:</span> <span class="kc">true</span>
+<span class="na">isDirectory</span><span class="p">:</span> <span class="kc">false</span>
+<span class="na">size</span><span class="p">:</span> <span class="mi">181</span>
+<span class="nx">birth</span> <span class="na">time</span><span class="p">:</span> <span class="nx">Fri</span> <span class="nx">Dec</span> <span class="mi">11</span> <span class="mi">2015</span> <span class="mi">09</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">41</span> <span class="nx">GMT</span><span class="o">+</span><span class="mi">0800</span> <span class="p">(</span><span class="nx">CST</span><span class="p">)</span>
+<span class="nx">modified</span> <span class="na">time</span><span class="p">:</span> <span class="nx">Fri</span> <span class="nx">Dec</span> <span class="mi">11</span> <span class="mi">2015</span> <span class="mi">12</span><span class="p">:</span><span class="mi">09</span><span class="p">:</span><span class="mi">00</span> <span class="nx">GMT</span><span class="o">+</span><span class="mi">0800</span> <span class="p">(</span><span class="nx">CST</span><span class="p">)</span>
+    <span class="nx">response</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span><span class="dl">'</span><span class="s1">Content-Type</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">text/html;charset=utf8</span><span class="dl">'</span><span class="p">});</span>
+    <span class="c1">// 将HTTP响应的HTML内容写入response:</span>
+    <span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="dl">'</span><span class="s1">&lt;input name="user"&gt;&lt;br/&gt;</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="dl">'</span><span class="s1">&lt;input name="password"&gt;&lt;br/&gt;</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="dl">'</span><span class="s1">&lt;input type="submit"&gt;</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="dl">'</span><span class="s1">&lt;h1&gt;Hello world!&lt;/h1&gt;</span><span class="dl">'</span><span class="p">);</span>
+    <span class="c1">//end 和 write 都可以不写，但是response.end()必须要有</span>
+<span class="p">});</span>
+
+<span class="c1">// 让服务器监听8080端口:</span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8080</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Server is running at http://127.0.0.1:8080/</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="url模块">url模块</h3>
+
+<p>​	用来解析url对象：</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">url</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">url</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://user:pass@host.com:8080/path/to/file?query=string#hash</span><span class="dl">'</span><span class="p">));</span>
+<span class="err">结果如下：</span>
+
+<span class="nx">Url</span> <span class="p">{</span>
+  <span class="nl">protocol</span><span class="p">:</span> <span class="dl">'</span><span class="s1">http:</span><span class="dl">'</span><span class="p">,</span>
+  <span class="nx">slashes</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nx">auth</span><span class="p">:</span> <span class="dl">'</span><span class="s1">user:pass</span><span class="dl">'</span><span class="p">,</span>
+  <span class="nx">host</span><span class="p">:</span> <span class="dl">'</span><span class="s1">host.com:8080</span><span class="dl">'</span><span class="p">,</span>
+  <span class="nx">port</span><span class="p">:</span> <span class="dl">'</span><span class="s1">8080</span><span class="dl">'</span><span class="p">,</span>
+  <span class="nx">hostname</span><span class="p">:</span> <span class="dl">'</span><span class="s1">host.com</span><span class="dl">'</span><span class="p">,</span>
+  <span class="nx">hash</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#hash</span><span class="dl">'</span><span class="p">,</span>
+  <span class="nx">search</span><span class="p">:</span> <span class="dl">'</span><span class="s1">?query=string</span><span class="dl">'</span><span class="p">,</span>
+  <span class="nx">query</span><span class="p">:</span> <span class="dl">'</span><span class="s1">query=string</span><span class="dl">'</span><span class="p">,</span>
+  <span class="nx">pathname</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/path/to/file</span><span class="dl">'</span><span class="p">,</span>
+  <span class="nx">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/path/to/file?query=string</span><span class="dl">'</span><span class="p">,</span>
+  <span class="nx">href</span><span class="p">:</span> <span class="dl">'</span><span class="s1">http://user:pass@host.com:8080/path/to/file?query=string#hash</span><span class="dl">'</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="path模块相关">path模块相关</h3>
+
+<p>​	用来方便的构造目录</p>
+
+<ul>
+  <li>构造目录</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">path</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="c1">// 解析当前目录:</span>
+<span class="kd">var</span> <span class="nx">workDir</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="dl">'</span><span class="s1">.</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// '/Users/michael'</span>
+
+<span class="c1">// 组合完整的文件路径:当前目录+'pub'+'index.html':</span>
+<span class="kd">var</span> <span class="nx">filePath</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">workDir</span><span class="p">,</span> <span class="dl">'</span><span class="s1">pub</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">index.html</span><span class="dl">'</span><span class="p">);</span>
+<span class="c1">//得到完整的路径 '/Users/michael/pub/index.html'</span>
+</code></pre></div></div>
+
+<ul>
+  <li>搭建一个简单的文件服务器：
+    <ul>
+      <li>需求分析：
+        <ol>
+          <li>本机可以直接访问：http://127.0.0.1:8080/</li>
+          <li>能够读取本机的文档（html/txt）</li>
+          <li>如果是目录，查找该目录下是否有index.html文档，有则打开，无则返回404</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//导入fs模块：用来读取文档内容，path：构造目录，url：解析http网址，http：得到请求和响应</span>
+<span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">path</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">url</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">http</span><span class="dl">'</span><span class="p">);</span>
+<span class="c1">// 构造目录，默认为当前目录，假设不再当前目录，则构造为绝对路径</span>
+<span class="kd">var</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">||</span> <span class="dl">'</span><span class="s1">.</span><span class="dl">'</span><span class="p">);</span>
+<span class="c1">// 打印root目录</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Root dir : </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">root</span><span class="p">);</span>
+<span class="c1">// 创建一个服务器，利用http模块，得到请求request和响应response</span>
+<span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="nx">response</span><span class="p">){</span>
+	<span class="c1">//解析请求网址，得到pathname</span>
+    <span class="kd">var</span> <span class="nx">pathname</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="p">).</span><span class="nx">pathname</span><span class="p">;</span>
+    <span class="c1">// 用path模块拼接路径，得到完整目录</span>
+    <span class="kd">var</span> <span class="nx">filePath</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span><span class="nx">pathname</span><span class="p">);</span>
+    <span class="c1">//console.log('filePath : '+filePath);</span>
+    <span class="c1">// fs模块获取文件信息，用来判断文件是目录还是文档</span>
+    <span class="nx">fs</span><span class="p">.</span><span class="nx">stat</span><span class="p">(</span><span class="nx">filePath</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">stats</span><span class="p">){</span>
+    	<span class="c1">// 如果没错并且文件信息是一个文档</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">err</span> <span class="o">&amp;&amp;</span> <span class="nx">stats</span><span class="p">.</span><span class="nx">isFile</span><span class="p">()){</span>
+        	<span class="c1">//打印状态200：请求的地址</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">200 </span><span class="dl">'</span><span class="o">+</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>
+            <span class="c1">//响应头200，设置编码格式为utf8，类型为text/html</span>
+            <span class="nx">response</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,{</span><span class="dl">'</span><span class="s1">Content-Type</span><span class="dl">'</span><span class="p">:</span><span class="dl">'</span><span class="s1">text/html;charset=UTF8</span><span class="dl">'</span><span class="p">});</span>
+            <span class="c1">// 将读到的内容流向response</span>
+            <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="nx">filePath</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+          <span class="c1">//条件：不出错而且是一个目录，拼接目录</span>
+        <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">err</span> <span class="o">&amp;&amp;</span> <span class="nx">stats</span><span class="p">.</span><span class="nx">isDirectory</span><span class="p">()){</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">filePath</span><span class="o">+</span><span class="dl">'</span><span class="s1"> isDir</span><span class="dl">'</span><span class="p">);</span>
+            <span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">filePath</span><span class="p">,</span><span class="dl">'</span><span class="s1">index.html</span><span class="dl">'</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">200 </span><span class="dl">'</span><span class="o">+</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="o">+</span><span class="dl">'</span><span class="s1">/index.html</span><span class="dl">'</span><span class="p">);</span>
+            <span class="nx">response</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,{</span><span class="dl">'</span><span class="s1">Content-Type</span><span class="dl">'</span><span class="p">:</span><span class="dl">'</span><span class="s1">text/html;charset=UTF8</span><span class="dl">'</span><span class="p">});</span>
+            <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="nx">html</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span><span class="p">{</span>  
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">404 </span><span class="dl">'</span><span class="o">+</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>
+            <span class="nx">response</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">404</span><span class="p">);</span>
+            <span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="dl">'</span><span class="s1">404 Not Found</span><span class="dl">'</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+<span class="c1">// 监听8080端口</span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8080</span><span class="p">);</span>
+<span class="c1">// 代码正常运行给一个提示</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Server is running at http://127.0.0.1:8080/</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+:ET
